@@ -9,3 +9,8 @@
 - [x] Test all CTAs and form functionality
 - [x] Update color palette to use brand color #589351
 - [x] Redesign landing page to match Dr. Hyman website aesthetic
+- [x] Add "Meet Your Host" section with bio and credentials
+- [x] Add Testimonials/Success Stories section
+- [x] Add Event Agenda/Schedule section
+- [x] Add Bonuses/What's Included section
+- [x] Add About the Program section
