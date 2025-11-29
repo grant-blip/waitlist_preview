@@ -111,8 +111,9 @@ export default function Home() {
           className="hidden md:block absolute inset-0 z-0"
           style={{
             backgroundImage: 'url(/victoria-hero.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center right',
+            backgroundSize: 'contain',
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat',
           }}
         />
         
@@ -122,7 +123,7 @@ export default function Home() {
           style={{
             backgroundImage: 'url(/victoria-hero.jpg)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center center',
+            backgroundPosition: 'center 30%',
           }}
         >
           <div className="absolute inset-0 bg-white/75" />
@@ -179,7 +180,7 @@ export default function Home() {
                   <img 
                     src="/victoria-hero.jpg" 
                     alt="Victoria O'Sullivan"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-[center_20%]"
                   />
                 </div>
               </div>

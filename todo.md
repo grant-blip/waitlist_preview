@@ -22,3 +22,5 @@
 - [x] Replace Meet Your Host image with Victoria's actual photo
 - [x] Add video testimonial section
 - [x] Add countdown timer to sticky header
+- [x] Adjust hero background image positioning to show Victoria's full head
+- [x] Center Victoria in Meet Your Host image
