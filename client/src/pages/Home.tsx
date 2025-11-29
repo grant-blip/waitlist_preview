@@ -325,82 +325,37 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Day 1 */}
             <Card className="border-2">
               <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6 pb-6 border-b-2 border-gray-100">
-                  <Calendar className="w-8 h-8 text-primary flex-shrink-0" />
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Calendar className="w-8 h-8 text-primary" />
+                  </div>
                   <div>
-                    <h4 className="text-xl md:text-2xl font-bold text-foreground">Day 1: Reboot & Reset</h4>
-                    <p className="text-muted-foreground">May 17th, 2025</p>
+                    <h4 className="text-2xl font-bold text-foreground mb-2">Day 1: Reboot & Reset</h4>
+                    <p className="text-muted-foreground">May 17th, 2025 | 10:00 AM - 5:00 PM</p>
                   </div>
                 </div>
                 
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
+                <div className="space-y-4 ml-20">
+                  {[
+                    { time: "10:00 AM", title: "How to decode your hormones & metabolism", desc: "for effortless fat loss" },
+                    { time: "11:30 AM", title: "The sneaky mistakes", desc: "sabotaging your energy, mood, and weight." },
+                    { time: "1:00 PM", title: "Lunch Break & Q&A", desc: "Network with other participants and get your questions answered" },
+                    { time: "2:00 PM", title: "Why gut health is the key to weight loss", desc: "clear skin & balanced hormones" },
+                    { time: "3:00 PM", title: "The Female Brain in Midlife", desc: "How hormones affect memory, mood, and focus." },
+                    { time: "4:00 PM", title: "The Craving Brain", desc: "Understanding why you reach for chocolate, wine, and snacks under stress—and how to break free." },
+                  ].map((session, idx) => (
+                    <div key={idx} className="flex gap-4">
+                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">{session.time}</div>
+                      <div className="flex-1">
+                        <h5 className="font-bold text-foreground mb-1">{session.title}</h5>
+                        <p className="text-sm text-muted-foreground">{session.desc}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>How to decode your hormones & metabolism</strong> for effortless fat loss
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        The sneaky mistakes sabotaging your energy, mood, and weight.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>Why gut health is the key to weight loss</strong>, clear skin & balanced hormones
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>The Female Brain in Midlife:</strong> How hormones affect memory, mood, and focus.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>The Craving Brain:</strong> Understanding why you reach for chocolate, wine, and snacks under stress—and how to break free.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t-2 border-gray-100">
-                    <div className="flex gap-4">
-                      <Coffee className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <p className="text-base text-muted-foreground italic">
-                        Includes lunch break & Q&A session
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
@@ -408,78 +363,33 @@ export default function Home() {
             {/* Day 2 */}
             <Card className="border-2">
               <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6 pb-6 border-b-2 border-gray-100">
-                  <Calendar className="w-8 h-8 text-primary flex-shrink-0" />
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Calendar className="w-8 h-8 text-primary" />
+                  </div>
                   <div>
-                    <h4 className="text-xl md:text-2xl font-bold text-foreground">Day 2: Build & Sustain Your Transformation</h4>
-                    <p className="text-muted-foreground">May 18th, 2025</p>
+                    <h4 className="text-2xl font-bold text-foreground mb-2">Day 2: Build & Sustain Your Transformation</h4>
+                    <p className="text-muted-foreground">May 18th, 2025 | 10:00 AM - 5:00 PM</p>
                   </div>
                 </div>
                 
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
+                <div className="space-y-4 ml-20">
+                  {[
+                    { time: "10:00 AM", title: "The Midlife Eating Blueprint", desc: "How to eat for fat-burning & energy." },
+                    { time: "11:30 AM", title: "Understanding Bioidentical Hormones & Natural Approaches", desc: "and which is right for you." },
+                    { time: "1:00 PM", title: "Lunch Break & Q&A", desc: "Continue networking and get personalized guidance" },
+                    { time: "2:00 PM", title: "The Hormones of Metabolism", desc: "Train smarter, not harder, for strength, fat-burning and longevity." },
+                    { time: "3:00 PM", title: "The Stress-Metabolism Connection", desc: "Turn stress from a fat-storing enemy into a fat-burning ally." },
+                    { time: "4:00 PM", title: "The Secret to Thriving in Midlife", desc: "A powerful, eye-opening revelation that will shift the way you think about your health forever." },
+                  ].map((session, idx) => (
+                    <div key={idx} className="flex gap-4">
+                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">{session.time}</div>
+                      <div className="flex-1">
+                        <h5 className="font-bold text-foreground mb-1">{session.title}</h5>
+                        <p className="text-sm text-muted-foreground">{session.desc}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>The Midlife Eating Blueprint:</strong> How to eat for fat-burning & energy.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        Understanding Bioidentical Hormones & Natural Approaches and which is right for you.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>The Hormones of Metabolism:</strong> Train smarter, not harder, for strength, fat-burning and longevity.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>The Stress-Metabolism Connection:</strong> Turn stress from a fat-storing enemy into a fat-burning ally.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                      <Check className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                        <strong>The Secret to Thriving in Midlife:</strong> A powerful, eye-opening revelation that will shift the way you think about your health forever.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t-2 border-gray-100">
-                    <div className="flex gap-4">
-                      <Coffee className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                      <p className="text-base text-muted-foreground italic">
-                        Includes lunch break & Q&A session
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
