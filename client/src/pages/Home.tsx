@@ -281,132 +281,85 @@ export default function Home() {
       </section>
 
       {/* Transformation Story Section */}
-      <section className="py-20 bg-white border-y border-gray-100">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
         <div className="container">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Real Women, Real Transformations
-              </h3>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Meet Sarah, who went from exhausted and frustrated to energized and thriving in just 90 days.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              {/* Before/After Story */}
-              <div className="space-y-6">
-                <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
-                      <span className="text-2xl">😔</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-foreground">Before</h4>
-                      <p className="text-sm text-muted-foreground">January 2024</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Waking up exhausted after 8 hours of sleep</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Gained 15kg despite eating "healthy"</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Brain fog making work impossible</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Hot flashes 10+ times per day</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>Reaching for wine every night to cope</span>
-                    </li>
-                  </ul>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              {/* Left Side - Typography & Copy */}
+              <div className="space-y-8 pr-0 md:pr-8">
+                <div>
+                  <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">
+                    REAL WOMEN, REAL TRANSFORMATIONS:
+                  </p>
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
+                    <span className="font-normal">Sarah is a </span>
+                    <span className="font-bold">perimenopausal woman</span>
+                    <span className="font-normal"> reclaiming her </span>
+                    <span className="italic text-primary">Energy, Vitality & Confidence</span>
+                    <span className="font-normal">.</span>
+                  </h3>
                 </div>
-
-                <div className="bg-primary/5 rounded-2xl p-6 border-2 border-primary/30">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="text-2xl">🎉</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-foreground">After 90 Days</h4>
-                      <p className="text-sm text-muted-foreground">April 2024</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Waking up naturally at 6am</strong> with energy to spare</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Lost 12kg</strong> and fitting into her favorite jeans again</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Mental clarity restored</strong> - crushing it at work</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Hot flashes completely gone</strong></span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span><strong>Feels confident and sexy</strong> with her partner again</span>
-                    </li>
-                  </ul>
+                
+                <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
+                  <p>
+                    She was exhausted, frustrated, and felt like her body had completely betrayed her. Despite doing everything "right," the weight kept creeping on, the brain fog made work impossible, and hot flashes disrupted her life 10+ times a day.
+                  </p>
+                  
+                  <p>
+                    She was ready to transform her health and get back to feeling like herself—energized, confident, and in control of her body again.
+                  </p>
+                  
+                  <p>
+                    She discovered Victoria's hormone-balancing approach and everything changed. Within 90 days, she lost 12kg, eliminated hot flashes completely, and woke up with natural energy for the first time in years.
+                  </p>
+                  
+                  <p className="font-semibold text-gray-900">
+                    She's taking back control of her health and paving the way for other women in midlife to thrive.
+                  </p>
                 </div>
               </div>
 
-              {/* Testimonial Quote */}
-              <div className="space-y-6">
-                <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-primary/20">
-                  <div className="flex gap-1 mb-4">
-                    {[1,2,3,4,5].map((star) => (
-                      <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                    ))}
+              {/* Right Side - Image Collage */}
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  {/* Top Left - Large Image */}
+                  <div className="col-span-2 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/water-background.jpg" 
+                      alt="Woman enjoying life" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                    "I honestly thought this was just how midlife was supposed to feel. I'd tried everything - different diets, supplements, even hormone therapy - but nothing worked. Victoria's approach was different. She helped me understand what was actually happening in my body and gave me a clear, step-by-step plan. Within weeks, I had more energy than I'd had in years. Within 3 months, I got my life back. I feel like ME again."
-                  </blockquote>
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-2xl font-bold text-primary">
-                      S
-                    </div>
-                    <div>
-                      <p className="font-bold text-foreground">Sarah M.</p>
-                      <p className="text-sm text-muted-foreground">Age 48, Melbourne</p>
+                  
+                  {/* Bottom Left - Portrait */}
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="w-24 h-24 rounded-full bg-white shadow-lg mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-4xl font-bold text-primary">S</span>
+                      </div>
+                      <p className="font-bold text-gray-900 text-lg">Sarah M.</p>
+                      <p className="text-sm text-gray-600">Age 48, Melbourne</p>
+                      <div className="flex gap-1 justify-center mt-3">
+                        {[1,2,3,4,5].map((star) => (
+                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div className="bg-primary/10 rounded-2xl p-6 border-2 border-primary/20">
-                  <h4 className="font-bold text-xl text-foreground mb-3">Imagine Your Life in 90 Days:</h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">→</span>
-                      <span>Waking up refreshed and energized every morning</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">→</span>
-                      <span>Slipping into clothes that haven't fit in years</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">→</span>
-                      <span>Having the mental clarity to excel at work and life</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">→</span>
-                      <span>Feeling confident, sexy, and like yourself again</span>
-                    </li>
-                  </ul>
+                  
+                  {/* Bottom Right - Quote Card */}
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-white p-6 flex flex-col justify-center">
+                    <blockquote className="text-sm md:text-base text-gray-700 leading-relaxed italic">
+                      "Within 3 months, I got my life back. I feel like ME again."
+                    </blockquote>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <div className="flex gap-1">
+                        {[1,2,3,4,5].map((star) => (
+                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
