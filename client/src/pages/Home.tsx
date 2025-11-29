@@ -207,7 +207,7 @@ export default function Home() {
           style={{
             backgroundImage: 'url(/victoria-host.png)',
             backgroundSize: 'contain',
-            backgroundPosition: '82.5% center',
+            backgroundPosition: '17.5% center',
             backgroundRepeat: 'no-repeat',
           }}
         />
@@ -226,7 +226,10 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="grid md:grid-cols-5 gap-8 items-center">
-            {/* Left Side - Content (60%) */}
+            {/* Left Side - Empty space for Victoria in background (40%) */}
+            <div className="hidden md:block md:col-span-2" />
+            
+            {/* Right Side - Content (60%) */}
             <div className="md:col-span-3 space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
               <div>
                 <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-lg">
@@ -264,9 +267,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
-            {/* Right Side - Empty space for Victoria in background (40%) */}
-            <div className="hidden md:block md:col-span-2" />
           </div>
         </div>
       </section>
