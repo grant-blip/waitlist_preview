@@ -327,13 +327,8 @@ export default function Home() {
 
           <div className="max-w-5xl mx-auto space-y-12">
             {/* Day 1 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-100">
-              <img 
-                src="/day1-agenda.jpg" 
-                alt="Day 1: Reboot & Reset"
-                className="w-full h-auto"
-              />
-              <div className="p-8">
+            <Card className="border-2">
+              <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6 pb-6 border-b-2 border-gray-100">
                   <Calendar className="w-8 h-8 text-primary flex-shrink-0" />
                   <div>
@@ -407,17 +402,12 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
 
             {/* Day 2 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-100">
-              <img 
-                src="/day2-agenda.jpg" 
-                alt="Day 2: Build & Sustain Your Transformation"
-                className="w-full h-auto"
-              />
-              <div className="p-8">
+            <Card className="border-2">
+              <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6 pb-6 border-b-2 border-gray-100">
                   <Calendar className="w-8 h-8 text-primary flex-shrink-0" />
                   <div>
@@ -491,8 +481,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
