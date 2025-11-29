@@ -646,20 +646,31 @@ export default function Home() {
       </section>
 
       {/* Event Agenda Section */}
-      <section className="py-20 bg-white">
-        <div className="container">
+      <section className="relative py-20 overflow-hidden">
+        {/* Fixed Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: 'url(/water-background.jpg)',
+            backgroundAttachment: 'fixed',
+          }}
+        />
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-black/40" />
+        
+        <div className="container relative z-10">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Your 2-Day Transformation Journey
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white/90 max-w-2xl mx-auto">
               A carefully designed curriculum that takes you from exhausted to energized in just 2 days.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Day 1 */}
-            <Card className="border-2">
+            <Card className="border-2 bg-white/95 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
@@ -693,7 +704,7 @@ export default function Home() {
             </Card>
 
             {/* Day 2 */}
-            <Card className="border-2">
+            <Card className="border-2 bg-white/95 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
