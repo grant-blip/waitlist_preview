@@ -190,53 +190,63 @@ export default function Home() {
       </section>
 
       {/* Meet Your Host Section */}
-      <section className="py-20 bg-white border-t">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-primary/10 border-y border-primary/20 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        
+        <div className="container relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="order-2 md:order-1">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
-                  <img 
-                    src="/victoria-hero.jpg" 
-                    alt="Victoria O'Sullivan"
-                    className="w-full h-full object-cover object-[35%_20%]"
-                  />
+                <div className="relative">
+                  {/* Image with shadow and border */}
+                  <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-white shadow-2xl border-4 border-white">
+                    <img 
+                      src="/victoria-host.png" 
+                      alt="Victoria O'Sullivan"
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
+                  {/* Decorative accent */}
+                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full opacity-20 blur-2xl"></div>
                 </div>
               </div>
               <div className="order-1 md:order-2 space-y-6">
                 <div>
-                  <p className="text-sm uppercase tracking-wider text-primary font-semibold mb-2">Meet Your Host</p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Victoria O'Sullivan</h3>
-                  <p className="text-lg text-muted-foreground font-medium">
+                  <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-lg">
+                    Meet Your Host
+                  </span>
+                  <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 leading-tight">
+                    Victoria O'Sullivan
+                  </h3>
+                  <p className="text-xl text-primary font-semibold">
                     Functional Medicine Practitioner & Women's Health Specialist
                   </p>
                 </div>
                 
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    With over 15 years of experience in functional medicine, Victoria O'Sullivan has dedicated her career to helping women navigate the complexities of perimenopause and menopause with grace and vitality.
+                <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                  <p className="font-medium">
+                    With over <strong className="text-primary">15 years of experience</strong> in functional medicine, Victoria O'Sullivan has dedicated her career to helping women navigate the complexities of perimenopause and menopause with grace and vitality.
                   </p>
                   <p>
-                    Her evidence-based approach combines cutting-edge research with practical, sustainable strategies that have transformed the lives of thousands of women worldwide.
-                  </p>
-                  <p>
-                    Victoria is a certified functional medicine practitioner, published researcher, and sought-after speaker on women's hormonal health and longevity.
+                    Her evidence-based approach combines cutting-edge research with practical, sustainable strategies that have transformed the lives of <strong className="text-primary">thousands of women worldwide</strong>.
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/30 text-accent-foreground rounded-full text-sm font-medium">
-                    <CheckCircle2 className="w-4 h-4" />
-                    15+ Years Experience
-                  </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/30 text-accent-foreground rounded-full text-sm font-medium">
-                    <CheckCircle2 className="w-4 h-4" />
-                    5,000+ Women Helped
-                  </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/30 text-accent-foreground rounded-full text-sm font-medium">
-                    <CheckCircle2 className="w-4 h-4" />
-                    Published Researcher
-                  </span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                  <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
+                    <div className="text-3xl font-bold text-primary mb-1">15+</div>
+                    <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+                  </div>
+                  <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
+                    <div className="text-3xl font-bold text-primary mb-1">5,000+</div>
+                    <div className="text-sm text-gray-600 font-medium">Women Helped</div>
+                  </div>
+                  <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
+                    <div className="text-3xl font-bold text-primary mb-1">100+</div>
+                    <div className="text-sm text-gray-600 font-medium">Published Articles</div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -38,3 +38,5 @@
 - [x] Move Victoria 50% back to the right in hero section
 - [x] Add urgency messaging to event date badge
 - [x] Optimize media logos section for mobile devices
+- [x] Redesign Meet Your Host section to be more visually punchy
+- [x] Replace Meet Your Host image with new Victoria photo
