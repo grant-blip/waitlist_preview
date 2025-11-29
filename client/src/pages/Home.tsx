@@ -285,19 +285,27 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[
-              { title: "Hormone Balance", icon: "🌸" },
-              { title: "Energy & Vitality", icon: "⚡" },
-              { title: "Metabolic Health", icon: "🔥" },
-              { title: "Gut Health", icon: "🌿" },
-              { title: "Sleep Quality", icon: "😴" },
-              { title: "Brain Health", icon: "🧠" },
-              { title: "Stress Management", icon: "🧘‍♀️" },
-              { title: "Nutrition", icon: "🥗" },
+              { title: "Hormone Balance", image: "/topic-thyroid.webp" },
+              { title: "Energy & Vitality", image: "/topic-fatigue.webp" },
+              { title: "Weight Management", image: "/topic-weight-loss.webp" },
+              { title: "Gut Health", image: "/topic-gut-issues.webp" },
+              { title: "Sleep Quality", image: "/topic-insomnia.webp" },
+              { title: "Women's Health", image: "/topic-womens-health.webp" },
+              { title: "Stress Management", image: "/topic-anxiety.webp" },
+              { title: "Auto-Immune", image: "/topic-autoimmune.webp" },
             ].map((topic, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow cursor-pointer border-2 hover:border-primary/50">
-                <CardContent className="p-6 text-center space-y-2">
-                  <div className="text-3xl">{topic.icon}</div>
-                  <p className="font-semibold text-sm">{topic.title}</p>
+              <Card key={index} className="hover:shadow-md transition-shadow cursor-pointer border-2 hover:border-primary/50 overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="aspect-video w-full overflow-hidden">
+                    <img 
+                      src={topic.image} 
+                      alt={topic.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <p className="font-semibold text-sm">{topic.title}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
