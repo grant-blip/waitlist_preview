@@ -272,43 +272,87 @@ export default function Home() {
       </section>
 
       {/* What You'll Learn Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What brings you to The Longevity Reset?
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+              What You'll Master in 2 Days
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get ready to transform your health with expert guidance on the topics that matter most to you.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              A comprehensive curriculum designed to give you the knowledge, tools, and strategies to reclaim your energy, balance your hormones, and thrive in midlife.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              { title: "Hormone Balance", image: "/topic-thyroid.webp" },
-              { title: "Energy & Vitality", image: "/topic-fatigue.webp" },
-              { title: "Weight Management", image: "/topic-weight-loss.webp" },
-              { title: "Gut Health", image: "/topic-gut-issues.webp" },
-              { title: "Sleep Quality", image: "/topic-insomnia.webp" },
-              { title: "Women's Health", image: "/topic-womens-health.webp" },
-              { title: "Stress Management", image: "/topic-anxiety.webp" },
-              { title: "Auto-Immune", image: "/topic-autoimmune.webp" },
-            ].map((topic, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow cursor-pointer border-2 hover:border-primary/50 overflow-hidden">
+              {
+                icon: <Flame className="w-8 h-8" />,
+                title: "Decode Your Hormones & Metabolism",
+                description: "Understand how your hormones control fat loss, energy, mood, and weight—and learn exactly how to optimize them for effortless results.",
+                image: "/topic-thyroid.webp"
+              },
+              {
+                icon: <Award className="w-8 h-8" />,
+                title: "The Midlife Eating Blueprint",
+                description: "Discover the exact eating strategy that turns your body into a fat-burning machine while boosting energy and mental clarity.",
+                image: "/topic-weight-loss.webp"
+              },
+              {
+                icon: <BookOpen className="w-8 h-8" />,
+                title: "Gut Health & Hormone Balance",
+                description: "Learn why gut health is the foundation for weight loss, clear skin, balanced hormones, and overall vitality in midlife.",
+                image: "/topic-gut-issues.webp"
+              },
+              {
+                icon: <Star className="w-8 h-8" />,
+                title: "The Female Brain in Midlife",
+                description: "Understand how hormonal changes affect your memory, mood, focus, and decision-making—and what you can do to protect your brain.",
+                image: "/topic-anxiety.webp"
+              },
+              {
+                icon: <Clock className="w-8 h-8" />,
+                title: "Break Free from Cravings",
+                description: "Discover the science behind why you reach for chocolate, wine, and snacks under stress—and the proven strategies to break free.",
+                image: "/topic-fatigue.webp"
+              },
+              {
+                icon: <Gift className="w-8 h-8" />,
+                title: "Stress-Metabolism Connection",
+                description: "Learn how to transform stress from a fat-storing enemy into a fat-burning ally with simple, science-backed techniques.",
+                image: "/topic-insomnia.webp"
+              },
+            ].map((module, index) => (
+              <Card key={index} className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
                 <CardContent className="p-0">
-                  <div className="aspect-video w-full overflow-hidden">
+                  <div className="relative aspect-video w-full overflow-hidden">
                     <img 
-                      src={topic.image} 
-                      alt={topic.title}
-                      className="w-full h-full object-cover"
+                      src={module.image} 
+                      alt={module.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+                      {module.icon}
+                    </div>
                   </div>
-                  <div className="p-4 text-center">
-                    <p className="font-semibold text-sm">{topic.title}</p>
+                  <div className="p-6">
+                    <h4 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{module.title}</h4>
+                    <p className="text-muted-foreground leading-relaxed">{module.description}</p>
                   </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="inline-block px-8 py-4 bg-primary/10 rounded-2xl border-2 border-primary/20">
+              <p className="text-lg md:text-xl font-semibold text-foreground mb-2">
+                Plus: Bioidentical Hormones, Metabolism Training & The Secret to Thriving in Midlife
+              </p>
+              <p className="text-muted-foreground">
+                Everything you need to transform your health and reclaim your vitality—all in one comprehensive event.
+              </p>
+            </div>
           </div>
         </div>
       </section>
