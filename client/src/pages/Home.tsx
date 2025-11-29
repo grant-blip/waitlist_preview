@@ -283,10 +283,8 @@ export default function Home() {
       {/* Transformation Story Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
         <div className="container">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-              {/* Left Side - Typography & Copy */}
-              <div className="space-y-8 pr-0 md:pr-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
                 <div>
                   <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">
                     REAL WOMEN, REAL TRANSFORMATIONS:
@@ -317,52 +315,28 @@ export default function Home() {
                     She's taking back control of her health and paving the way for other women in midlife to thrive.
                   </p>
                 </div>
-              </div>
-
-              {/* Right Side - Image Collage */}
-              <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Top Left - Large Image */}
-                  <div className="col-span-2 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                    <img 
-                      src="/water-background.jpg" 
-                      alt="Woman enjoying life" 
-                      className="w-full h-full object-cover"
-                    />
+                
+                {/* Testimonial Quote */}
+                <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-primary/10 max-w-2xl">
+                  <div className="flex gap-1 mb-4">
+                    {[1,2,3,4,5].map((star) => (
+                      <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
                   </div>
-                  
-                  {/* Bottom Left - Portrait */}
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="w-24 h-24 rounded-full bg-white shadow-lg mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-4xl font-bold text-primary">S</span>
-                      </div>
-                      <p className="font-bold text-gray-900 text-lg">Sarah M.</p>
-                      <p className="text-sm text-gray-600">Age 48, Melbourne</p>
-                      <div className="flex gap-1 justify-center mt-3">
-                        {[1,2,3,4,5].map((star) => (
-                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
+                  <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6">
+                    "Within 3 months, I got my life back. I feel like ME again."
+                  </blockquote>
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-xl font-bold text-primary">
+                      S
                     </div>
-                  </div>
-                  
-                  {/* Bottom Right - Quote Card */}
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-white p-6 flex flex-col justify-center">
-                    <blockquote className="text-sm md:text-base text-gray-700 leading-relaxed italic">
-                      "Within 3 months, I got my life back. I feel like ME again."
-                    </blockquote>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <div className="flex gap-1">
-                        {[1,2,3,4,5].map((star) => (
-                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
+                    <div>
+                      <p className="font-bold text-gray-900">Sarah M.</p>
+                      <p className="text-sm text-gray-600">Age 48, Melbourne</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -1403,22 +1377,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 bg-gray-50 border-t">
-        <div className="container max-w-3xl text-center">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-            Ready to Transform Your Health?
-          </h3>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Join the waitlist today and be the first to secure your spot when registration opens for The Longevity Reset. Plus, get instant access to $361 worth of bonus materials.
-          </p>
-          <Button 
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-            onClick={scrollToWaitlist}
-          >
-            Join the Waitlist Now
-          </Button>
+      {/* Newsletter/Community CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-primary/5 border-t relative overflow-hidden">
+        <div className="container">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              {/* Left Side - Device Mockup */}
+              <div className="relative">
+                <img 
+                  src="/longevity-reset-mockup.png" 
+                  alt="The Longevity Reset on multiple devices" 
+                  className="w-full h-auto"
+                />
+              </div>
+              
+              {/* Right Side - CTA Copy & Form */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
+                    <span className="font-normal">join </span>
+                    <span className="font-bold">17,000+ women</span>
+                    <span className="font-normal"> to get all the </span>
+                    <span className="font-normal">resources + tools you need to </span>
+                    <span className="italic text-primary">thrive in midlife</span>
+                  </h3>
+                  
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                    Learn the exact strategies to balance your hormones, boost your energy, and reclaim your vitality. From understanding your metabolism to mastering the midlife eating blueprint, Victoria O'Sullivan covers it all in this transformative 2-day event!
+                  </p>
+                  
+                  <p className="text-base md:text-lg font-semibold text-gray-900">
+                    Get on the waitlist for priority access to our best content, exclusive bonuses, and VIP offers.
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-primary/20">
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <input 
+                      type="text" 
+                      placeholder="Name" 
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                    />
+                    <input 
+                      type="email" 
+                      placeholder="Email" 
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                    />
+                  </div>
+                  <Button 
+                    size="lg"
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
+                    onClick={scrollToWaitlist}
+                  >
+                    Join The Waitlist
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
