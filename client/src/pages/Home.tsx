@@ -196,64 +196,77 @@ export default function Home() {
       </section>
 
       {/* Meet Your Host Section */}
-      <section className="relative min-h-[600px] md:min-h-[700px] bg-gradient-to-br from-primary/5 via-white to-primary/10 border-y border-primary/20 overflow-hidden">
+      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 border-y border-primary/20">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         
-        <div className="relative z-10 h-full">
-          <div className="grid md:grid-cols-5 h-full">
-            {/* Image Side - 2 columns */}
-            <div className="md:col-span-2 relative h-[400px] md:h-full">
-              <div className="absolute inset-0">
-                <img 
-                  src="/victoria-host.png" 
-                  alt="Victoria O'Sullivan"
-                  className="w-full h-full object-cover object-center"
-                />
+        {/* Background Image - Desktop */}
+        <div 
+          className="hidden md:block absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(/victoria-host.png)',
+            backgroundSize: 'contain',
+            backgroundPosition: '82.5% center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        
+        {/* Background Image - Mobile */}
+        <div 
+          className="md:hidden absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(/victoria-host.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 30%',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/85 to-white/90" />
+        </div>
+        
+        <div className="container relative z-10">
+          <div className="grid md:grid-cols-5 gap-8 items-center">
+            {/* Left Side - Content (60%) */}
+            <div className="md:col-span-3 space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
+              <div>
+                <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-lg">
+                  Meet Your Host
+                </span>
+                <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 leading-tight">
+                  Victoria O'Sullivan
+                </h3>
+                <p className="text-base md:text-lg lg:text-xl text-primary font-semibold">
+                  Functional Medicine Practitioner & Women's Health Specialist
+                </p>
+              </div>
+              
+              <div className="space-y-3 md:space-y-4 text-gray-700 leading-relaxed text-base md:text-lg">
+                <p className="font-medium">
+                  With over <strong className="text-primary">15 years of experience</strong> in functional medicine, Victoria O'Sullivan has dedicated her career to helping women navigate the complexities of perimenopause and menopause with grace and vitality.
+                </p>
+                <p>
+                  Her evidence-based approach combines cutting-edge research with practical, sustainable strategies that have transformed the lives of <strong className="text-primary">thousands of women worldwide</strong>.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2 md:pt-4">
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">15+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Years Experience</div>
+                </div>
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">17K+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Women Helped</div>
+                </div>
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">50+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Media Features</div>
+                </div>
               </div>
             </div>
             
-            {/* Content Side - 3 columns */}
-            <div className="md:col-span-3 flex items-center py-12 md:py-20 px-6 md:px-12 lg:px-20">
-              <div className="max-w-2xl space-y-6">
-                <div>
-                  <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-lg">
-                    Meet Your Host
-                  </span>
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 leading-tight">
-                    Victoria O'Sullivan
-                  </h3>
-                  <p className="text-xl md:text-2xl text-primary font-semibold">
-                    Functional Medicine Practitioner & Women's Health Specialist
-                  </p>
-                </div>
-                
-                <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
-                  <p className="font-medium">
-                    With over <strong className="text-primary">15 years of experience</strong> in functional medicine, Victoria O'Sullivan has dedicated her career to helping women navigate the complexities of perimenopause and menopause with grace and vitality.
-                  </p>
-                  <p>
-                    Her evidence-based approach combines cutting-edge research with practical, sustainable strategies that have transformed the lives of <strong className="text-primary">thousands of women worldwide</strong>.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-3 gap-4 pt-4">
-                  <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">15+</div>
-                    <div className="text-xs md:text-sm text-gray-600 font-medium">Years Experience</div>
-                  </div>
-                  <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">17K+</div>
-                    <div className="text-xs md:text-sm text-gray-600 font-medium">Women Helped</div>
-                  </div>
-                  <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">50+</div>
-                    <div className="text-xs md:text-sm text-gray-600 font-medium">Media Features</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Right Side - Empty space for Victoria in background (40%) */}
+            <div className="hidden md:block md:col-span-2" />
           </div>
         </div>
       </section>
