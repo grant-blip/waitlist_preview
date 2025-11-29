@@ -18,3 +18,4 @@
 - [x] Adjust hero section layout to showcase Victoria on left with text on right
 - [x] Redesign hero with full background image and text overlay on right
 - [x] Update hero background with VOS.jpg image
+- [x] Optimize hero section and layout for mobile devices

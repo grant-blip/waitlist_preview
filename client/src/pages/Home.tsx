@@ -52,18 +52,33 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section 
-        className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden"
-        style={{
-          backgroundImage: 'url(/victoria-hero.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center right',
-        }}
-      >
+      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center overflow-hidden">
+        {/* Background Image - Desktop */}
+        <div 
+          className="hidden md:block absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(/victoria-hero.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center right',
+          }}
+        />
+        
+        {/* Background Image - Mobile */}
+        <div 
+          className="md:hidden absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(/victoria-hero.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+          }}
+        >
+          <div className="absolute inset-0 bg-white/75" />
+        </div>
+        
         <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left Side - Content Overlay */}
-            <div className="space-y-6 py-12 px-6 md:px-8">
+            <div className="space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
               {/* Attention Badge */}
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground rounded-full text-sm font-medium shadow-sm">
@@ -73,14 +88,14 @@ export default function Home() {
               </div>
 
               {/* Main Headline */}
-              <div className="space-y-4">
-                <p className="text-sm uppercase tracking-wider text-gray-700 font-semibold">
+              <div className="space-y-3 md:space-y-4">
+                <p className="text-xs md:text-sm uppercase tracking-wider text-gray-700 font-semibold">
                   Attention All Perimenopausal and Menopausal Women
                 </p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
                 </h2>
-                <p className="text-lg md:text-xl text-gray-700">
+                <p className="text-base md:text-lg lg:text-xl text-gray-700">
                   Discover the proven strategies to reclaim your energy, balance your hormones, and feel like yourself again.
                 </p>
               </div>
@@ -88,7 +103,7 @@ export default function Home() {
               {/* CTA Button */}
               <Button 
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+                className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
                 onClick={scrollToWaitlist}
               >
                 Join the Waitlist Now
