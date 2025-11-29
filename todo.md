@@ -36,3 +36,5 @@
 - [x] Replace hero background image with new Victoria photo
 - [x] Adjust hero background positioning to move Victoria closer to center
 - [x] Move Victoria 50% back to the right in hero section
+- [x] Add urgency messaging to event date badge
+- [x] Optimize media logos section for mobile devices

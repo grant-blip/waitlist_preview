@@ -137,7 +137,7 @@ export default function Home() {
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground rounded-full text-sm font-medium shadow-sm">
                   <Calendar className="w-4 h-4" />
-                  Virtual Event: May 17 & 18th, 2025 @ 10am - 5pm (+ Q&A)
+                  Virtual Event: May 17 & 18th, 2025 @ 10am - 5pm (+ Q&A) • Limited to 100 Attendees
                 </span>
               </div>
 
@@ -184,7 +184,7 @@ export default function Home() {
           <img 
             src="/media-logos.jpg" 
             alt="As featured in major media outlets"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-contain max-h-24 md:max-h-32"
           />
         </div>
       </section>
