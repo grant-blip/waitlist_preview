@@ -105,7 +105,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center overflow-hidden">
+      <section className="relative min-h-[350px] md:min-h-[490px] flex items-center overflow-hidden">
         {/* Background Image - Desktop */}
         <div 
           className="hidden md:block absolute inset-0 z-0"
