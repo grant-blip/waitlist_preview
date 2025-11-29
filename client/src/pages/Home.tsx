@@ -187,6 +187,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sales Video Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container max-w-5xl">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Watch: Why The Longevity Reset Is Different
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Discover the science-backed approach that's helping thousands of women reclaim their energy, metabolism, and confidence in midlife.
+            </p>
+          </div>
+          
+          <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+            {/* Video Placeholder */}
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5">
+              <div className="text-center space-y-4">
+                <div className="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center shadow-lg">
+                  <Video className="w-10 h-10 text-white" />
+                </div>
+                <p className="text-lg font-semibold text-gray-700">Sales Video Coming Soon</p>
+                <p className="text-sm text-gray-500">16:9 aspect ratio placeholder</p>
+              </div>
+            </div>
+            {/* When you have the video, replace the placeholder div above with:
+            <iframe 
+              className="absolute inset-0 w-full h-full"
+              src="YOUR_VIDEO_URL_HERE"
+              title="The Longevity Reset Sales Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            */}
+          </div>
+        </div>
+      </section>
+
       {/* Featured In - Media Logos */}
       <section className="py-12 bg-primary/10 border-y border-primary/20">
         <div className="container">
@@ -253,11 +289,14 @@ export default function Home() {
               </div>
               
               <div className="space-y-3 md:space-y-4 text-gray-700 leading-relaxed text-base md:text-lg">
+                <p className="font-medium italic text-gray-800 border-l-4 border-primary pl-4 py-2 bg-primary/5">
+                  "I've been exactly where you are. At 42, I was exhausted, gaining weight despite doing everything 'right,' and feeling like a stranger in my own body. My doctor dismissed my concerns as 'just stress.' That's when I knew something had to change."
+                </p>
                 <p className="font-medium">
-                  With over <strong className="text-primary">25 years of experience</strong> in functional medicine, Victoria O'Sullivan has dedicated her career to helping women navigate the complexities of perimenopause and menopause with grace and vitality.
+                  With over <strong className="text-primary">25 years of experience</strong> in functional medicine, Victoria O'Sullivan has dedicated her career to helping women navigate the complexities of perimenopause and menopause with grace and vitality—because she's lived it herself.
                 </p>
                 <p>
-                  Her evidence-based approach combines cutting-edge research with practical, sustainable strategies that have transformed the lives of <strong className="text-primary">thousands of women worldwide</strong>.
+                  Her evidence-based approach combines cutting-edge research with practical, sustainable strategies that have transformed the lives of <strong className="text-primary">17,000+ women worldwide</strong>. Victoria doesn't just teach hormone balance—she embodies it.
                 </p>
               </div>
 
@@ -414,8 +453,130 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Testimonials Section - Moved here for optimal conversion */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              See Real Transformations
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Watch women share their personal journeys and the life-changing results they've achieved with Victoria's approach.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Video Testimonial 1 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"I Got My Life Back"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Lost 12kg, eliminated hot flashes, sleeping 8 hours/night—watch Sarah's complete transformation.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Sarah M., Age 48</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Testimonial 2 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"No More Hot Flashes!"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Balanced hormones naturally, regained confidence, off antidepressants—Jennifer's inspiring journey.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Jennifer K., Age 52</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Testimonial 3 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"Balanced & Thriving"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Restored mental clarity, lost 15kg, energy like her 30s—see Michelle's remarkable results.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Michelle R., Age 55</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+              onClick={scrollToWaitlist}
+            >
+              Ready to Write Your Own Success Story?
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Tiers Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -481,13 +642,19 @@ export default function Home() {
                 </div>
 
                 <CardContent className="p-8">
+                  {/* Early Bird Banner */}
+                  <div className="-mt-8 -mx-8 mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 p-3 text-center">
+                    <p className="text-sm font-bold text-gray-900">🔥 EARLY BIRD SPECIAL: First 30 get VIP for $177 (save $20!)</p>
+                  </div>
+
                   <div className="text-center mb-6">
                     <h4 className="text-2xl font-bold text-foreground mb-2">VIP Experience</h4>
-                    <div className="flex items-baseline justify-center gap-2 mb-2">
-                      <span className="text-5xl font-bold text-primary">$197</span>
+                    <div className="flex items-baseline justify-center gap-3 mb-2">
+                      <span className="text-3xl font-bold text-gray-400 line-through">$197</span>
+                      <span className="text-5xl font-bold text-primary">$177</span>
                     </div>
-                    <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-4">
-                      <span className="text-sm font-bold text-primary">Save $164 in bonuses!</span>
+                    <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-2">
+                      <span className="text-sm font-bold text-primary">Early Bird Price - Limited Time!</span>
                     </div>
                     <p className="text-sm text-muted-foreground">Everything in General + $361 in exclusive bonuses</p>
                   </div>
@@ -499,29 +666,44 @@ export default function Home() {
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700"><strong>Complete Hormone Balancing Guide</strong> ($97 value)</span>
+                      <div>
+                        <span className="text-gray-900 font-bold">Complete Hormone Balancing Guide</span>
+                        <p className="text-sm text-gray-600 italic">Know exactly which hormones need attention and how to fix them naturally</p>
+                      </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700"><strong>14-Day Meal Plan & Recipes</strong> ($67 value)</span>
+                      <div>
+                        <span className="text-gray-900 font-bold">14-Day Meal Plan & Recipes</span>
+                        <p className="text-sm text-gray-600 italic">No more guessing what to eat—delicious meals that balance hormones & burn fat</p>
+                      </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700"><strong>Personalized Protocol Template</strong> ($147 value)</span>
+                      <div>
+                        <span className="text-gray-900 font-bold">Personalized Protocol Template</span>
+                        <p className="text-sm text-gray-600 italic">Your custom roadmap to implement everything you learn immediately</p>
+                      </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700"><strong>Downloadable Workbooks & Trackers</strong> ($50 value)</span>
+                      <div>
+                        <span className="text-gray-900 font-bold">Workbooks & Progress Trackers</span>
+                        <p className="text-sm text-gray-600 italic">See your transformation unfold with tools that keep you accountable</p>
+                      </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Star className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700"><strong>Priority Q&A access</strong> (your questions answered first)</span>
+                      <div>
+                        <span className="text-gray-900 font-bold">Priority Q&A Access</span>
+                        <p className="text-sm text-gray-600 italic">Get your specific questions answered first—no waiting, no wondering</p>
+                      </div>
                     </div>
                   </div>
 
                   <div className="mb-6 p-4 bg-primary/10 rounded-xl border-2 border-primary/30 text-center">
                     <p className="text-sm font-bold text-foreground">Total Value: $558</p>
-                    <p className="text-xs text-muted-foreground">You Pay Just $197</p>
+                    <p className="text-xs text-muted-foreground">Early Bird: Just $177 (Regular $197)</p>
                   </div>
 
                   <Button 
@@ -1013,6 +1195,39 @@ export default function Home() {
                   />
                 </div>
 
+                {/* Tier Selection */}
+                <div className="space-y-3">
+                  <Label className="text-base font-semibold">Which tier interests you?</Label>
+                  <div className="space-y-3">
+                    <label className="flex items-start gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-primary transition-all">
+                      <input type="radio" name="tier" value="general" className="mt-1" defaultChecked />
+                      <div className="flex-1">
+                        <div className="font-bold text-gray-900">General Admission - $97</div>
+                        <div className="text-sm text-gray-600">Full 2-day event access + recordings</div>
+                      </div>
+                    </label>
+                    <label className="flex items-start gap-3 p-4 border-2 border-primary/50 bg-primary/5 rounded-lg cursor-pointer hover:border-primary transition-all">
+                      <input type="radio" name="tier" value="vip" className="mt-1" />
+                      <div className="flex-1">
+                        <div className="font-bold text-primary">VIP Experience - $177 (Early Bird!)</div>
+                        <div className="text-sm text-gray-600">Everything + $361 in exclusive bonuses</div>
+                        <div className="text-xs text-primary font-semibold mt-1">⭐ MOST POPULAR - Save $20!</div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Guarantee */}
+                <div className="p-4 bg-green-50 border-2 border-green-200 rounded-lg">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-bold text-green-900 mb-1">100% Satisfaction Guarantee</p>
+                      <p className="text-sm text-green-800">If you don't feel this event was worth 10X what you paid, we'll refund you in full—no questions asked. You have nothing to lose and your health to gain.</p>
+                    </div>
+                  </div>
+                </div>
+
                 <Button 
                   type="submit"
                   size="lg"
@@ -1028,118 +1243,6 @@ export default function Home() {
               </form>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      {/* Video Testimonials Section */}
-      <section className="py-20 bg-white border-t">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              See Real Transformations
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Watch women share their personal journeys and the life-changing results they've achieved with Victoria's approach.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Video Testimonial 1 */}
-            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
-                    alt="Video testimonial"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-2">"I Got My Life Back"</h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Watch how Sarah transformed her energy levels and lost 12kg in just 90 days.
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="flex gap-1 text-yellow-500">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-muted-foreground">Sarah M., Age 48</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Video Testimonial 2 */}
-            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
-                  <img 
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
-                    alt="Video testimonial"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-2">"No More Hot Flashes!"</h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Discover how Jennifer eliminated her symptoms and regained her confidence naturally.
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="flex gap-1 text-yellow-500">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-muted-foreground">Jennifer K., Age 52</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Video Testimonial 3 */}
-            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
-                  <img 
-                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80"
-                    alt="Video testimonial"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-2">"Balanced & Thriving"</h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    See how Michelle balanced her hormones and restored mental clarity in midlife.
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="flex gap-1 text-yellow-500">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-muted-foreground">Michelle R., Age 55</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
