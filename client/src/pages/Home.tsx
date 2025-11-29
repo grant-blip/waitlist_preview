@@ -106,19 +106,21 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-[500px] md:min-h-[700px] flex items-center overflow-hidden bg-white">
+        {/* Mobile: Image with text overlay */}
+        <div className="md:hidden absolute inset-0 z-0">
+          <img 
+            src="/victoria-hero.jpg" 
+            alt="Victoria O'Sullivan"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/75 to-white/85" />
+        </div>
+        
+        {/* Desktop: 50/50 split */}
         <div className="w-full">
           <div className="grid md:grid-cols-2 gap-0 items-center min-h-[500px] md:min-h-[700px]">
-            {/* Left Side - Victoria Image (50%) */}
-            <div className="relative h-[400px] md:h-[700px] order-2 md:order-1">
-              <img 
-                src="/victoria-hero.jpg" 
-                alt="Victoria O'Sullivan"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-            
-            {/* Right Side - Content (50%) */}
-            <div className="space-y-4 md:space-y-6 py-8 md:py-12 px-6 md:px-12 order-1 md:order-2 bg-gray-50">
+            {/* Left Side - Content (50%) */}
+            <div className="relative z-10 space-y-4 md:space-y-6 py-8 md:py-12 px-6 md:px-12 bg-transparent md:bg-gray-50">
               {/* Attention Badge */}
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground rounded-full text-sm font-medium shadow-sm">
@@ -148,6 +150,15 @@ export default function Home() {
               >
                 Join the Waitlist Now
               </Button>
+            </div>
+            
+            {/* Right Side - Victoria Image (50%) - Desktop only */}
+            <div className="hidden md:block relative h-[700px]">
+              <img 
+                src="/victoria-hero.jpg" 
+                alt="Victoria O'Sullivan"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>
