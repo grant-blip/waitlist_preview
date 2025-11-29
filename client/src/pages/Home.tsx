@@ -179,7 +179,13 @@ export default function Home() {
       </section>
 
       {/* Featured In - Media Logos */}
-      <section className="py-8 bg-primary/10 border-y border-primary/20">
+      <section className="py-12 bg-primary/10 border-y border-primary/20">
+        <div className="container">
+          <div className="text-center mb-6">
+            <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Trusted By Leading Media</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">As Featured In</h3>
+          </div>
+        </div>
         <div className="w-full">
           <img 
             src="/media-logos.jpg" 
