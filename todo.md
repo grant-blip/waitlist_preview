@@ -33,3 +33,4 @@
 - [x] Remove trust badge from hero section completely
 - [x] Add Featured In media logos section after hero
 - [x] Expand media logos section to full page width
+- [x] Replace hero background image with new Victoria photo

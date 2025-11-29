@@ -110,7 +110,7 @@ export default function Home() {
         <div 
           className="hidden md:block absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/victoria-hero.jpg)',
+            backgroundImage: 'url(/victoria-hero-new.png)',
             backgroundSize: 'contain',
             backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
@@ -121,7 +121,7 @@ export default function Home() {
         <div 
           className="md:hidden absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/victoria-hero.jpg)',
+            backgroundImage: 'url(/victoria-hero-new.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center 30%',
           }}
