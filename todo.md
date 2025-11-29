@@ -31,3 +31,4 @@
 - [x] Add trust indicators/credentials near Victoria's image
 - [x] Move trust badge image to left side content area
 - [x] Remove trust badge from hero section completely
+- [x] Add Featured In media logos section after hero

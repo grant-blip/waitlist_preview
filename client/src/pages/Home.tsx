@@ -178,6 +178,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured In - Media Logos */}
+      <section className="py-8 bg-primary/10 border-y border-primary/20">
+        <div className="container">
+          <div className="flex justify-center">
+            <img 
+              src="/media-logos.jpg" 
+              alt="As featured in major media outlets"
+              className="w-full max-w-6xl h-auto object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Meet Your Host Section */}
       <section className="py-20 bg-white border-t">
         <div className="container">
