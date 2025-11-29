@@ -40,3 +40,14 @@
 - [x] Optimize media logos section for mobile devices
 - [x] Redesign Meet Your Host section to be more visually punchy
 - [x] Replace Meet Your Host image with new Victoria photo
+
+## Priority 1 Optimization Fixes (Marketing Audit)
+
+- [ ] Fix countdown timer - Set to count down to May 17, 2025 10:00 AM
+- [ ] Fix experience inconsistency - Change bio "15 years" to "over 25 years"
+- [ ] Delete "Transform Your Health in Just 2 Days" section (6 topic boxes - redundant with agenda)
+- [ ] Delete "How The Longevity Reset Works" section (4 steps - obvious/no value)
+- [ ] Delete "What Women Are Saying" section (3 testimonials - redundant)
+- [ ] Delete "See Real Transformations" section (video placeholders - non-functional)
+- [ ] Delete "Why The Longevity Reset is Different" section (6 boxes - generic filler)
+- [ ] Merge two FAQ sections into one (keep best 8-10 questions)
