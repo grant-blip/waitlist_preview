@@ -150,8 +150,14 @@ export default function Home() {
                   You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
                 </h2>
                 <p className="text-base md:text-lg lg:text-xl text-gray-700">
-                  Discover the proven strategies to reclaim your energy, balance your hormones, and feel like yourself again.
+                  <strong>Imagine waking up energized, fitting into your favorite jeans, and feeling confident and sexy again.</strong> Join 17,000+ women who've transformed their health with Victoria's proven hormone-balancing strategies.
                 </p>
+                
+                {/* Value Proposition Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border-2 border-primary/30 rounded-full">
+                  <Gift className="w-5 h-5 text-primary" />
+                  <span className="text-sm md:text-base font-bold text-foreground">FREE Priority Access + $361 in Bonuses</span>
+                </div>
               </div>
 
               {/* CTA Button */}
@@ -164,10 +170,18 @@ export default function Home() {
                   Join the Waitlist Now
                 </Button>
                 
-                {/* Social Proof Counter */}
-                <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <Flame className="w-4 h-4 text-orange-500" />
-                  <span className="font-medium">Join <span className="text-primary font-bold">247+</span> women already on the waitlist</span>
+                {/* Social Proof + Scarcity */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-sm text-gray-700">
+                    <Flame className="w-4 h-4 text-orange-500" />
+                    <span className="font-medium">Join <span className="text-primary font-bold">247+</span> women already on the waitlist</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex-1 bg-gray-200 rounded-full h-2 overflow-hidden">
+                      <div className="bg-primary h-full rounded-full" style={{width: '67%'}}></div>
+                    </div>
+                    <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">67 of 100 spots claimed</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -271,15 +285,149 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Transformation Story Section */}
+      <section className="py-20 bg-white border-y border-gray-100">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Real Women, Real Transformations
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Meet Sarah, who went from exhausted and frustrated to energized and thriving in just 90 days.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              {/* Before/After Story */}
+              <div className="space-y-6">
+                <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                      <span className="text-2xl">😔</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground">Before</h4>
+                      <p className="text-sm text-muted-foreground">January 2024</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Waking up exhausted after 8 hours of sleep</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Gained 15kg despite eating "healthy"</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Brain fog making work impossible</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Hot flashes 10+ times per day</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span>Reaching for wine every night to cope</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-primary/5 rounded-2xl p-6 border-2 border-primary/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                      <span className="text-2xl">🎉</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground">After 90 Days</h4>
+                      <p className="text-sm text-muted-foreground">April 2024</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Waking up naturally at 6am</strong> with energy to spare</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Lost 12kg</strong> and fitting into her favorite jeans again</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Mental clarity restored</strong> - crushing it at work</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Hot flashes completely gone</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Feels confident and sexy</strong> with her partner again</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Testimonial Quote */}
+              <div className="space-y-6">
+                <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-primary/20">
+                  <div className="flex gap-1 mb-4">
+                    {[1,2,3,4,5].map((star) => (
+                      <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                    "I honestly thought this was just how midlife was supposed to feel. I'd tried everything - different diets, supplements, even hormone therapy - but nothing worked. Victoria's approach was different. She helped me understand what was actually happening in my body and gave me a clear, step-by-step plan. Within weeks, I had more energy than I'd had in years. Within 3 months, I got my life back. I feel like ME again."
+                  </blockquote>
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-2xl font-bold text-primary">
+                      S
+                    </div>
+                    <div>
+                      <p className="font-bold text-foreground">Sarah M.</p>
+                      <p className="text-sm text-muted-foreground">Age 48, Melbourne</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-primary/10 rounded-2xl p-6 border-2 border-primary/20">
+                  <h4 className="font-bold text-xl text-foreground mb-3">Imagine Your Life in 90 Days:</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">→</span>
+                      <span>Waking up refreshed and energized every morning</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">→</span>
+                      <span>Slipping into clothes that haven't fit in years</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">→</span>
+                      <span>Having the mental clarity to excel at work and life</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">→</span>
+                      <span>Feeling confident, sexy, and like yourself again</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What You'll Learn Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              What You'll Master in 2 Days
+              Transform Your Health in Just 2 Days
             </h3>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              A comprehensive curriculum designed to give you the knowledge, tools, and strategies to reclaim your energy, balance your hormones, and thrive in midlife.
+              Stop feeling exhausted, stuck, and frustrated. Get the exact strategies to reclaim your energy, lose stubborn weight, and feel like yourself again—starting this weekend.
             </p>
           </div>
 
@@ -437,6 +585,119 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* What You'll Walk Away With Section */}
+      <section className="py-20 bg-white border-y border-gray-100">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                What You'll Walk Away With
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                This isn't just information—you'll leave with actionable tools, personalized protocols, and ongoing support to ensure lasting transformation.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Your Personalized Hormone-Balancing Protocol</h4>
+                      <p className="text-muted-foreground">A customized action plan based on your specific symptoms, goals, and lifestyle—not a one-size-fits-all approach.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Complete 14-Day Meal Plan & Recipes</h4>
+                      <p className="text-muted-foreground">Delicious, hormone-balancing meals with shopping lists and meal prep instructions—start implementing immediately.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Lifetime Access to All Recordings</h4>
+                      <p className="text-muted-foreground">Can't attend live? No problem. Watch and rewatch all sessions at your own pace, forever.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Access to Private Support Community</h4>
+                      <p className="text-muted-foreground">Join 17,000+ women in our private Facebook group for ongoing support, accountability, and encouragement.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Live Q&A Sessions with Victoria</h4>
+                      <p className="text-muted-foreground">Get YOUR specific questions answered during dedicated Q&A sessions—personalized guidance for your unique situation.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Downloadable Workbooks & Trackers</h4>
+                      <p className="text-muted-foreground">Track your progress, symptoms, and wins with our proven tracking tools—see your transformation unfold in real-time.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 text-center">
+              <div className="inline-block px-8 py-6 bg-primary/10 rounded-2xl border-2 border-primary/30">
+                <p className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                  Total Value: $361
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  <strong>Your Investment:</strong> FREE Priority Access When You Join the Waitlist Today
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -765,6 +1026,123 @@ export default function Home() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white border-y border-gray-100">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Frequently Asked Questions
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Everything you need to know about The Longevity Reset
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    What if I can't attend the live sessions?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    No problem at all! You'll get <strong>lifetime access to all recordings</strong>, so you can watch at your own pace, rewatch any session, and never miss a thing. Many of our most successful participants watch the recordings on their own schedule.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    Is this right for me if I'm already on HRT or bioidentical hormones?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Absolutely! We cover <strong>both natural and bioidentical hormone approaches</strong>, and you'll learn how to optimize whatever protocol you're currently on. Many women on HRT still struggle with weight, energy, and symptoms because they're missing the other critical pieces—which we'll address in depth.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    I've tried everything—diets, supplements, exercise. Why will this work when nothing else has?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Because this isn't another generic diet or supplement protocol. Victoria's approach is <strong>evidence-based and personalized</strong> to how YOUR body works in perimenopause and menopause. You'll learn exactly why previous approaches failed and get a customized strategy based on your hormones, metabolism, and lifestyle—not a one-size-fits-all plan.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    What's the time commitment? I have a busy schedule.
+                  </h4>
+                  <p className="text-muted-foreground">
+                    The live event runs <strong>10am-5pm on May 17-18</strong> (with lunch breaks and Q&A). But remember, you get lifetime access to recordings, so you can watch on your schedule. Plus, the strategies you'll learn are designed to fit into a busy life—not add more stress.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    Will I get personalized guidance, or is this just general information?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    You'll get <strong>both</strong>! The curriculum covers comprehensive strategies that work for all women in midlife, PLUS you'll have dedicated Q&A sessions with Victoria to ask YOUR specific questions. You'll also receive personalized protocols based on your symptoms and goals.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    What if I'm in a different time zone?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    The event is scheduled for <strong>Australian Eastern Time (AEST)</strong>, but with lifetime recording access, you can participate from anywhere in the world on your own schedule. Many international participants watch the recordings and submit questions via our private community.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    How is this different from other hormone or menopause programs?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Victoria's approach combines <strong>15+ years of clinical experience with cutting-edge research</strong> and has helped over 17,000 women. Unlike generic programs, you'll get evidence-based strategies tailored to midlife metabolism, ongoing support in our 17,000+ member community, and practical tools you can implement immediately—not just theory.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    What's included in the $361 worth of bonuses?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    When you join the waitlist, you'll receive: <strong>Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Lifetime Access to All Recordings ($147 value), Private Community Access ($50 value)</strong>, plus downloadable workbooks and tracking tools. All completely FREE when you secure your spot.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 text-center">
+              <div className="inline-block px-8 py-6 bg-primary/10 rounded-2xl border-2 border-primary/30">
+                <p className="text-lg font-semibold text-foreground mb-2">
+                  Still have questions?
+                </p>
+                <p className="text-muted-foreground">
+                  Join the waitlist and we'll answer any questions you have before the event.
+                </p>
+              </div>
             </div>
           </div>
         </div>
