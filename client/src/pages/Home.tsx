@@ -196,37 +196,35 @@ export default function Home() {
       </section>
 
       {/* Meet Your Host Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-primary/10 border-y border-primary/20 relative overflow-hidden">
+      <section className="relative min-h-[600px] md:min-h-[700px] bg-gradient-to-br from-primary/5 via-white to-primary/10 border-y border-primary/20 overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         
-        <div className="container relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="order-2 md:order-1">
-                <div className="relative">
-                  {/* Image with shadow and border */}
-                  <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-white shadow-2xl border-4 border-white">
-                    <img 
-                      src="/victoria-host.png" 
-                      alt="Victoria O'Sullivan"
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </div>
-                  {/* Decorative accent */}
-                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full opacity-20 blur-2xl"></div>
-                </div>
+        <div className="relative z-10 h-full">
+          <div className="grid md:grid-cols-5 h-full">
+            {/* Image Side - 2 columns */}
+            <div className="md:col-span-2 relative h-[400px] md:h-full">
+              <div className="absolute inset-0">
+                <img 
+                  src="/victoria-host.png" 
+                  alt="Victoria O'Sullivan"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
-              <div className="order-1 md:order-2 space-y-6">
+            </div>
+            
+            {/* Content Side - 3 columns */}
+            <div className="md:col-span-3 flex items-center py-12 md:py-20 px-6 md:px-12 lg:px-20">
+              <div className="max-w-2xl space-y-6">
                 <div>
                   <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-lg">
                     Meet Your Host
                   </span>
-                  <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 leading-tight">
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 leading-tight">
                     Victoria O'Sullivan
                   </h3>
-                  <p className="text-xl text-primary font-semibold">
+                  <p className="text-xl md:text-2xl text-primary font-semibold">
                     Functional Medicine Practitioner & Women's Health Specialist
                   </p>
                 </div>
@@ -240,18 +238,18 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                <div className="grid grid-cols-3 gap-4 pt-4">
                   <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">15+</div>
-                    <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">15+</div>
+                    <div className="text-xs md:text-sm text-gray-600 font-medium">Years Experience</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">17,000+</div>
-                    <div className="text-sm text-gray-600 font-medium">Women Helped</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">17K+</div>
+                    <div className="text-xs md:text-sm text-gray-600 font-medium">Women Helped</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">50+</div>
-                    <div className="text-sm text-gray-600 font-medium">Media Features</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">50+</div>
+                    <div className="text-xs md:text-sm text-gray-600 font-medium">Media Features</div>
                   </div>
                 </div>
               </div>
