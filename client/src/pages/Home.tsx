@@ -333,7 +333,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border-2 border-primary/20">
-              <div className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
                 {/* Checklist Item 1 */}
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 mt-1">
@@ -345,8 +345,6 @@ export default function Home() {
                     You wake up exhausted, even after 8 hours of sleep. Your body feels heavy, your mind foggy, and you're dragging yourself through the day on sheer willpower and coffee. <span className="font-bold text-foreground">You're tired of being tired.</span>
                   </p>
                 </div>
-
-                <div className="border-t border-gray-200"></div>
 
                 {/* Checklist Item 2 */}
                 <div className="flex gap-4 items-start">
@@ -360,8 +358,6 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="border-t border-gray-200"></div>
-
                 {/* Checklist Item 3 */}
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 mt-1">
@@ -373,8 +369,6 @@ export default function Home() {
                     You're lying awake at 3am, drenched in sweat, throwing off the covers only to pull them back on minutes later. Hot flashes ambush you in meetings, at dinner, in the middle of conversations. <span className="font-bold text-foreground">You're exhausted by your own body's unpredictability.</span>
                   </p>
                 </div>
-
-                <div className="border-t border-gray-200"></div>
 
                 {/* Checklist Item 4 */}
                 <div className="flex gap-4 items-start">
@@ -388,8 +382,6 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="border-t border-gray-200"></div>
-
                 {/* Checklist Item 5 */}
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 mt-1">
@@ -401,8 +393,6 @@ export default function Home() {
                     You snap at your partner over nothing. You cry at commercials. You feel rage bubbling under the surface for no reason at all. Your emotions feel like a rollercoaster you can't get off. <span className="font-bold text-foreground">You're desperate to feel like YOU again.</span>
                   </p>
                 </div>
-
-                <div className="border-t border-gray-200"></div>
 
                 {/* Checklist Item 6 */}
                 <div className="flex gap-4 items-start">
@@ -416,8 +406,6 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="border-t border-gray-200"></div>
-
                 {/* Checklist Item 7 */}
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 mt-1">
@@ -427,6 +415,18 @@ export default function Home() {
                   </div>
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                     You look in the mirror and barely recognize the woman staring back. You miss your energy, your confidence, your spark. You want to feel vibrant, alive, and powerful again. <span className="font-bold text-foreground">You're ready to reclaim your body, your health, and your life.</span>
+                  </p>
+                </div>
+
+                {/* Checklist Item 8 - NEW */}
+                <div className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                      <Check className="w-4 h-4 text-primary-foreground" />
+                    </div>
+                  </div>
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    You've spent years putting everyone else first—your career, your family, your responsibilities. Now you're ready to invest in yourself and finally prioritize YOUR health, YOUR energy, YOUR happiness. <span className="font-bold text-foreground">You deserve to thrive, not just survive.</span>
                   </p>
                 </div>
               </div>
