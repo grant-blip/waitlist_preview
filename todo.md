@@ -34,3 +34,4 @@
 - [x] Add Featured In media logos section after hero
 - [x] Expand media logos section to full page width
 - [x] Replace hero background image with new Victoria photo
+- [x] Adjust hero background positioning to move Victoria closer to center

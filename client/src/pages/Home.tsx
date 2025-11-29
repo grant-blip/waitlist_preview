@@ -112,7 +112,7 @@ export default function Home() {
           style={{
             backgroundImage: 'url(/victoria-hero-new.png)',
             backgroundSize: 'contain',
-            backgroundPosition: 'right center',
+            backgroundPosition: '65% center',
             backgroundRepeat: 'no-repeat',
           }}
         />
