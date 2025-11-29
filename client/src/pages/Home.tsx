@@ -180,7 +180,7 @@ export default function Home() {
                   <img 
                     src="/victoria-hero.jpg" 
                     alt="Victoria O'Sullivan"
-                    className="w-full h-full object-cover object-[center_20%]"
+                    className="w-full h-full object-cover object-[35%_20%]"
                   />
                 </div>
               </div>
