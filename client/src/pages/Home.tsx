@@ -240,12 +240,12 @@ export default function Home() {
                     <div className="text-sm text-gray-600 font-medium">Years Experience</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">5,000+</div>
+                    <div className="text-3xl font-bold text-primary mb-1">17,000+</div>
                     <div className="text-sm text-gray-600 font-medium">Women Helped</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-md border border-primary/10 text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">100+</div>
-                    <div className="text-sm text-gray-600 font-medium">Published Articles</div>
+                    <div className="text-3xl font-bold text-primary mb-1">50+</div>
+                    <div className="text-sm text-gray-600 font-medium">Media Features</div>
                   </div>
                 </div>
               </div>
