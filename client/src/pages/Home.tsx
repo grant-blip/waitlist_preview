@@ -133,111 +133,56 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="grid md:grid-cols-5 gap-8 items-center">
             {/* Left Side - Content Overlay (60%) */}
-            <div className="md:col-span-3 space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
-              {/* Attention Badge */}
-              <div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground rounded-full text-sm font-medium shadow-sm">
-                  <Calendar className="w-4 h-4" />
-                  Virtual Event: May 17 & 18th, 2025 @ 10am - 5pm (+ Q&A) • Limited to 100 Attendees
-                </span>
-              </div>
-
+            <div className="md:col-span-3 space-y-6 md:space-y-8 py-8 md:py-12">
               {/* Main Headline */}
-              <div className="space-y-3 md:space-y-4">
-                <p className="text-xs md:text-sm uppercase tracking-wider text-gray-700 font-semibold">
+              <div className="space-y-4 md:space-y-5">
+                <p className="text-xs md:text-sm uppercase tracking-wider text-gray-600 font-semibold">
                   Attention All Perimenopausal and Menopausal Women
                 </p>
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
                 </h2>
-                <p className="text-base md:text-lg lg:text-xl text-gray-700">
-                  <strong>Imagine waking up energized, fitting into your favorite jeans, and feeling confident and sexy again.</strong> Join 17,000+ women who've transformed their health with Victoria's proven hormone-balancing strategies.
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Reset your hormones, your metabolism, and your future in just 2 days.
                 </p>
-                
-                {/* Pricing Badge */}
-                <div className="space-y-2">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full">
-                    <span className="text-sm md:text-base font-bold">General Admission: $97</span>
-                  </div>
-                  <div className="inline-flex items-center gap-2 px-5 py-3 bg-primary border-2 border-primary/30 rounded-full shadow-lg ml-0 md:ml-3">
-                    <Gift className="w-5 h-5 text-white" />
-                    <span className="text-sm md:text-base font-bold text-white">VIP: $197 + Get $361 in Exclusive Bonuses</span>
-                  </div>
+              </div>
+
+              {/* Event Details + Pricing */}
+              <div className="space-y-3">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm text-gray-700 rounded-lg text-sm font-medium shadow-sm border border-gray-200">
+                    <Calendar className="w-4 h-4 text-primary" />
+                    May 17-18, 2025
+                  </span>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-bold shadow-sm">
+                    From $97
+                  </span>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-md">
+                    <Gift className="w-4 h-4" />
+                    VIP $197
+                  </span>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <Button 
                   size="lg"
-                  className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+                  className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
                   onClick={scrollToWaitlist}
                 >
                   Join the Waitlist Now
                 </Button>
                 
-                {/* Social Proof + Scarcity */}
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <Flame className="w-4 h-4 text-orange-500" />
-                    <span className="font-medium">Join <span className="text-primary font-bold">247+</span> women already on the waitlist</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex-1 bg-gray-200 rounded-full h-2 overflow-hidden">
-                      <div className="bg-primary h-full rounded-full" style={{width: '67%'}}></div>
-                    </div>
-                    <span className="text-xs font-semibold text-gray-700 whitespace-nowrap">67 of 100 spots claimed</span>
-                  </div>
-                </div>
+                {/* Simplified Social Proof */}
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold text-primary">247+ women</span> already joined • <span className="font-semibold text-gray-900">33 spots left</span>
+                </p>
               </div>
             </div>
             
             {/* Right Side - Empty space for Victoria in background (40%) */}
             <div className="hidden md:block md:col-span-2" />
-          </div>
-        </div>
-      </section>
-
-      {/* Say No To / Hello Again To Section */}
-      <section className="py-16 bg-white">
-        <div className="container max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Say No To */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Say no to:</h3>
-              <div className="space-y-4">
-                {[
-                  { emoji: "🚫", text: "Sleepless nights (goodbye 2-4am wakings)" },
-                  { emoji: "🚫", text: "3pm crashes, exhaustion so chronic you can't get through the day" },
-                  { emoji: "🚫", text: "Weight gain, despite doing EVERYTHING right" },
-                  { emoji: "🚫", text: "Brain fog so severe you wonder if you are actually going crazy" },
-                  { emoji: "🚫", text: "Medical tests that just keep telling you \"everything is normal\"" },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-100">
-                    <span className="text-2xl flex-shrink-0">{item.emoji}</span>
-                    <p className="text-gray-700 font-medium">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* And Hello Again To */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">And hello again to:</h3>
-              <div className="space-y-4">
-                {[
-                  { emoji: "🛌", text: "Restful, deep and regenerative sleep (like you had in your 20s)" },
-                  { emoji: "⚡️", text: "Energy and focus to do the things you ENJOY, so you can be yourself again" },
-                  { emoji: "🍎", text: "A metabolism that WORKS and rewards you for your effort" },
-                  { emoji: "🌀", text: "A life that feels under control and full of possibility again" },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20">
-                    <span className="text-2xl flex-shrink-0">{item.emoji}</span>
-                    <p className="text-gray-700 font-medium">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
