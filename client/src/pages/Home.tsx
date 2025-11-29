@@ -57,15 +57,12 @@ export default function Home() {
         style={{
           backgroundImage: 'url(/victoria-hero.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center right',
         }}
       >
         <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left Side - Empty space for Victoria in background */}
-            <div className="hidden md:block" />
-
-            {/* Right Side - Content Overlay */}
+            {/* Left Side - Content Overlay */}
             <div className="space-y-6 py-12 px-6 md:px-8">
               {/* Attention Badge */}
               <div>
@@ -97,6 +94,9 @@ export default function Home() {
                 Join the Waitlist Now
               </Button>
             </div>
+            
+            {/* Right Side - Empty space for Victoria in background */}
+            <div className="hidden md:block" />
           </div>
         </div>
       </section>
