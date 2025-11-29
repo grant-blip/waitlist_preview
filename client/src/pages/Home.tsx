@@ -106,7 +106,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden">
+      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #F5F1E8 0%, #FFFDF7 100%)' }}>
         {/* Background Image - Desktop */}
         <div 
           className="hidden md:block absolute inset-0 z-0"
@@ -139,7 +139,7 @@ export default function Home() {
                 <p className="text-xs md:text-sm uppercase tracking-wider text-gray-600 font-semibold">
                   Attention All Perimenopausal and Menopausal Women
                 </p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
                   You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
                 </h2>
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
@@ -191,7 +191,7 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container max-w-5xl">
           <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               Watch: Why The Longevity Reset Is Different
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Meet Your Host Section */}
-      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 border-y border-primary/20">
+      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden border-y" style={{ background: 'linear-gradient(135deg, #FFFDF7 0%, #F5F1E8 50%, #E8F2E6 100%)', borderColor: '#D4AF37' }}>
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
@@ -280,7 +280,7 @@ export default function Home() {
                 <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-lg">
                   Meet Your Host
                 </span>
-                <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 leading-tight">
+                <h3 className="text-2xl md:text-4xl lg:text-5xl font-luxury-serif font-bold text-gray-900 mb-3 leading-tight">
                   Victoria O'Sullivan
                 </h3>
                 <p className="text-base md:text-lg lg:text-xl text-primary font-semibold">
@@ -301,16 +301,16 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2 md:pt-4">
-                <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">25+</div>
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center" style={{ borderColor: 'var(--rose-gold)' }}>
+                  <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--rose-gold)' }}>25+</div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">Years Experience</div>
                 </div>
-                <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">17K+</div>
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center" style={{ borderColor: 'var(--rose-gold)' }}>
+                  <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--rose-gold)' }}>17K+</div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">Women Helped</div>
                 </div>
-                <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">50+</div>
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center" style={{ borderColor: 'var(--rose-gold)' }}>
+                  <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--rose-gold)' }}>50+</div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">Media Features</div>
                 </div>
               </div>
@@ -322,14 +322,14 @@ export default function Home() {
 
 
       {/* This Is For You If Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-primary/5 to-white">
+      <section className="py-20" style={{ background: 'linear-gradient(to bottom, #FAF8F5 0%, #FFFDF7 100%)' }}>
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif font-bold text-foreground mb-6">
                 This Is For You If...
               </h2>
-              <div className="w-24 h-1 bg-primary mx-auto"></div>
+              <div className="w-24 h-1 mx-auto" style={{ backgroundColor: 'var(--champagne-gold)' }}></div>
             </div>
 
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border-2 border-primary/20">
@@ -454,10 +454,10 @@ export default function Home() {
       </section>
 
       {/* Video Testimonials Section - Moved here for optimal conversion */}
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ background: 'linear-gradient(to bottom, #FAF8F5 0%, #FFF5F0 100%)' }}>
         <div className="container">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               See Real Transformations
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -576,11 +576,11 @@ export default function Home() {
       </section>
 
       {/* Pricing Tiers Section */}
-      <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
+      <section id="pricing" className="py-20" style={{ background: 'linear-gradient(135deg, #E8F2E6 0%, #F5F1E8 50%, #FFFDF7 100%)' }}>
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
                 Choose Your Experience
               </h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -633,10 +633,10 @@ export default function Home() {
               </Card>
 
               {/* VIP Tier */}
-              <Card className="border-4 border-primary shadow-2xl hover:shadow-3xl transition-all relative">
+              <Card className="border-4 shadow-2xl hover:shadow-3xl transition-all relative" style={{ borderColor: '#B76E79' }}>
                 {/* Most Popular Badge */}
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-primary text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg">
+                  <div className="text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
                     ⭐ MOST POPULAR
                   </div>
                 </div>
@@ -729,23 +729,23 @@ export default function Home() {
 
       {/* Event Agenda Section */}
       <section className="relative py-20 overflow-hidden">
-        {/* Fixed Background Image */}
+        {/* Luxury Gradient Background with Subtle Texture */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/water-background.jpg)',
-            backgroundAttachment: 'fixed',
+            background: 'linear-gradient(135deg, #E8E5DC 0%, #F5F1E8 50%, #FFFDF7 100%)',
           }}
-        />
-        {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        >
+          {/* Subtle overlay for depth */}
+          <div className="absolute inset-0 bg-white/10" />
+        </div>
         
         <div className="container relative z-10">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-gray-900 mb-4">
               Your 2-Day Transformation Journey
             </h3>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               A carefully designed curriculum that takes you from exhausted to energized in just 2 days.
             </p>
           </div>
@@ -827,7 +827,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
                 What You'll Walk Away With
               </h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
@@ -978,7 +978,7 @@ export default function Home() {
             <div className="inline-block px-6 py-2 bg-primary/10 rounded-full mb-4">
               <span className="text-sm font-bold text-primary uppercase tracking-wider">⭐ VIP Exclusive</span>
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               VIP Bonuses Worth $361
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -1048,11 +1048,11 @@ export default function Home() {
 
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white border-y border-gray-100">
+      <section className="py-20 border-y" style={{ background: 'linear-gradient(to bottom, #F5F1E8 0%, #FAF8F5 100%)', borderColor: '#D4AF37' }}>
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
                 Frequently Asked Questions
               </h3>
               <p className="text-lg text-muted-foreground">
@@ -1158,7 +1158,7 @@ export default function Home() {
       <section id="waitlist-form" className="py-20 bg-gray-50">
         <div className="container max-w-2xl">
           <div className="text-center mb-10">
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               Join the Waitlist
             </h3>
             <p className="text-lg text-muted-foreground">
@@ -1247,7 +1247,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter/Community CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-primary/5 border-t relative overflow-hidden">
+      <section className="py-20 border-t relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #FFFDF7 0%, #F5F1E8 50%, #E8E5DC 100%)', borderColor: '#D4AF37' }}>
         <div className="container">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
@@ -1263,7 +1263,7 @@ export default function Home() {
               {/* Right Side - CTA Copy & Form */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif leading-tight mb-6">
                     <span className="font-normal">join </span>
                     <span className="font-bold">17,000+ women</span>
                     <span className="font-normal"> to get all the </span>

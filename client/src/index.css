@@ -43,6 +43,16 @@
 }
 
 :root {
+  /* Luxury Color Palette for Executive Women */
+  --champagne-gold: #D4AF37;
+  --rose-gold: #B76E79;
+  --warm-cream: #FAF8F5;
+  --soft-blush: #F9F5F2;
+  --warm-taupe: #C9B8A8;
+  --charcoal: #2C2C2C;
+  --champagne-beige: #F5F1E8;
+  --warm-ivory: #FFFDF7;
+  
   --primary: oklch(0.589 0.062 132.5);
   --primary-foreground: oklch(1 0 0);
   --sidebar-primary: var(--color-blue-600);
@@ -174,4 +184,69 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+}
+/* Luxury Typography Classes */
+.font-luxury-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-luxury-body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Premium Shadow Utilities */
+.shadow-luxury {
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-luxury-hover {
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.25), 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Gold Accent Utilities */
+.border-gold {
+  border-color: var(--champagne-gold);
+}
+
+.border-rose-gold {
+  border-color: var(--rose-gold);
+}
+
+.text-gold {
+  color: var(--champagne-gold);
+}
+
+.text-rose-gold {
+  color: var(--rose-gold);
+}
+
+.bg-gold {
+  background-color: var(--champagne-gold);
+}
+
+.bg-rose-gold {
+  background-color: var(--rose-gold);
+}
+
+/* Luxury Button Enhancements */
+.btn-luxury {
+  background: linear-gradient(135deg, var(--champagne-gold) 0%, #C9A028 100%);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-luxury:hover {
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Premium Card Styling */
+.card-luxury {
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FAF8F5 100%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card-luxury:hover {
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
 }
