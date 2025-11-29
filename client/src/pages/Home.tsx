@@ -280,66 +280,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transformation Story Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-                <div>
-                  <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">
-                    REAL WOMEN, REAL TRANSFORMATIONS:
-                  </p>
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
-                    <span className="font-normal">Sarah is a </span>
-                    <span className="font-bold">perimenopausal woman</span>
-                    <span className="font-normal"> reclaiming her </span>
-                    <span className="italic text-primary">Energy, Vitality & Confidence</span>
-                    <span className="font-normal">.</span>
-                  </h3>
-                </div>
-                
-                <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
-                  <p>
-                    She was exhausted, frustrated, and felt like her body had completely betrayed her. Despite doing everything "right," the weight kept creeping on, the brain fog made work impossible, and hot flashes disrupted her life 10+ times a day.
-                  </p>
-                  
-                  <p>
-                    She was ready to transform her health and get back to feeling like herself—energized, confident, and in control of her body again.
-                  </p>
-                  
-                  <p>
-                    She discovered Victoria's hormone-balancing approach and everything changed. Within 90 days, she lost 12kg, eliminated hot flashes completely, and woke up with natural energy for the first time in years.
-                  </p>
-                  
-                  <p className="font-semibold text-gray-900">
-                    She's taking back control of her health and paving the way for other women in midlife to thrive.
-                  </p>
-                </div>
-                
-                {/* Testimonial Quote */}
-                <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-primary/10 max-w-2xl">
-                  <div className="flex gap-1 mb-4">
-                    {[1,2,3,4,5].map((star) => (
-                      <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6">
-                    "Within 3 months, I got my life back. I feel like ME again."
-                  </blockquote>
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-xl font-bold text-primary">
-                      S
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900">Sarah M.</p>
-                      <p className="text-sm text-gray-600">Age 48, Melbourne</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Pricing Tiers Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -958,7 +899,117 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Testimonials Section */}
+      <section className="py-20 bg-white border-t">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              See Real Transformations
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Watch women share their personal journeys and the life-changing results they've achieved with Victoria's approach.
+            </p>
+          </div>
 
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Video Testimonial 1 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"I Got My Life Back"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Watch how Sarah transformed her energy levels and lost 12kg in just 90 days.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Sarah M., Age 48</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Testimonial 2 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"No More Hot Flashes!"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Discover how Jennifer eliminated her symptoms and regained her confidence naturally.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Jennifer K., Age 52</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Testimonial 3 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"Balanced & Thriving"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    See how Michelle balanced her hormones and restored mental clarity in midlife.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Michelle R., Age 55</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Newsletter/Community CTA Section */}
       <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-primary/5 border-t relative overflow-hidden">
