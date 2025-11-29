@@ -29,3 +29,4 @@
 - [x] Reduce hero height by 15-20%
 - [x] Add social proof counter below CTA
 - [x] Add trust indicators/credentials near Victoria's image
+- [x] Move trust badge image to left side content area

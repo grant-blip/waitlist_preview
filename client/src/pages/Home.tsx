@@ -170,26 +170,19 @@ export default function Home() {
                   <span className="font-medium">Join <span className="text-primary font-bold">247+</span> women already on the waitlist</span>
                 </div>
               </div>
-            </div>
-            
-            {/* Right Side - Trust Indicators near Victoria (40%) */}
-            <div className="hidden md:flex md:col-span-2 items-end justify-end pb-8 pr-8">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg px-6 py-4 space-y-2">
-                <div className="flex items-center gap-3">
-                  <Award className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="text-sm font-bold text-gray-900">Certified Functional</p>
-                    <p className="text-sm font-bold text-gray-900">Medicine Practitioner</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="text-xs text-gray-600">15+ Years Experience</p>
-                  </div>
-                </div>
+              
+              {/* Trust Badge */}
+              <div className="mt-4">
+                <img 
+                  src="/trust-badge.jpg" 
+                  alt="Certified Functional Medicine Practitioner - 15+ Years Experience"
+                  className="w-auto h-20 md:h-24 object-contain"
+                />
               </div>
             </div>
+            
+            {/* Right Side - Empty space for Victoria in background (40%) */}
+            <div className="hidden md:block md:col-span-2" />
           </div>
         </div>
       </section>
