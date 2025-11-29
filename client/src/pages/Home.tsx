@@ -153,10 +153,15 @@ export default function Home() {
                   <strong>Imagine waking up energized, fitting into your favorite jeans, and feeling confident and sexy again.</strong> Join 17,000+ women who've transformed their health with Victoria's proven hormone-balancing strategies.
                 </p>
                 
-                {/* Value Proposition Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border-2 border-primary/30 rounded-full">
-                  <Gift className="w-5 h-5 text-primary" />
-                  <span className="text-sm md:text-base font-bold text-foreground">FREE Priority Access + $361 in Bonuses</span>
+                {/* Pricing Badge */}
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full">
+                    <span className="text-sm md:text-base font-bold">General Admission: $97</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 px-5 py-3 bg-primary border-2 border-primary/30 rounded-full shadow-lg ml-0 md:ml-3">
+                    <Gift className="w-5 h-5 text-white" />
+                    <span className="text-sm md:text-base font-bold text-white">VIP: $197 + Get $361 in Exclusive Bonuses</span>
+                  </div>
                 </div>
               </div>
 
@@ -419,6 +424,135 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Tiers Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Choose Your Experience
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Both tiers give you access to the complete 2-day transformation event. VIP members receive exclusive bonuses worth $361.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* General Admission */}
+              <Card className="border-2 border-gray-200 hover:shadow-lg transition-all">
+                <CardContent className="p-8">
+                  <div className="text-center mb-6">
+                    <h4 className="text-2xl font-bold text-foreground mb-2">General Admission</h4>
+                    <div className="flex items-baseline justify-center gap-2 mb-4">
+                      <span className="text-5xl font-bold text-foreground">$97</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Perfect for getting started</p>
+                  </div>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">Full access to both days (10am-5pm)</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">All live training sessions</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">Live Q&A with Victoria</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">Lifetime access to recordings</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">Private community access</span>
+                    </div>
+                  </div>
+
+                  <Button 
+                    className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 rounded-full"
+                    onClick={scrollToWaitlist}
+                  >
+                    Join Waitlist - General
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* VIP Tier */}
+              <Card className="border-4 border-primary shadow-2xl hover:shadow-3xl transition-all relative">
+                {/* Most Popular Badge */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <div className="bg-primary text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg">
+                    ⭐ MOST POPULAR
+                  </div>
+                </div>
+
+                <CardContent className="p-8">
+                  <div className="text-center mb-6">
+                    <h4 className="text-2xl font-bold text-foreground mb-2">VIP Experience</h4>
+                    <div className="flex items-baseline justify-center gap-2 mb-2">
+                      <span className="text-5xl font-bold text-primary">$197</span>
+                    </div>
+                    <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-4">
+                      <span className="text-sm font-bold text-primary">Save $164 in bonuses!</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Everything in General + $361 in exclusive bonuses</p>
+                  </div>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700"><strong>Everything in General Admission</strong></span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700"><strong>Complete Hormone Balancing Guide</strong> ($97 value)</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700"><strong>14-Day Meal Plan & Recipes</strong> ($67 value)</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700"><strong>Personalized Protocol Template</strong> ($147 value)</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700"><strong>Downloadable Workbooks & Trackers</strong> ($50 value)</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Star className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700"><strong>Priority Q&A access</strong> (your questions answered first)</span>
+                    </div>
+                  </div>
+
+                  <div className="mb-6 p-4 bg-primary/10 rounded-xl border-2 border-primary/30 text-center">
+                    <p className="text-sm font-bold text-foreground">Total Value: $558</p>
+                    <p className="text-xs text-muted-foreground">You Pay Just $197</p>
+                  </div>
+
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full shadow-lg"
+                    onClick={scrollToWaitlist}
+                  >
+                    Join Waitlist - VIP ⭐
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                🔒 <strong>Secure your spot now.</strong> Limited to 100 attendees total. Payment will be collected after waitlist closes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What You'll Learn Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container">
@@ -597,90 +731,118 @@ export default function Home() {
               <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 What You'll Walk Away With
               </h3>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
                 This isn't just information—you'll leave with actionable tools, personalized protocols, and ongoing support to ensure lasting transformation.
               </p>
+              <div className="flex items-center justify-center gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-gray-900"></div>
+                  <span className="font-semibold">Included in General ($97)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-primary"></div>
+                  <span className="font-semibold">VIP Exclusive ($197)</span>
+                </div>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow relative">
+                <div className="absolute top-4 right-4">
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
+                </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                      <Gift className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Your Personalized Hormone-Balancing Protocol</h4>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Your Personalized Hormone-Balancing Protocol <span className="text-primary text-sm">VIP</span></h4>
                       <p className="text-muted-foreground">A customized action plan based on your specific symptoms, goals, and lifestyle—not a one-size-fits-all approach.</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow relative">
+                <div className="absolute top-4 right-4">
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
+                </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                      <Gift className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Complete 14-Day Meal Plan & Recipes</h4>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Complete 14-Day Meal Plan & Recipes <span className="text-primary text-sm">VIP</span></h4>
                       <p className="text-muted-foreground">Delicious, hormone-balancing meals with shopping lists and meal prep instructions—start implementing immediately.</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-gray-200 hover:shadow-lg transition-shadow relative">
+                <div className="absolute top-4 right-4">
+                  <div className="w-3 h-3 rounded-full bg-gray-900"></div>
+                </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-gray-900" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Lifetime Access to All Recordings</h4>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Lifetime Access to All Recordings <span className="text-gray-600 text-sm">All Tiers</span></h4>
                       <p className="text-muted-foreground">Can't attend live? No problem. Watch and rewatch all sessions at your own pace, forever.</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-gray-200 hover:shadow-lg transition-shadow relative">
+                <div className="absolute top-4 right-4">
+                  <div className="w-3 h-3 rounded-full bg-gray-900"></div>
+                </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-gray-900" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Access to Private Support Community</h4>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Access to Private Support Community <span className="text-gray-600 text-sm">All Tiers</span></h4>
                       <p className="text-muted-foreground">Join 17,000+ women in our private Facebook group for ongoing support, accountability, and encouragement.</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-gray-200 hover:shadow-lg transition-shadow relative">
+                <div className="absolute top-4 right-4">
+                  <div className="w-3 h-3 rounded-full bg-gray-900"></div>
+                </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-gray-900" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Live Q&A Sessions with Victoria</h4>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Live Q&A Sessions with Victoria <span className="text-gray-600 text-sm">All Tiers</span></h4>
                       <p className="text-muted-foreground">Get YOUR specific questions answered during dedicated Q&A sessions—personalized guidance for your unique situation.</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow relative">
+                <div className="absolute top-4 right-4">
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
+                </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                      <Gift className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Downloadable Workbooks & Trackers</h4>
+                      <h4 className="font-bold text-lg text-foreground mb-2">Downloadable Workbooks & Trackers <span className="text-primary text-sm">VIP</span></h4>
                       <p className="text-muted-foreground">Track your progress, symptoms, and wins with our proven tracking tools—see your transformation unfold in real-time.</p>
                     </div>
                   </div>
@@ -689,13 +851,21 @@ export default function Home() {
             </div>
 
             <div className="mt-12 text-center">
-              <div className="inline-block px-8 py-6 bg-primary/10 rounded-2xl border-2 border-primary/30">
-                <p className="text-xl md:text-2xl font-bold text-foreground mb-2">
-                  Total Value: $361
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  <strong>Your Investment:</strong> FREE Priority Access When You Join the Waitlist Today
-                </p>
+              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <div className="px-6 py-4 bg-gray-50 rounded-xl border-2 border-gray-200">
+                  <p className="text-lg font-bold text-foreground mb-1">
+                    General Admission
+                  </p>
+                  <p className="text-3xl font-bold text-gray-900 mb-2">$97</p>
+                  <p className="text-sm text-muted-foreground">Core event access + recordings</p>
+                </div>
+                <div className="px-6 py-4 bg-primary/10 rounded-xl border-2 border-primary/30">
+                  <p className="text-lg font-bold text-foreground mb-1">
+                    VIP Experience
+                  </p>
+                  <p className="text-3xl font-bold text-primary mb-2">$197</p>
+                  <p className="text-sm text-muted-foreground">Everything + $361 in bonuses</p>
+                </div>
               </div>
             </div>
           </div>
@@ -706,11 +876,14 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-16">
+            <div className="inline-block px-6 py-2 bg-primary/10 rounded-full mb-4">
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">⭐ VIP Exclusive</span>
+            </div>
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Exclusive Bonuses When You Join
+              VIP Bonuses Worth $361
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get instant access to these valuable resources when you secure your spot on the waitlist.
+              Upgrade to VIP for just $100 more and receive these exclusive bonuses to accelerate your transformation.
             </p>
           </div>
 
@@ -753,8 +926,16 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-2xl font-bold text-foreground mb-2">Total Bonus Value: <span className="text-primary">$361</span></p>
-            <p className="text-muted-foreground">Yours FREE when you join the waitlist today</p>
+            <div className="inline-block px-8 py-6 bg-primary/10 rounded-2xl border-2 border-primary/30">
+              <p className="text-2xl font-bold text-foreground mb-2">Total VIP Bonus Value: <span className="text-primary">$361</span></p>
+              <p className="text-muted-foreground mb-4">Included FREE with VIP tier ($197)</p>
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full"
+                onClick={scrollToWaitlist}
+              >
+                Upgrade to VIP ⭐
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -1103,6 +1284,39 @@ export default function Home() {
               <Card className="border-2 border-primary/10">
                 <CardContent className="p-6">
                   <h4 className="font-bold text-lg text-foreground mb-3">
+                    What's the difference between General Admission and VIP?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    <strong>General Admission ($97)</strong> includes full access to both days, all training sessions, live Q&A, lifetime recordings, and community access. <strong>VIP ($197)</strong> includes everything in General PLUS $361 worth of exclusive bonuses: Complete Hormone Balancing Guide, 14-Day Meal Plan, Personalized Protocol Template, Workbooks & Trackers, and priority Q&A access. VIP members get their questions answered first and receive actionable tools to implement immediately.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    Is VIP worth the extra $100?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Absolutely! You're getting <strong>$361 in bonuses for just $100 more</strong>—that's $261 in extra value. The VIP bonuses include the exact tools you need to implement what you learn: personalized protocols, meal plans, tracking workbooks, and priority access to Victoria. Most successful participants choose VIP because they want the complete transformation toolkit, not just information.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    When do I need to pay?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    You're joining the <strong>waitlist now for free</strong>—no payment required yet. Once the waitlist closes, we'll send you a payment link to secure your spot. You'll choose your tier (General $97 or VIP $197) at that time. This gives you priority access and ensures you don't miss out when spots fill up.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
                     What if I'm in a different time zone?
                   </h4>
                   <p className="text-muted-foreground">
@@ -1125,10 +1339,21 @@ export default function Home() {
               <Card className="border-2 border-primary/10">
                 <CardContent className="p-6">
                   <h4 className="font-bold text-lg text-foreground mb-3">
-                    What's included in the $361 worth of bonuses?
+                    What's included in the VIP bonuses?
                   </h4>
                   <p className="text-muted-foreground">
-                    When you join the waitlist, you'll receive: <strong>Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Lifetime Access to All Recordings ($147 value), Private Community Access ($50 value)</strong>, plus downloadable workbooks and tracking tools. All completely FREE when you secure your spot.
+                    VIP members receive <strong>$361 in exclusive bonuses</strong>: Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Personalized Protocol Template ($147 value), Downloadable Workbooks & Trackers ($50 value), plus priority Q&A access. These bonuses are designed to help you implement everything you learn immediately and get faster results.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-primary/10">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-3">
+                    Can I upgrade from General to VIP later?
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Yes! You can upgrade to VIP anytime before the event starts by paying the $100 difference. However, we recommend choosing VIP when you register to ensure you receive all bonuses and materials in advance, giving you time to prepare and get the most out of the event.
                   </p>
                 </CardContent>
               </Card>
