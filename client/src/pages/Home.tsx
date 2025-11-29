@@ -52,23 +52,24 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[700px] flex items-center overflow-hidden bg-gray-50">
-        <div className="container">
+      <section 
+        className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(/victoria-hero.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left Side - Victoria Image */}
-            <div className="relative h-[600px] md:h-[700px] order-2 md:order-1">
-              <img 
-                src="/victoria-hero.jpg" 
-                alt="Victoria O'Sullivan"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-              />
-            </div>
+            {/* Left Side - Empty space for Victoria in background */}
+            <div className="hidden md:block" />
 
-            {/* Right Side - Content */}
-            <div className="space-y-8 order-1 md:order-2 py-12">
+            {/* Right Side - Content Overlay */}
+            <div className="space-y-6 py-12 px-6 md:px-8">
               {/* Attention Badge */}
               <div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/50 text-accent-foreground rounded-full text-sm font-medium">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground rounded-full text-sm font-medium shadow-sm">
                   <Calendar className="w-4 h-4" />
                   Virtual Event: May 17 & 18th, 2025 @ 10am - 5pm (+ Q&A)
                 </span>
@@ -76,13 +77,13 @@ export default function Home() {
 
               {/* Main Headline */}
               <div className="space-y-4">
-                <p className="text-sm uppercase tracking-wider text-muted-foreground font-semibold">
+                <p className="text-sm uppercase tracking-wider text-gray-700 font-semibold">
                   Attention All Perimenopausal and Menopausal Women
                 </p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
                 </h2>
-                <p className="text-lg md:text-xl text-muted-foreground">
+                <p className="text-lg md:text-xl text-gray-700">
                   Discover the proven strategies to reclaim your energy, balance your hormones, and feel like yourself again.
                 </p>
               </div>

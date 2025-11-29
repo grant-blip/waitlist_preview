@@ -16,3 +16,4 @@
 - [x] Add About the Program section
 - [x] Update hero section with Victoria image as background
 - [x] Adjust hero section layout to showcase Victoria on left with text on right
+- [x] Redesign hero with full background image and text overlay on right
