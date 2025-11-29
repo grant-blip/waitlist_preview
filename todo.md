@@ -14,3 +14,5 @@
 - [x] Add Event Agenda/Schedule section
 - [x] Add Bonuses/What's Included section
 - [x] Add About the Program section
+- [x] Update hero section with Victoria image as background
+- [x] Adjust hero section layout to showcase Victoria on left with text on right

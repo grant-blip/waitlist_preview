@@ -52,38 +52,50 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+      <section className="relative min-h-[700px] flex items-center overflow-hidden bg-gray-50">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Attention Badge */}
-            <div className="inline-block">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/50 text-accent-foreground rounded-full text-sm font-medium">
-                <Calendar className="w-4 h-4" />
-                Virtual Event: May 17 & 18th, 2025 @ 10am - 5pm (+ Q&A)
-              </span>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Side - Victoria Image */}
+            <div className="relative h-[600px] md:h-[700px] order-2 md:order-1">
+              <img 
+                src="/victoria-hero.jpg" 
+                alt="Victoria O'Sullivan"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
             </div>
 
-            {/* Main Headline */}
-            <div className="space-y-4">
-              <p className="text-sm uppercase tracking-wider text-muted-foreground font-semibold">
-                Attention All Perimenopausal and Menopausal Women
-              </p>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
-              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                Discover the proven strategies to reclaim your energy, balance your hormones, and feel like yourself again.
-              </p>
-            </div>
+            {/* Right Side - Content */}
+            <div className="space-y-8 order-1 md:order-2 py-12">
+              {/* Attention Badge */}
+              <div>
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/50 text-accent-foreground rounded-full text-sm font-medium">
+                  <Calendar className="w-4 h-4" />
+                  Virtual Event: May 17 & 18th, 2025 @ 10am - 5pm (+ Q&A)
+                </span>
+              </div>
 
-            {/* CTA Button */}
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-              onClick={scrollToWaitlist}
-            >
-              Join the Waitlist Now
-            </Button>
+              {/* Main Headline */}
+              <div className="space-y-4">
+                <p className="text-sm uppercase tracking-wider text-muted-foreground font-semibold">
+                  Attention All Perimenopausal and Menopausal Women
+                </p>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                  You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
+                </h2>
+                <p className="text-lg md:text-xl text-muted-foreground">
+                  Discover the proven strategies to reclaim your energy, balance your hormones, and feel like yourself again.
+                </p>
+              </div>
+
+              {/* CTA Button */}
+              <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+                onClick={scrollToWaitlist}
+              >
+                Join the Waitlist Now
+              </Button>
+            </div>
           </div>
         </div>
       </section>
