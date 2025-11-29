@@ -282,6 +282,82 @@ export default function Home() {
 
 
 
+      {/* This Is For You If Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-primary/5 to-white">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                This Is For You If...
+              </h2>
+              <div className="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div className="space-y-8 text-lg md:text-xl leading-relaxed">
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-primary">
+                <p className="text-gray-700">
+                  You wake up exhausted, even after 8 hours of sleep. Your body feels heavy, your mind foggy, and you're dragging yourself through the day on sheer willpower and coffee. <span className="font-semibold text-foreground">You're tired of being tired.</span>
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-primary">
+                <p className="text-gray-700">
+                  You've tried everything—cutting calories, exercising more, eating "clean"—but the weight keeps creeping on, settling stubbornly around your middle. You feel like your body has turned against you. <span className="font-semibold text-foreground">You're desperate to feel comfortable in your own skin again.</span>
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-primary">
+                <p className="text-gray-700">
+                  You're lying awake at 3am, drenched in sweat, throwing off the covers only to pull them back on minutes later. Hot flashes ambush you in meetings, at dinner, in the middle of conversations. <span className="font-semibold text-foreground">You're exhausted by your own body's unpredictability.</span>
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-primary">
+                <p className="text-gray-700">
+                  You walk into a room and forget why. You lose your train of thought mid-sentence. You wonder if this is just "getting older" or if something is seriously wrong. <span className="font-semibold text-foreground">You're scared you're losing yourself.</span>
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-primary">
+                <p className="text-gray-700">
+                  You snap at your partner over nothing. You cry at commercials. You feel rage bubbling under the surface for no reason at all. Your emotions feel like a rollercoaster you can't get off. <span className="font-semibold text-foreground">You're desperate to feel like YOU again.</span>
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-primary">
+                <p className="text-gray-700">
+                  Your doctor says "your labs are normal" and suggests antidepressants or "just dealing with it." You know something is wrong, but you feel dismissed, invisible, unheard. <span className="font-semibold text-foreground">You're done accepting "this is just how it is."</span>
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-primary">
+                <p className="text-gray-700">
+                  You look in the mirror and barely recognize the woman staring back. You miss your energy, your confidence, your spark. You want to feel vibrant, alive, and powerful again. <span className="font-semibold text-foreground">You're ready to reclaim your body, your health, and your life.</span>
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-16 text-center">
+              <div className="bg-primary/10 rounded-2xl p-8 md:p-12 border-2 border-primary">
+                <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  If you nodded your head to even ONE of these...
+                </p>
+                <p className="text-xl text-gray-700 mb-8">
+                  The Longevity Reset was created specifically for YOU.
+                </p>
+                <Button 
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+                  onClick={scrollToWaitlist}
+                >
+                  Yes, This Is Me—I'm Ready
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Tiers Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container">
