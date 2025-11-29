@@ -170,15 +170,6 @@ export default function Home() {
                   <span className="font-medium">Join <span className="text-primary font-bold">247+</span> women already on the waitlist</span>
                 </div>
               </div>
-              
-              {/* Trust Badge */}
-              <div className="mt-4">
-                <img 
-                  src="/trust-badge.jpg" 
-                  alt="Certified Functional Medicine Practitioner - 15+ Years Experience"
-                  className="w-auto h-20 md:h-24 object-contain"
-                />
-              </div>
             </div>
             
             {/* Right Side - Empty space for Victoria in background (40%) */}
