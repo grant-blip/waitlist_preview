@@ -19,3 +19,6 @@
 - [x] Redesign hero with full background image and text overlay on right
 - [x] Update hero background with VOS.jpg image
 - [x] Optimize hero section and layout for mobile devices
+- [x] Replace Meet Your Host image with Victoria's actual photo
+- [x] Add video testimonial section
+- [x] Add countdown timer to sticky header

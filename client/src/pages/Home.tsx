@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { CheckCircle2, Calendar, Users, Video, Star, Clock, Gift, BookOpen } from "lucide-react";
 
@@ -10,6 +10,33 @@ export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Countdown timer state
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  
+  useEffect(() => {
+    // Set event date: May 17, 2025 at 10:00 AM
+    const eventDate = new Date('2025-05-17T10:00:00').getTime();
+    
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+      
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    };
+    
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,12 +65,38 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-white">
       {/* Sticky Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-6">
-            <h1 className="text-xl font-bold text-foreground">The Longevity Reset</h1>
+        <div className="container flex h-16 items-center justify-between gap-4">
+          <div className="flex items-center gap-4 md:gap-6">
+            <h1 className="text-base md:text-xl font-bold text-foreground">The Longevity Reset</h1>
+            
+            {/* Countdown Timer */}
+            <div className="hidden sm:flex items-center gap-2 md:gap-3 text-xs md:text-sm">
+              <Clock className="w-4 h-4 text-primary" />
+              <div className="flex items-center gap-1 md:gap-2">
+                <div className="text-center">
+                  <div className="font-bold text-foreground">{timeLeft.days}</div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">Days</div>
+                </div>
+                <span className="text-muted-foreground">:</span>
+                <div className="text-center">
+                  <div className="font-bold text-foreground">{timeLeft.hours}</div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">Hrs</div>
+                </div>
+                <span className="text-muted-foreground">:</span>
+                <div className="text-center">
+                  <div className="font-bold text-foreground">{timeLeft.minutes}</div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">Min</div>
+                </div>
+                <span className="text-muted-foreground hidden md:inline">:</span>
+                <div className="text-center hidden md:block">
+                  <div className="font-bold text-foreground">{timeLeft.seconds}</div>
+                  <div className="text-xs text-muted-foreground">Sec</div>
+                </div>
+              </div>
+            </div>
           </div>
           <Button 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-4 md:px-6 text-sm md:text-base"
             onClick={scrollToWaitlist}
           >
             Join the Waitlist
@@ -124,9 +177,9 @@ export default function Home() {
               <div className="order-2 md:order-1">
                 <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
                   <img 
-                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80" 
+                    src="/victoria-hero.jpg" 
                     alt="Victoria O'Sullivan"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
               </div>
@@ -459,6 +512,96 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonials Section */}
+      <section className="py-20 bg-white border-t">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              See Real Transformations
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Watch women share their personal journeys and the life-changing results they've achieved.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Video Testimonial 1 */}
+            <Card className="border-2 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"I Got My Life Back"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Watch how Lisa transformed her energy levels and lost 20 pounds in just 12 weeks.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Lisa T., Age 49</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Testimonial 2 */}
+            <Card className="border-2 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
+                    alt="Video testimonial"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h4 className="font-bold text-lg text-foreground mb-2">"No More Hot Flashes!"</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Discover how Maria eliminated her symptoms and regained her confidence naturally.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-muted-foreground">Maria S., Age 53</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+              onClick={scrollToWaitlist}
+            >
+              Join the Waitlist Now
+            </Button>
           </div>
         </div>
       </section>
