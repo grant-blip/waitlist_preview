@@ -4,12 +4,13 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
-import { CheckCircle2, Calendar, Users, Video, Star, Clock, Gift, BookOpen, Flame, Award, Check, Coffee } from "lucide-react";
+import { CheckCircle2, Calendar, Users, Video, Star, Clock, Gift, BookOpen, Flame, Award, Check, Coffee, ChevronDown } from "lucide-react";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   
   // Countdown timer state
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -197,6 +198,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Say No To / Hello Again To Section */}
+      <section className="py-16 bg-white">
+        <div className="container max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Say No To */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Say no to:</h3>
+              <div className="space-y-4">
+                {[
+                  { emoji: "🚫", text: "Sleepless nights (goodbye 2-4am wakings)" },
+                  { emoji: "🚫", text: "3pm crashes, exhaustion so chronic you can't get through the day" },
+                  { emoji: "🚫", text: "Weight gain, despite doing EVERYTHING right" },
+                  { emoji: "🚫", text: "Brain fog so severe you wonder if you are actually going crazy" },
+                  { emoji: "🚫", text: "Medical tests that just keep telling you \"everything is normal\"" },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-100">
+                    <span className="text-2xl flex-shrink-0">{item.emoji}</span>
+                    <p className="text-gray-700 font-medium">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* And Hello Again To */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">And hello again to:</h3>
+              <div className="space-y-4">
+                {[
+                  { emoji: "🛌", text: "Restful, deep and regenerative sleep (like you had in your 20s)" },
+                  { emoji: "⚡️", text: "Energy and focus to do the things you ENJOY, so you can be yourself again" },
+                  { emoji: "🍎", text: "A metabolism that WORKS and rewards you for your effort" },
+                  { emoji: "🌀", text: "A life that feels under control and full of possibility again" },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20">
+                    <span className="text-2xl flex-shrink-0">{item.emoji}</span>
+                    <p className="text-gray-700 font-medium">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured In - Media Logos */}
       <section className="py-12 bg-primary/10 border-y border-primary/20">
         <div className="container">
@@ -273,7 +318,7 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2 md:pt-4">
                 <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">15+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">25+</div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">Years Experience</div>
                 </div>
                 <div className="bg-white rounded-xl p-3 md:p-4 shadow-md border border-primary/10 text-center">
@@ -626,14 +671,30 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <div className="inline-block px-8 py-4 bg-primary/10 rounded-2xl border-2 border-primary/20">
-              <p className="text-lg md:text-xl font-semibold text-foreground mb-2">
-                Plus: Bioidentical Hormones, Metabolism Training & The Secret to Thriving in Midlife
-              </p>
-              <p className="text-muted-foreground">
-                Everything you need to transform your health and reclaim your vitality—all in one comprehensive event.
-              </p>
+          <div className="mt-16 space-y-8">
+            <div className="text-center">
+              <div className="inline-block px-8 py-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl border-2 border-primary/30 shadow-lg">
+                <p className="text-lg md:text-xl font-bold text-foreground mb-3">
+                  ✨ Get Access to Functional Testing
+                </p>
+                <p className="text-base md:text-lg text-muted-foreground mb-2">
+                  DUTCH Panel • Microbiome Mapping • DNA Testing
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Finally stop guessing and get personalized insights based on YOUR unique biology
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-block px-8 py-4 bg-primary/10 rounded-2xl border-2 border-primary/20">
+                <p className="text-lg md:text-xl font-semibold text-foreground mb-2">
+                  Plus: Bioidentical Hormones, Metabolism Training & The Secret to Thriving in Midlife
+                </p>
+                <p className="text-muted-foreground">
+                  Everything you need to transform your health and reclaim your vitality—all in one comprehensive event.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1225,138 +1286,84 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-6">
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    What if I can't attend the live sessions?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    No problem at all! You'll get <strong>lifetime access to all recordings</strong>, so you can watch at your own pace, rewatch any session, and never miss a thing. Many of our most successful participants watch the recordings on their own schedule.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="space-y-3">
+              {[
+                {
+                  question: "What if I can't attend the live sessions?",
+                  answer: "No problem at all! You'll get <strong>lifetime access to all recordings</strong>, so you can watch at your own pace, rewatch any session, and never miss a thing. Many of our most successful participants watch the recordings on their own schedule."
+                },
+                {
+                  question: "Is this right for me if I'm already on HRT or bioidentical hormones?",
+                  answer: "Absolutely! We cover <strong>both natural and bioidentical hormone approaches</strong>, and you'll learn how to optimize whatever protocol you're currently on. Many women on HRT still struggle with weight, energy, and symptoms because they're missing the other critical pieces—which we'll address in depth."
+                },
+                {
+                  question: "I've tried everything—diets, supplements, exercise. Why will this work when nothing else has?",
+                  answer: "Because this isn't another generic diet or supplement protocol. Victoria's approach is <strong>evidence-based and personalized</strong> to how YOUR body works in perimenopause and menopause. You'll learn exactly why previous approaches failed and get a customized strategy based on your hormones, metabolism, and lifestyle—not a one-size-fits-all plan."
+                },
+                {
+                  question: "What's the time commitment? I have a busy schedule.",
+                  answer: "The live event runs <strong>10am-5pm on May 17-18</strong> (with lunch breaks and Q&A). But remember, you get lifetime access to recordings, so you can watch on your schedule. Plus, the strategies you'll learn are designed to fit into a busy life—not add more stress."
+                },
+                {
+                  question: "Will I get personalized guidance, or is this just general information?",
+                  answer: "You'll get <strong>both</strong>! The curriculum covers comprehensive strategies that work for all women in midlife, PLUS you'll have dedicated Q&A sessions with Victoria to ask YOUR specific questions. You'll also receive personalized protocols based on your symptoms and goals."
+                },
+                {
+                  question: "What's the difference between General Admission and VIP?",
+                  answer: "<strong>General Admission ($97)</strong> includes full access to both days, all training sessions, live Q&A, lifetime recordings, and community access. <strong>VIP ($197)</strong> includes everything in General PLUS $361 worth of exclusive bonuses: Complete Hormone Balancing Guide, 14-Day Meal Plan, Personalized Protocol Template, Workbooks & Trackers, and priority Q&A access. VIP members get their questions answered first and receive actionable tools to implement immediately."
+                },
+                {
+                  question: "Is VIP worth the extra $100?",
+                  answer: "Absolutely! You're getting <strong>$361 in bonuses for just $100 more</strong>—that's $261 in extra value. The VIP bonuses include the exact tools you need to implement what you learn: personalized protocols, meal plans, tracking workbooks, and priority access to Victoria. Most successful participants choose VIP because they want the complete transformation toolkit, not just information."
+                },
+                {
+                  question: "When do I need to pay?",
+                  answer: "You're joining the <strong>waitlist now for free</strong>—no payment required yet. Once the waitlist closes, we'll send you a payment link to secure your spot. You'll choose your tier (General $97 or VIP $197) at that time. This gives you priority access and ensures you don't miss out when spots fill up."
+                },
+                {
+                  question: "What if I'm in a different time zone?",
+                  answer: "The event is scheduled for <strong>Australian Eastern Time (AEST)</strong>, but with lifetime recording access, you can participate from anywhere in the world on your own schedule. Many international participants watch the recordings and submit questions via our private community."
+                },
+                {
+                  question: "How is this different from other hormone or menopause programs?",
+                  answer: "Victoria's approach combines <strong>over 25 years of clinical experience with cutting-edge research</strong> and has helped thousands of women transform their health. Unlike generic programs, you'll get evidence-based strategies tailored to midlife metabolism, ongoing support in our thriving community, and practical tools you can implement immediately—not just theory."
+                },
+                {
+                  question: "What's included in the VIP bonuses?",
+                  answer: "VIP members receive <strong>$361 in exclusive bonuses</strong>: Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Personalized Protocol Template ($147 value), Downloadable Workbooks & Trackers ($50 value), plus priority Q&A access. These bonuses are designed to help you implement everything you learn immediately and get faster results."
+                },
+                {
+                  question: "Can I upgrade from General to VIP later?",
+                  answer: "Yes! You can upgrade to VIP anytime before the event starts by paying the $100 difference. However, we recommend choosing VIP when you register to ensure you receive all bonuses and materials in advance, giving you time to prepare and get the most out of the event."
+                }
+              ].map((faq, index) => (
+                <Card 
+                  key={index} 
+                  className="border-2 border-primary/10 hover:border-primary/30 transition-all cursor-pointer"
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                >
+                  <CardContent className="p-5">
+                    <div className="flex items-center justify-between gap-4">
+                      <h4 className="font-bold text-base md:text-lg text-foreground">
+                        {faq.question}
+                      </h4>
+                      <ChevronDown 
+                        className={`w-5 h-5 text-primary flex-shrink-0 transition-transform ${
+                          openFaqIndex === index ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </div>
+                    {openFaqIndex === index && (
+                      <p 
+                        className="text-muted-foreground mt-4 pt-4 border-t border-gray-200"
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
 
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    Is this right for me if I'm already on HRT or bioidentical hormones?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Absolutely! We cover <strong>both natural and bioidentical hormone approaches</strong>, and you'll learn how to optimize whatever protocol you're currently on. Many women on HRT still struggle with weight, energy, and symptoms because they're missing the other critical pieces—which we'll address in depth.
-                  </p>
-                </CardContent>
-              </Card>
 
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    I've tried everything—diets, supplements, exercise. Why will this work when nothing else has?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Because this isn't another generic diet or supplement protocol. Victoria's approach is <strong>evidence-based and personalized</strong> to how YOUR body works in perimenopause and menopause. You'll learn exactly why previous approaches failed and get a customized strategy based on your hormones, metabolism, and lifestyle—not a one-size-fits-all plan.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    What's the time commitment? I have a busy schedule.
-                  </h4>
-                  <p className="text-muted-foreground">
-                    The live event runs <strong>10am-5pm on May 17-18</strong> (with lunch breaks and Q&A). But remember, you get lifetime access to recordings, so you can watch on your schedule. Plus, the strategies you'll learn are designed to fit into a busy life—not add more stress.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    Will I get personalized guidance, or is this just general information?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    You'll get <strong>both</strong>! The curriculum covers comprehensive strategies that work for all women in midlife, PLUS you'll have dedicated Q&A sessions with Victoria to ask YOUR specific questions. You'll also receive personalized protocols based on your symptoms and goals.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    What's the difference between General Admission and VIP?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    <strong>General Admission ($97)</strong> includes full access to both days, all training sessions, live Q&A, lifetime recordings, and community access. <strong>VIP ($197)</strong> includes everything in General PLUS $361 worth of exclusive bonuses: Complete Hormone Balancing Guide, 14-Day Meal Plan, Personalized Protocol Template, Workbooks & Trackers, and priority Q&A access. VIP members get their questions answered first and receive actionable tools to implement immediately.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    Is VIP worth the extra $100?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Absolutely! You're getting <strong>$361 in bonuses for just $100 more</strong>—that's $261 in extra value. The VIP bonuses include the exact tools you need to implement what you learn: personalized protocols, meal plans, tracking workbooks, and priority access to Victoria. Most successful participants choose VIP because they want the complete transformation toolkit, not just information.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    When do I need to pay?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    You're joining the <strong>waitlist now for free</strong>—no payment required yet. Once the waitlist closes, we'll send you a payment link to secure your spot. You'll choose your tier (General $97 or VIP $197) at that time. This gives you priority access and ensures you don't miss out when spots fill up.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    What if I'm in a different time zone?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    The event is scheduled for <strong>Australian Eastern Time (AEST)</strong>, but with lifetime recording access, you can participate from anywhere in the world on your own schedule. Many international participants watch the recordings and submit questions via our private community.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    How is this different from other hormone or menopause programs?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Victoria's approach combines <strong>15+ years of clinical experience with cutting-edge research</strong> and has helped over 17,000 women. Unlike generic programs, you'll get evidence-based strategies tailored to midlife metabolism, ongoing support in our 17,000+ member community, and practical tools you can implement immediately—not just theory.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    What's included in the VIP bonuses?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    VIP members receive <strong>$361 in exclusive bonuses</strong>: Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Personalized Protocol Template ($147 value), Downloadable Workbooks & Trackers ($50 value), plus priority Q&A access. These bonuses are designed to help you implement everything you learn immediately and get faster results.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 border-primary/10">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-3">
-                    Can I upgrade from General to VIP later?
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Yes! You can upgrade to VIP anytime before the event starts by paying the $100 difference. However, we recommend choosing VIP when you register to ensure you receive all bonuses and materials in advance, giving you time to prepare and get the most out of the event.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
 
             <div className="mt-12 text-center">
