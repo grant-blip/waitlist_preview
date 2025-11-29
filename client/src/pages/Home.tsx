@@ -180,14 +180,12 @@ export default function Home() {
 
       {/* Featured In - Media Logos */}
       <section className="py-8 bg-primary/10 border-y border-primary/20">
-        <div className="container">
-          <div className="flex justify-center">
-            <img 
-              src="/media-logos.jpg" 
-              alt="As featured in major media outlets"
-              className="w-full max-w-6xl h-auto object-contain"
-            />
-          </div>
+        <div className="w-full">
+          <img 
+            src="/media-logos.jpg" 
+            alt="As featured in major media outlets"
+            className="w-full h-auto object-cover"
+          />
         </div>
       </section>
 
