@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
-import { CheckCircle2, Calendar, Users, Video, Star, Clock, Gift, BookOpen } from "lucide-react";
+import { CheckCircle2, Calendar, Users, Video, Star, Clock, Gift, BookOpen, Flame, Award } from "lucide-react";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -105,7 +105,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center overflow-hidden">
+      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden">
         {/* Background Image - Desktop */}
         <div 
           className="hidden md:block absolute inset-0 z-0"
@@ -130,9 +130,9 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left Side - Content Overlay */}
-            <div className="space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
+          <div className="grid md:grid-cols-5 gap-8 items-center">
+            {/* Left Side - Content Overlay (60%) */}
+            <div className="md:col-span-3 space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
               {/* Attention Badge */}
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground rounded-full text-sm font-medium shadow-sm">
@@ -155,17 +155,41 @@ export default function Home() {
               </div>
 
               {/* CTA Button */}
-              <Button 
-                size="lg"
-                className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-                onClick={scrollToWaitlist}
-              >
-                Join the Waitlist Now
-              </Button>
+              <div className="space-y-3">
+                <Button 
+                  size="lg"
+                  className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+                  onClick={scrollToWaitlist}
+                >
+                  Join the Waitlist Now
+                </Button>
+                
+                {/* Social Proof Counter */}
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <Flame className="w-4 h-4 text-orange-500" />
+                  <span className="font-medium">Join <span className="text-primary font-bold">247+</span> women already on the waitlist</span>
+                </div>
+              </div>
             </div>
             
-            {/* Right Side - Empty space for Victoria in background */}
-            <div className="hidden md:block" />
+            {/* Right Side - Trust Indicators near Victoria (40%) */}
+            <div className="hidden md:flex md:col-span-2 items-end justify-end pb-8 pr-8">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg px-6 py-4 space-y-2">
+                <div className="flex items-center gap-3">
+                  <Award className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="text-sm font-bold text-gray-900">Certified Functional</p>
+                    <p className="text-sm font-bold text-gray-900">Medicine Practitioner</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="text-xs text-gray-600">15+ Years Experience</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

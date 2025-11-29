@@ -25,3 +25,7 @@
 - [x] Adjust hero background image positioning to show Victoria's full head
 - [x] Center Victoria in Meet Your Host image
 - [x] Further adjust Meet Your Host image to move Victoria more to the left
+- [x] Adjust hero layout to 60/40 ratio (text/image)
+- [x] Reduce hero height by 15-20%
+- [x] Add social proof counter below CTA
+- [x] Add trust indicators/credentials near Victoria's image
