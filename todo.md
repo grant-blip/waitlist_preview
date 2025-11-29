@@ -28,3 +28,4 @@
 - [x] Adjust hero section to 50/50 width proportion
 - [x] Swap hero section sides (text left, image right)
 - [x] Make mobile hero display text overlay on image
+- [x] Change hero section to 2/3 text, 1/3 image proportion
