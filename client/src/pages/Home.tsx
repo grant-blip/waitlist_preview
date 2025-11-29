@@ -105,22 +105,34 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center overflow-hidden bg-white">
-        {/* Mobile: Image with text overlay */}
-        <div className="md:hidden absolute inset-0 z-0">
-          <img 
-            src="/victoria-hero.jpg" 
-            alt="Victoria O'Sullivan"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/75 to-white/85" />
+      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center overflow-hidden">
+        {/* Background Image - Desktop */}
+        <div 
+          className="hidden md:block absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(/victoria-hero.jpg)',
+            backgroundSize: 'contain',
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        
+        {/* Background Image - Mobile */}
+        <div 
+          className="md:hidden absolute inset-0 z-0"
+          style={{
+            backgroundImage: 'url(/victoria-hero.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 30%',
+          }}
+        >
+          <div className="absolute inset-0 bg-white/75" />
         </div>
         
-        {/* Desktop: 50/50 split */}
-        <div className="w-full">
-          <div className="grid md:grid-cols-3 gap-0 items-center min-h-[500px] md:min-h-[700px]">
-            {/* Left Side - Content (2/3) */}
-            <div className="relative z-10 space-y-4 md:space-y-6 py-8 md:py-12 px-6 md:px-12 bg-transparent md:bg-gray-50 md:col-span-2">
+        <div className="container relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Side - Content Overlay */}
+            <div className="space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
               {/* Attention Badge */}
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm text-foreground rounded-full text-sm font-medium shadow-sm">
@@ -152,14 +164,8 @@ export default function Home() {
               </Button>
             </div>
             
-            {/* Right Side - Victoria Image (1/3) - Desktop only */}
-            <div className="hidden md:block relative h-[700px] md:col-span-1">
-              <img 
-                src="/victoria-hero.jpg" 
-                alt="Victoria O'Sullivan"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
+            {/* Right Side - Empty space for Victoria in background */}
+            <div className="hidden md:block" />
           </div>
         </div>
       </section>

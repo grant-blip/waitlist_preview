@@ -25,7 +25,3 @@
 - [x] Adjust hero background image positioning to show Victoria's full head
 - [x] Center Victoria in Meet Your Host image
 - [x] Further adjust Meet Your Host image to move Victoria more to the left
-- [x] Adjust hero section to 50/50 width proportion
-- [x] Swap hero section sides (text left, image right)
-- [x] Make mobile hero display text overlay on image
-- [x] Change hero section to 2/3 text, 1/3 image proportion
