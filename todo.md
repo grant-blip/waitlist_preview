@@ -25,5 +25,3 @@
 - [x] Adjust hero background image positioning to show Victoria's full head
 - [x] Center Victoria in Meet Your Host image
 - [x] Further adjust Meet Your Host image to move Victoria more to the left
-- [x] Replace hero and Meet Your Host images with new Vos2.jpg
-- [x] Reduce hero section height by 30%
