@@ -4,51 +4,72 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
-import { CheckCircle2, Calendar, Users, Video, Star, Clock, Gift, BookOpen, Flame, Award, Check, Coffee, ChevronDown } from "lucide-react";
+import {
+  CheckCircle2,
+  Calendar,
+  Users,
+  Video,
+  Star,
+  Clock,
+  Gift,
+  BookOpen,
+  Flame,
+  Award,
+  Check,
+  Coffee,
+  ChevronDown,
+} from "lucide-react";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  
+
   // Countdown timer state
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
   useEffect(() => {
     // Set event date: May 17, 2025 at 10:00 AM
-    const eventDate = new Date('2025-05-17T10:00:00').getTime();
-    
+    const eventDate = new Date("2025-05-17T10:00:00").getTime();
+
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = eventDate - now;
-      
+
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
       }
     };
-    
+
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!name || !email) {
       toast.error("Please fill in all fields");
       return;
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast.success("You've been added to the waitlist!");
@@ -59,7 +80,9 @@ export default function Home() {
   };
 
   const scrollToWaitlist = () => {
-    document.getElementById('waitlist-form')?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById("waitlist-form")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -68,35 +91,53 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
         <div className="container flex h-16 items-center justify-between gap-4">
           <div className="flex items-center gap-4 md:gap-6">
-            <h1 className="text-base md:text-xl font-bold text-foreground">The Longevity Reset</h1>
-            
+            <h1 className="text-base md:text-xl font-bold text-foreground">
+              The Longevity Reset
+            </h1>
+
             {/* Countdown Timer */}
             <div className="hidden sm:flex items-center gap-2 md:gap-3 text-xs md:text-sm">
               <Clock className="w-4 h-4 text-primary" />
               <div className="flex items-center gap-1 md:gap-2">
                 <div className="text-center">
-                  <div className="font-bold text-foreground">{timeLeft.days}</div>
-                  <div className="text-[10px] md:text-xs text-muted-foreground">Days</div>
+                  <div className="font-bold text-foreground">
+                    {timeLeft.days}
+                  </div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">
+                    Days
+                  </div>
                 </div>
                 <span className="text-muted-foreground">:</span>
                 <div className="text-center">
-                  <div className="font-bold text-foreground">{timeLeft.hours}</div>
-                  <div className="text-[10px] md:text-xs text-muted-foreground">Hrs</div>
+                  <div className="font-bold text-foreground">
+                    {timeLeft.hours}
+                  </div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">
+                    Hrs
+                  </div>
                 </div>
                 <span className="text-muted-foreground">:</span>
                 <div className="text-center">
-                  <div className="font-bold text-foreground">{timeLeft.minutes}</div>
-                  <div className="text-[10px] md:text-xs text-muted-foreground">Min</div>
+                  <div className="font-bold text-foreground">
+                    {timeLeft.minutes}
+                  </div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">
+                    Min
+                  </div>
                 </div>
-                <span className="text-muted-foreground hidden md:inline">:</span>
+                <span className="text-muted-foreground hidden md:inline">
+                  :
+                </span>
                 <div className="text-center hidden md:block">
-                  <div className="font-bold text-foreground">{timeLeft.seconds}</div>
+                  <div className="font-bold text-foreground">
+                    {timeLeft.seconds}
+                  </div>
                   <div className="text-xs text-muted-foreground">Sec</div>
                 </div>
               </div>
             </div>
           </div>
-          <Button 
+          <Button
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-4 md:px-6 text-sm md:text-base"
             onClick={scrollToWaitlist}
           >
@@ -106,30 +147,35 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #F5F1E8 0%, #FFFDF7 100%)' }}>
+      <section
+        className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #F5F1E8 0%, #FFFDF7 100%)",
+        }}
+      >
         {/* Background Image - Desktop */}
-        <div 
+        <div
           className="hidden md:block absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/victoria-hero-new.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: '82.5% center',
-            backgroundRepeat: 'no-repeat',
+            backgroundImage: "url(/victoria-hero-new.png)",
+            backgroundSize: "contain",
+            backgroundPosition: "82.5% center",
+            backgroundRepeat: "no-repeat",
           }}
         />
-        
+
         {/* Background Image - Mobile */}
-        <div 
+        <div
           className="md:hidden absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/victoria-hero-new.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center 30%',
+            backgroundImage: "url(/victoria-hero-new.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",
           }}
         >
           <div className="absolute inset-0 bg-white/75" />
         </div>
-        
+
         <div className="container relative z-10">
           <div className="grid md:grid-cols-5 gap-8 items-center">
             {/* Left Side - Content Overlay (60%) */}
@@ -140,10 +186,12 @@ export default function Home() {
                   Attention All Perimenopausal and Menopausal Women
                 </p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
-                  You Were Never Meant to Feel This Tired, This Stuck, or This Out of Sync.
+                  You Were Never Meant to Feel This Tired, This Stuck, or This
+                  Out of Sync.
                 </h2>
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Reset your hormones, your metabolism, and your future in just 2 days.
+                  Reset your hormones, your metabolism, and your future in just
+                  2 days.
                 </p>
               </div>
 
@@ -166,21 +214,25 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className="space-y-4">
-                <Button 
+                <Button
                   size="lg"
                   className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
                   onClick={scrollToWaitlist}
                 >
                   Join the Waitlist Now
                 </Button>
-                
+
                 {/* Simplified Social Proof */}
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold text-primary">247+ women</span> already joined • <span className="font-semibold text-gray-900">33 spots left</span>
+                  <span className="font-semibold text-primary">247+ women</span>{" "}
+                  already joined •{" "}
+                  <span className="font-semibold text-gray-900">
+                    33 spots left
+                  </span>
                 </p>
               </div>
             </div>
-            
+
             {/* Right Side - Empty space for Victoria in background (40%) */}
             <div className="hidden md:block md:col-span-2" />
           </div>
@@ -195,12 +247,13 @@ export default function Home() {
               Watch: Why The Longevity Reset Is Different
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover the science-backed approach that's helping thousands of women reclaim their energy, metabolism, and confidence in midlife.
+              Discover the science-backed approach that's helping thousands of
+              women reclaim their energy, metabolism, and confidence in midlife.
             </p>
           </div>
-          
+
           <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
-            <iframe 
+            <iframe
               className="absolute inset-0 w-full h-full"
               src="https://player.vimeo.com/video/1080000343?badge=0&autopause=0&player_id=0&app_id=58479"
               title="The Longevity Reset Sales Video"
@@ -217,13 +270,17 @@ export default function Home() {
       <section className="py-12 bg-primary/10 border-y border-primary/20">
         <div className="container">
           <div className="text-center mb-6">
-            <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Trusted By Leading Media</p>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">As Featured In</h3>
+            <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">
+              Trusted By Leading Media
+            </p>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              As Featured In
+            </h3>
           </div>
         </div>
         <div className="w-full">
-          <img 
-            src="/media-logos.jpg" 
+          <img
+            src="/media-logos.jpg"
             alt="As featured in major media outlets"
             className="w-full h-auto object-contain max-h-24 md:max-h-32"
           />
@@ -231,39 +288,46 @@ export default function Home() {
       </section>
 
       {/* Meet Your Host Section */}
-      <section className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden border-y" style={{ background: 'linear-gradient(135deg, #FFFDF7 0%, #F5F1E8 50%, #E8F2E6 100%)', borderColor: '#D4AF37' }}>
+      <section
+        className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden border-y"
+        style={{
+          background:
+            "linear-gradient(135deg, #FFFDF7 0%, #F5F1E8 50%, #E8F2E6 100%)",
+          borderColor: "#D4AF37",
+        }}
+      >
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        
+
         {/* Background Image - Desktop */}
-        <div 
+        <div
           className="hidden md:block absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/victoria-host.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: '17.5% center',
-            backgroundRepeat: 'no-repeat',
+            backgroundImage: "url(/victoria-host.png)",
+            backgroundSize: "contain",
+            backgroundPosition: "17.5% center",
+            backgroundRepeat: "no-repeat",
           }}
         />
-        
+
         {/* Background Image - Mobile */}
-        <div 
+        <div
           className="md:hidden absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/victoria-host.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center 30%',
+            backgroundImage: "url(/victoria-host.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/85 to-white/90" />
         </div>
-        
+
         <div className="container relative z-10">
           <div className="grid md:grid-cols-5 gap-8 items-center">
             {/* Left Side - Empty space for Victoria in background (40%) */}
             <div className="hidden md:block md:col-span-2" />
-            
+
             {/* Right Side - Content (60%) */}
             <div className="md:col-span-3 space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-8">
               <div>
@@ -277,31 +341,78 @@ export default function Home() {
                   Functional Medicine Practitioner & Women's Health Specialist
                 </p>
               </div>
-              
+
               <div className="space-y-3 md:space-y-4 text-gray-700 leading-relaxed text-base md:text-lg">
                 <p className="font-medium italic text-gray-800 border-l-4 border-primary pl-4 py-2 bg-primary/5">
-                  "I've been exactly where you are. At 42, I was exhausted, gaining weight despite doing everything 'right,' and feeling like a stranger in my own body. My doctor dismissed my concerns as 'just stress.' That's when I knew something had to change."
+                  "I've been exactly where you are. At 42, I was exhausted,
+                  gaining weight despite doing everything 'right,' and feeling
+                  like a stranger in my own body. My doctor dismissed my
+                  concerns as 'just stress.' That's when I knew something had to
+                  change."
                 </p>
                 <p className="font-medium">
-                  With over <strong className="text-primary">25 years of experience</strong> in functional medicine, Victoria O'Sullivan has dedicated her career to helping women navigate the complexities of perimenopause and menopause with grace and vitality—because she's lived it herself.
+                  With over{" "}
+                  <strong className="text-primary">
+                    25 years of experience
+                  </strong>{" "}
+                  in functional medicine, Victoria O'Sullivan has dedicated her
+                  career to helping women navigate the complexities of
+                  perimenopause and menopause with grace and vitality—because
+                  she's lived it herself.
                 </p>
                 <p>
-                  Her evidence-based approach combines cutting-edge research with practical, sustainable strategies that have transformed the lives of <strong className="text-primary">17,000+ women worldwide</strong>. Victoria doesn't just teach hormone balance—she embodies it.
+                  Her evidence-based approach combines cutting-edge research
+                  with practical, sustainable strategies that have transformed
+                  the lives of{" "}
+                  <strong className="text-primary">
+                    17,000+ women worldwide
+                  </strong>
+                  . Victoria doesn't just teach hormone balance—she embodies it.
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2 md:pt-4">
-                <div className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center" style={{ borderColor: 'var(--rose-gold)' }}>
-                  <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--rose-gold)' }}>25+</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Years Experience</div>
+                <div
+                  className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center"
+                  style={{ borderColor: "var(--rose-gold)" }}
+                >
+                  <div
+                    className="text-2xl md:text-3xl font-bold mb-1"
+                    style={{ color: "var(--rose-gold)" }}
+                  >
+                    25+
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Years Experience
+                  </div>
                 </div>
-                <div className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center" style={{ borderColor: 'var(--rose-gold)' }}>
-                  <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--rose-gold)' }}>17K+</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Women Helped</div>
+                <div
+                  className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center"
+                  style={{ borderColor: "var(--rose-gold)" }}
+                >
+                  <div
+                    className="text-2xl md:text-3xl font-bold mb-1"
+                    style={{ color: "var(--rose-gold)" }}
+                  >
+                    17K+
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Women Helped
+                  </div>
                 </div>
-                <div className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center" style={{ borderColor: 'var(--rose-gold)' }}>
-                  <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--rose-gold)' }}>50+</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Media Features</div>
+                <div
+                  className="bg-white rounded-xl p-3 md:p-4 shadow-luxury border text-center"
+                  style={{ borderColor: "var(--rose-gold)" }}
+                >
+                  <div
+                    className="text-2xl md:text-3xl font-bold mb-1"
+                    style={{ color: "var(--rose-gold)" }}
+                  >
+                    50+
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Media Features
+                  </div>
                 </div>
               </div>
             </div>
@@ -309,134 +420,199 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* This Is For You If Section */}
-      <section className="py-20" style={{ background: 'linear-gradient(to bottom, #FAF8F5 0%, #FFFDF7 100%)' }}>
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif font-bold text-foreground mb-6">
-                This Is For You If...
-              </h2>
-              <div className="w-24 h-1 mx-auto" style={{ backgroundColor: 'var(--champagne-gold)' }}></div>
-            </div>
+      <section className="py-20 relative overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/this-is-for-you-bg.jpg)" }}
+        ></div>
+        <div className="absolute inset-0 bg-white/70"></div>
 
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border-2 border-primary/20">
-              <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                {/* Checklist Item 1 */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
-                    </div>
-                  </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    You wake up exhausted, even after 8 hours of sleep. Your body feels heavy, your mind foggy, and you're dragging yourself through the day on sheer willpower and coffee. <span className="font-bold text-foreground">You're tired of being tired.</span>
-                  </p>
-                </div>
+        {/* Content */}
+        <div className="relative z-10">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif font-bold text-foreground mb-6">
+                  This Is For You If...
+                </h2>
+                <div
+                  className="w-24 h-1 mx-auto"
+                  style={{ backgroundColor: "var(--champagne-gold)" }}
+                ></div>
+              </div>
 
-                {/* Checklist Item 2 */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
+              <div
+                className="bg-[#FBF9F7]/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-luxury border-2"
+                style={{
+                  borderColor: "var(--champagne-gold)",
+                  borderWidth: "1px",
+                }}
+              >
+                <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                  {/* Checklist Item 1 */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
                     </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      You wake up exhausted, even after 8 hours of sleep. Your
+                      body feels heavy, your mind foggy, and you're dragging
+                      yourself through the day on sheer willpower and coffee.{" "}
+                      <span className="font-bold text-foreground">
+                        You're tired of being tired.
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    You've tried everything—cutting calories, exercising more, eating "clean"—but the weight keeps creeping on, settling stubbornly around your middle. You feel like your body has turned against you. <span className="font-bold text-foreground">You're desperate to feel comfortable in your own skin again.</span>
-                  </p>
-                </div>
 
-                {/* Checklist Item 3 */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
+                  {/* Checklist Item 2 */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
                     </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      You've tried everything—cutting calories, exercising more,
+                      eating "clean"—but the weight keeps creeping on, settling
+                      stubbornly around your middle. You feel like your body has
+                      turned against you.{" "}
+                      <span className="font-bold text-foreground">
+                        You're desperate to feel comfortable in your own skin
+                        again.
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    You're lying awake at 3am, drenched in sweat, throwing off the covers only to pull them back on minutes later. Hot flashes ambush you in meetings, at dinner, in the middle of conversations. <span className="font-bold text-foreground">You're exhausted by your own body's unpredictability.</span>
-                  </p>
-                </div>
 
-                {/* Checklist Item 4 */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
+                  {/* Checklist Item 3 */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
                     </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      You're lying awake at 3am, drenched in sweat, throwing off
+                      the covers only to pull them back on minutes later. Hot
+                      flashes ambush you in meetings, at dinner, in the middle
+                      of conversations.{" "}
+                      <span className="font-bold text-foreground">
+                        You're exhausted by your own body's unpredictability.
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    You walk into a room and forget why. You lose your train of thought mid-sentence. You wonder if this is just "getting older" or if something is seriously wrong. <span className="font-bold text-foreground">You're scared you're losing yourself.</span>
-                  </p>
-                </div>
 
-                {/* Checklist Item 5 */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
+                  {/* Checklist Item 4 */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
                     </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      You walk into a room and forget why. You lose your train
+                      of thought mid-sentence. You wonder if this is just
+                      "getting older" or if something is seriously wrong.{" "}
+                      <span className="font-bold text-foreground">
+                        You're scared you're losing yourself.
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    You snap at your partner over nothing. You cry at commercials. You feel rage bubbling under the surface for no reason at all. Your emotions feel like a rollercoaster you can't get off. <span className="font-bold text-foreground">You're desperate to feel like YOU again.</span>
-                  </p>
-                </div>
 
-                {/* Checklist Item 6 */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
+                  {/* Checklist Item 5 */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
                     </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      You snap at your partner over nothing. You cry at
+                      commercials. You feel rage bubbling under the surface for
+                      no reason at all. Your emotions feel like a rollercoaster
+                      you can't get off.{" "}
+                      <span className="font-bold text-foreground">
+                        You're desperate to feel like YOU again.
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Your doctor says "your labs are normal" and suggests antidepressants or "just dealing with it." You know something is wrong, but you feel dismissed, invisible, unheard. <span className="font-bold text-foreground">You're done accepting "this is just how it is."</span>
-                  </p>
-                </div>
 
-                {/* Checklist Item 7 */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
+                  {/* Checklist Item 6 */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
                     </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      Your doctor says "your labs are normal" and suggests
+                      antidepressants or "just dealing with it." You know
+                      something is wrong, but you feel dismissed, invisible,
+                      unheard.{" "}
+                      <span className="font-bold text-foreground">
+                        You're done accepting "this is just how it is."
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    You look in the mirror and barely recognize the woman staring back. You miss your energy, your confidence, your spark. You want to feel vibrant, alive, and powerful again. <span className="font-bold text-foreground">You're ready to reclaim your body, your health, and your life.</span>
-                  </p>
-                </div>
 
-                {/* Checklist Item 8 - NEW */}
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                      <Check className="w-4 h-4 text-primary-foreground" />
+                  {/* Checklist Item 7 */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
                     </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      You look in the mirror and barely recognize the woman
+                      staring back. You miss your energy, your confidence, your
+                      spark. You want to feel vibrant, alive, and powerful
+                      again.{" "}
+                      <span className="font-bold text-foreground">
+                        You're ready to reclaim your body, your health, and your
+                        life.
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    You've spent years putting everyone else first—your career, your family, your responsibilities. Now you're ready to invest in yourself and finally prioritize YOUR health, YOUR energy, YOUR happiness. <span className="font-bold text-foreground">You deserve to thrive, not just survive.</span>
-                  </p>
+
+                  {/* Checklist Item 8 - NEW */}
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
+                    </div>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      You've spent years putting everyone else first—your
+                      career, your family, your responsibilities. Now you're
+                      ready to invest in yourself and finally prioritize YOUR
+                      health, YOUR energy, YOUR happiness.{" "}
+                      <span className="font-bold text-foreground">
+                        You deserve to thrive, not just survive.
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-16 text-center">
-              <div className="bg-primary/10 rounded-2xl p-8 md:p-12 border-2 border-primary">
-                <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  If you nodded your head to even ONE of these...
-                </p>
-                <p className="text-xl text-gray-700 mb-8">
-                  The Longevity Reset was created specifically for YOU.
-                </p>
-                <Button 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-                  onClick={scrollToWaitlist}
-                >
-                  Yes, This Is Me—I'm Ready
-                </Button>
+              <div className="mt-16 text-center">
+                <div className="bg-primary/10 rounded-2xl p-8 md:p-12 border-2 border-primary">
+                  <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                    If you nodded your head to even ONE of these...
+                  </p>
+                  <p className="text-xl text-gray-700 mb-8">
+                    The Longevity Reset was created specifically for YOU.
+                  </p>
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
+                    onClick={scrollToWaitlist}
+                  >
+                    Yes, This Is Me—I'm Ready
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -444,14 +620,20 @@ export default function Home() {
       </section>
 
       {/* Video Testimonials Section - Moved here for optimal conversion */}
-      <section className="py-20" style={{ background: 'linear-gradient(to bottom, #FAF8F5 0%, #FFF5F0 100%)' }}>
+      <section
+        className="py-20"
+        style={{
+          background: "linear-gradient(to bottom, #FAF8F5 0%, #FFF5F0 100%)",
+        }}
+      >
         <div className="container">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               See Real Transformations
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Watch women share their personal journeys and the life-changing results they've achieved with Victoria's approach.
+              Watch women share their personal journeys and the life-changing
+              results they've achieved with Victoria's approach.
             </p>
           </div>
 
@@ -460,7 +642,7 @@ export default function Home() {
             <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
                 <div className="aspect-video bg-gray-100 relative">
-                  <iframe 
+                  <iframe
                     className="absolute inset-0 w-full h-full"
                     src="https://player.vimeo.com/video/843807324?badge=0&autopause=0&player_id=0&app_id=58479"
                     title="Sarah M. Testimonial"
@@ -470,9 +652,12 @@ export default function Home() {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-2">"I Got My Life Back"</h4>
+                  <h4 className="font-bold text-lg text-foreground mb-2">
+                    "I Got My Life Back"
+                  </h4>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Lost 12kg, eliminated hot flashes, sleeping 8 hours/night—watch Sarah's complete transformation.
+                    Lost 12kg, eliminated hot flashes, sleeping 8
+                    hours/night—watch Sarah's complete transformation.
                   </p>
                   <div className="flex items-center gap-2">
                     <div className="flex gap-1 text-yellow-500">
@@ -480,7 +665,9 @@ export default function Home() {
                         <Star key={i} className="w-4 h-4 fill-current" />
                       ))}
                     </div>
-                    <span className="text-sm text-muted-foreground">Sarah M., Age 48</span>
+                    <span className="text-sm text-muted-foreground">
+                      Sarah M., Age 48
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -490,7 +677,7 @@ export default function Home() {
             <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
                 <div className="aspect-video bg-gray-100 relative">
-                  <iframe 
+                  <iframe
                     className="absolute inset-0 w-full h-full"
                     src="https://player.vimeo.com/video/843807307?badge=0&autopause=0&player_id=0&app_id=58479"
                     title="Jennifer K. Testimonial"
@@ -500,9 +687,12 @@ export default function Home() {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-2">"No More Hot Flashes!"</h4>
+                  <h4 className="font-bold text-lg text-foreground mb-2">
+                    "No More Hot Flashes!"
+                  </h4>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Balanced hormones naturally, regained confidence, off antidepressants—Jennifer's inspiring journey.
+                    Balanced hormones naturally, regained confidence, off
+                    antidepressants—Jennifer's inspiring journey.
                   </p>
                   <div className="flex items-center gap-2">
                     <div className="flex gap-1 text-yellow-500">
@@ -510,7 +700,9 @@ export default function Home() {
                         <Star key={i} className="w-4 h-4 fill-current" />
                       ))}
                     </div>
-                    <span className="text-sm text-muted-foreground">Jennifer K., Age 52</span>
+                    <span className="text-sm text-muted-foreground">
+                      Jennifer K., Age 52
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -520,7 +712,7 @@ export default function Home() {
             <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
                 <div className="aspect-video bg-gray-100 relative">
-                  <iframe 
+                  <iframe
                     className="absolute inset-0 w-full h-full"
                     src="https://player.vimeo.com/video/843807252?badge=0&autopause=0&player_id=0&app_id=58479"
                     title="Michelle R. Testimonial"
@@ -530,9 +722,12 @@ export default function Home() {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h4 className="font-bold text-lg text-foreground mb-2">"Balanced & Thriving"</h4>
+                  <h4 className="font-bold text-lg text-foreground mb-2">
+                    "Balanced & Thriving"
+                  </h4>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Restored mental clarity, lost 15kg, energy like her 30s—see Michelle's remarkable results.
+                    Restored mental clarity, lost 15kg, energy like her 30s—see
+                    Michelle's remarkable results.
                   </p>
                   <div className="flex items-center gap-2">
                     <div className="flex gap-1 text-yellow-500">
@@ -540,7 +735,9 @@ export default function Home() {
                         <Star key={i} className="w-4 h-4 fill-current" />
                       ))}
                     </div>
-                    <span className="text-sm text-muted-foreground">Michelle R., Age 55</span>
+                    <span className="text-sm text-muted-foreground">
+                      Michelle R., Age 55
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -548,7 +745,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button 
+            <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
               onClick={scrollToWaitlist}
@@ -560,7 +757,14 @@ export default function Home() {
       </section>
 
       {/* Pricing Tiers Section */}
-      <section id="pricing" className="py-20" style={{ background: 'linear-gradient(135deg, #E8F2E6 0%, #F5F1E8 50%, #FFFDF7 100%)' }}>
+      <section
+        id="pricing"
+        className="py-20"
+        style={{
+          background:
+            "linear-gradient(135deg, #E8F2E6 0%, #F5F1E8 50%, #FFFDF7 100%)",
+        }}
+      >
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -568,7 +772,8 @@ export default function Home() {
                 Choose Your Experience
               </h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Both tiers give you access to the complete 2-day transformation event. VIP members receive exclusive bonuses worth $361.
+                Both tiers give you access to the complete 2-day transformation
+                event. VIP members receive exclusive bonuses worth $361.
               </p>
             </div>
 
@@ -577,37 +782,53 @@ export default function Home() {
               <Card className="border-2 border-gray-200 hover:shadow-lg transition-all">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
-                    <h4 className="text-2xl font-bold text-foreground mb-2">General Admission</h4>
+                    <h4 className="text-2xl font-bold text-foreground mb-2">
+                      General Admission
+                    </h4>
                     <div className="flex items-baseline justify-center gap-2 mb-4">
-                      <span className="text-5xl font-bold text-foreground">$97</span>
+                      <span className="text-5xl font-bold text-foreground">
+                        $97
+                      </span>
                     </div>
-                    <p className="text-sm text-muted-foreground">Perfect for getting started</p>
+                    <p className="text-sm text-muted-foreground">
+                      Perfect for getting started
+                    </p>
                   </div>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Full access to both days (10am-5pm)</span>
+                      <span className="text-gray-700">
+                        Full access to both days (10am-5pm)
+                      </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">All live training sessions</span>
+                      <span className="text-gray-700">
+                        All live training sessions
+                      </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Live Q&A with Victoria</span>
+                      <span className="text-gray-700">
+                        Live Q&A with Victoria
+                      </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Lifetime access to recordings</span>
+                      <span className="text-gray-700">
+                        Lifetime access to recordings
+                      </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Private community access</span>
+                      <span className="text-gray-700">
+                        Private community access
+                      </span>
                     </div>
                   </div>
 
-                  <Button 
+                  <Button
                     className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 rounded-full"
                     onClick={scrollToWaitlist}
                   >
@@ -617,10 +838,19 @@ export default function Home() {
               </Card>
 
               {/* VIP Tier */}
-              <Card className="border-4 shadow-2xl hover:shadow-3xl transition-all relative" style={{ borderColor: '#B76E79' }}>
+              <Card
+                className="border-4 shadow-2xl hover:shadow-3xl transition-all relative"
+                style={{ borderColor: "#B76E79" }}
+              >
                 {/* Most Popular Badge */}
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
+                  <div
+                    className="text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)",
+                    }}
+                  >
                     ⭐ MOST POPULAR
                   </div>
                 </div>
@@ -628,69 +858,113 @@ export default function Home() {
                 <CardContent className="p-8">
                   {/* Early Bird Banner */}
                   <div className="-mt-8 -mx-8 mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 p-3 text-center">
-                    <p className="text-sm font-bold text-gray-900">🔥 EARLY BIRD SPECIAL: First 30 get VIP for $177 (save $20!)</p>
+                    <p className="text-sm font-bold text-gray-900">
+                      🔥 EARLY BIRD SPECIAL: First 30 get VIP for $177 (save
+                      $20!)
+                    </p>
                   </div>
 
                   <div className="text-center mb-6">
-                    <h4 className="text-2xl font-bold text-foreground mb-2">VIP Experience</h4>
+                    <h4 className="text-2xl font-bold text-foreground mb-2">
+                      VIP Experience
+                    </h4>
                     <div className="flex items-baseline justify-center gap-3 mb-2">
-                      <span className="text-3xl font-bold text-gray-400 line-through">$197</span>
-                      <span className="text-5xl font-bold text-primary">$177</span>
+                      <span className="text-3xl font-bold text-gray-400 line-through">
+                        $197
+                      </span>
+                      <span className="text-5xl font-bold text-primary">
+                        $177
+                      </span>
                     </div>
                     <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-2">
-                      <span className="text-sm font-bold text-primary">Early Bird Price - Limited Time!</span>
+                      <span className="text-sm font-bold text-primary">
+                        Early Bird Price - Limited Time!
+                      </span>
                     </div>
-                    <p className="text-sm text-muted-foreground">Everything in General + $361 in exclusive bonuses</p>
+                    <p className="text-sm text-muted-foreground">
+                      Everything in General + $361 in exclusive bonuses
+                    </p>
                   </div>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700"><strong>Everything in General Admission</strong></span>
+                      <span className="text-gray-700">
+                        <strong>Everything in General Admission</strong>
+                      </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-900 font-bold">Complete Hormone Balancing Guide</span>
-                        <p className="text-sm text-gray-600 italic">Know exactly which hormones need attention and how to fix them naturally</p>
+                        <span className="text-gray-900 font-bold">
+                          Complete Hormone Balancing Guide
+                        </span>
+                        <p className="text-sm text-gray-600 italic">
+                          Know exactly which hormones need attention and how to
+                          fix them naturally
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-900 font-bold">14-Day Meal Plan & Recipes</span>
-                        <p className="text-sm text-gray-600 italic">No more guessing what to eat—delicious meals that balance hormones & burn fat</p>
+                        <span className="text-gray-900 font-bold">
+                          14-Day Meal Plan & Recipes
+                        </span>
+                        <p className="text-sm text-gray-600 italic">
+                          No more guessing what to eat—delicious meals that
+                          balance hormones & burn fat
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-900 font-bold">Personalized Protocol Template</span>
-                        <p className="text-sm text-gray-600 italic">Your custom roadmap to implement everything you learn immediately</p>
+                        <span className="text-gray-900 font-bold">
+                          Personalized Protocol Template
+                        </span>
+                        <p className="text-sm text-gray-600 italic">
+                          Your custom roadmap to implement everything you learn
+                          immediately
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-900 font-bold">Workbooks & Progress Trackers</span>
-                        <p className="text-sm text-gray-600 italic">See your transformation unfold with tools that keep you accountable</p>
+                        <span className="text-gray-900 font-bold">
+                          Workbooks & Progress Trackers
+                        </span>
+                        <p className="text-sm text-gray-600 italic">
+                          See your transformation unfold with tools that keep
+                          you accountable
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Star className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-900 font-bold">Priority Q&A Access</span>
-                        <p className="text-sm text-gray-600 italic">Get your specific questions answered first—no waiting, no wondering</p>
+                        <span className="text-gray-900 font-bold">
+                          Priority Q&A Access
+                        </span>
+                        <p className="text-sm text-gray-600 italic">
+                          Get your specific questions answered first—no waiting,
+                          no wondering
+                        </p>
                       </div>
                     </div>
                   </div>
 
                   <div className="mb-6 p-4 bg-primary/10 rounded-xl border-2 border-primary/30 text-center">
-                    <p className="text-sm font-bold text-foreground">Total Value: $558</p>
-                    <p className="text-xs text-muted-foreground">Early Bird: Just $177 (Regular $197)</p>
+                    <p className="text-sm font-bold text-foreground">
+                      Total Value: $558
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Early Bird: Just $177 (Regular $197)
+                    </p>
                   </div>
 
-                  <Button 
+                  <Button
                     className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full shadow-lg"
                     onClick={scrollToWaitlist}
                   >
@@ -702,35 +976,37 @@ export default function Home() {
 
             <div className="mt-12 text-center">
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-                🔒 <strong>Secure your spot now.</strong> Limited to 100 attendees total. Payment will be collected after waitlist closes.
+                🔒 <strong>Secure your spot now.</strong> Limited to 100
+                attendees total. Payment will be collected after waitlist
+                closes.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-
-
       {/* Event Agenda Section */}
       <section className="relative py-20 overflow-hidden">
         {/* Luxury Gradient Background with Subtle Texture */}
-        <div 
+        <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, #E8E5DC 0%, #F5F1E8 50%, #FFFDF7 100%)',
+            background:
+              "linear-gradient(135deg, #E8E5DC 0%, #F5F1E8 50%, #FFFDF7 100%)",
           }}
         >
           {/* Subtle overlay for depth */}
           <div className="absolute inset-0 bg-white/10" />
         </div>
-        
+
         <div className="container relative z-10">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-gray-900 mb-4">
               Your 2-Day Transformation Journey
             </h3>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              A carefully designed curriculum that takes you from exhausted to energized in just 2 days.
+              A carefully designed curriculum that takes you from exhausted to
+              energized in just 2 days.
             </p>
           </div>
 
@@ -743,25 +1019,59 @@ export default function Home() {
                     <Calendar className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-foreground mb-2">Day 1: Reboot & Reset</h4>
-                    <p className="text-muted-foreground">May 17th, 2025 | 10:00 AM - 5:00 PM</p>
+                    <h4 className="text-2xl font-bold text-foreground mb-2">
+                      Day 1: Reboot & Reset
+                    </h4>
+                    <p className="text-muted-foreground">
+                      May 17th, 2025 | 10:00 AM - 5:00 PM
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 ml-20">
                   {[
-                    { time: "10:00 AM", title: "How to decode your hormones & metabolism", desc: "for effortless fat loss" },
-                    { time: "11:30 AM", title: "The sneaky mistakes", desc: "sabotaging your energy, mood, and weight." },
-                    { time: "1:00 PM", title: "Lunch Break & Q&A", desc: "Network with other participants and get your questions answered" },
-                    { time: "2:00 PM", title: "Why gut health is the key to weight loss", desc: "clear skin & balanced hormones" },
-                    { time: "3:00 PM", title: "The Female Brain in Midlife", desc: "How hormones affect memory, mood, and focus." },
-                    { time: "4:00 PM", title: "The Craving Brain", desc: "Understanding why you reach for chocolate, wine, and snacks under stress—and how to break free." },
+                    {
+                      time: "10:00 AM",
+                      title: "How to decode your hormones & metabolism",
+                      desc: "for effortless fat loss",
+                    },
+                    {
+                      time: "11:30 AM",
+                      title: "The sneaky mistakes",
+                      desc: "sabotaging your energy, mood, and weight.",
+                    },
+                    {
+                      time: "1:00 PM",
+                      title: "Lunch Break & Q&A",
+                      desc: "Network with other participants and get your questions answered",
+                    },
+                    {
+                      time: "2:00 PM",
+                      title: "Why gut health is the key to weight loss",
+                      desc: "clear skin & balanced hormones",
+                    },
+                    {
+                      time: "3:00 PM",
+                      title: "The Female Brain in Midlife",
+                      desc: "How hormones affect memory, mood, and focus.",
+                    },
+                    {
+                      time: "4:00 PM",
+                      title: "The Craving Brain",
+                      desc: "Understanding why you reach for chocolate, wine, and snacks under stress—and how to break free.",
+                    },
                   ].map((session, idx) => (
                     <div key={idx} className="flex gap-4">
-                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">{session.time}</div>
+                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">
+                        {session.time}
+                      </div>
                       <div className="flex-1">
-                        <h5 className="font-bold text-foreground mb-1">{session.title}</h5>
-                        <p className="text-sm text-muted-foreground">{session.desc}</p>
+                        <h5 className="font-bold text-foreground mb-1">
+                          {session.title}
+                        </h5>
+                        <p className="text-sm text-muted-foreground">
+                          {session.desc}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -777,25 +1087,60 @@ export default function Home() {
                     <Calendar className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-foreground mb-2">Day 2: Build & Sustain Your Transformation</h4>
-                    <p className="text-muted-foreground">May 18th, 2025 | 10:00 AM - 5:00 PM</p>
+                    <h4 className="text-2xl font-bold text-foreground mb-2">
+                      Day 2: Build & Sustain Your Transformation
+                    </h4>
+                    <p className="text-muted-foreground">
+                      May 18th, 2025 | 10:00 AM - 5:00 PM
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 ml-20">
                   {[
-                    { time: "10:00 AM", title: "The Midlife Eating Blueprint", desc: "How to eat for fat-burning & energy." },
-                    { time: "11:30 AM", title: "Understanding Bioidentical Hormones & Natural Approaches", desc: "and which is right for you." },
-                    { time: "1:00 PM", title: "Lunch Break & Q&A", desc: "Continue networking and get personalized guidance" },
-                    { time: "2:00 PM", title: "The Hormones of Metabolism", desc: "Train smarter, not harder, for strength, fat-burning and longevity." },
-                    { time: "3:00 PM", title: "The Stress-Metabolism Connection", desc: "Turn stress from a fat-storing enemy into a fat-burning ally." },
-                    { time: "4:00 PM", title: "The Secret to Thriving in Midlife", desc: "A powerful, eye-opening revelation that will shift the way you think about your health forever." },
+                    {
+                      time: "10:00 AM",
+                      title: "The Midlife Eating Blueprint",
+                      desc: "How to eat for fat-burning & energy.",
+                    },
+                    {
+                      time: "11:30 AM",
+                      title:
+                        "Understanding Bioidentical Hormones & Natural Approaches",
+                      desc: "and which is right for you.",
+                    },
+                    {
+                      time: "1:00 PM",
+                      title: "Lunch Break & Q&A",
+                      desc: "Continue networking and get personalized guidance",
+                    },
+                    {
+                      time: "2:00 PM",
+                      title: "The Hormones of Metabolism",
+                      desc: "Train smarter, not harder, for strength, fat-burning and longevity.",
+                    },
+                    {
+                      time: "3:00 PM",
+                      title: "The Stress-Metabolism Connection",
+                      desc: "Turn stress from a fat-storing enemy into a fat-burning ally.",
+                    },
+                    {
+                      time: "4:00 PM",
+                      title: "The Secret to Thriving in Midlife",
+                      desc: "A powerful, eye-opening revelation that will shift the way you think about your health forever.",
+                    },
                   ].map((session, idx) => (
                     <div key={idx} className="flex gap-4">
-                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">{session.time}</div>
+                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">
+                        {session.time}
+                      </div>
                       <div className="flex-1">
-                        <h5 className="font-bold text-foreground mb-1">{session.title}</h5>
-                        <p className="text-sm text-muted-foreground">{session.desc}</p>
+                        <h5 className="font-bold text-foreground mb-1">
+                          {session.title}
+                        </h5>
+                        <p className="text-sm text-muted-foreground">
+                          {session.desc}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -815,12 +1160,16 @@ export default function Home() {
                 What You'll Walk Away With
               </h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-                This isn't just information—you'll leave with actionable tools, personalized protocols, and ongoing support to ensure lasting transformation.
+                This isn't just information—you'll leave with actionable tools,
+                personalized protocols, and ongoing support to ensure lasting
+                transformation.
               </p>
               <div className="flex items-center justify-center gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-gray-900"></div>
-                  <span className="font-semibold">Included in General ($97)</span>
+                  <span className="font-semibold">
+                    Included in General ($97)
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-primary"></div>
@@ -840,8 +1189,15 @@ export default function Home() {
                       <Gift className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Your Personalized Hormone-Balancing Protocol <span className="text-primary text-sm">VIP</span></h4>
-                      <p className="text-muted-foreground">A customized action plan based on your specific symptoms, goals, and lifestyle—not a one-size-fits-all approach.</p>
+                      <h4 className="font-bold text-lg text-foreground mb-2">
+                        Your Personalized Hormone-Balancing Protocol{" "}
+                        <span className="text-primary text-sm">VIP</span>
+                      </h4>
+                      <p className="text-muted-foreground">
+                        A customized action plan based on your specific
+                        symptoms, goals, and lifestyle—not a one-size-fits-all
+                        approach.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -857,8 +1213,15 @@ export default function Home() {
                       <Gift className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Complete 14-Day Meal Plan & Recipes <span className="text-primary text-sm">VIP</span></h4>
-                      <p className="text-muted-foreground">Delicious, hormone-balancing meals with shopping lists and meal prep instructions—start implementing immediately.</p>
+                      <h4 className="font-bold text-lg text-foreground mb-2">
+                        Complete 14-Day Meal Plan & Recipes{" "}
+                        <span className="text-primary text-sm">VIP</span>
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Delicious, hormone-balancing meals with shopping lists
+                        and meal prep instructions—start implementing
+                        immediately.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -874,8 +1237,14 @@ export default function Home() {
                       <CheckCircle2 className="w-6 h-6 text-gray-900" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Lifetime Access to All Recordings <span className="text-gray-600 text-sm">All Tiers</span></h4>
-                      <p className="text-muted-foreground">Can't attend live? No problem. Watch and rewatch all sessions at your own pace, forever.</p>
+                      <h4 className="font-bold text-lg text-foreground mb-2">
+                        Lifetime Access to All Recordings{" "}
+                        <span className="text-gray-600 text-sm">All Tiers</span>
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Can't attend live? No problem. Watch and rewatch all
+                        sessions at your own pace, forever.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -891,8 +1260,14 @@ export default function Home() {
                       <CheckCircle2 className="w-6 h-6 text-gray-900" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Access to Private Support Community <span className="text-gray-600 text-sm">All Tiers</span></h4>
-                      <p className="text-muted-foreground">Join 17,000+ women in our private Facebook group for ongoing support, accountability, and encouragement.</p>
+                      <h4 className="font-bold text-lg text-foreground mb-2">
+                        Access to Private Support Community{" "}
+                        <span className="text-gray-600 text-sm">All Tiers</span>
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Join 17,000+ women in our private Facebook group for
+                        ongoing support, accountability, and encouragement.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -908,8 +1283,15 @@ export default function Home() {
                       <CheckCircle2 className="w-6 h-6 text-gray-900" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Live Q&A Sessions with Victoria <span className="text-gray-600 text-sm">All Tiers</span></h4>
-                      <p className="text-muted-foreground">Get YOUR specific questions answered during dedicated Q&A sessions—personalized guidance for your unique situation.</p>
+                      <h4 className="font-bold text-lg text-foreground mb-2">
+                        Live Q&A Sessions with Victoria{" "}
+                        <span className="text-gray-600 text-sm">All Tiers</span>
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Get YOUR specific questions answered during dedicated
+                        Q&A sessions—personalized guidance for your unique
+                        situation.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -925,8 +1307,15 @@ export default function Home() {
                       <Gift className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Downloadable Workbooks & Trackers <span className="text-primary text-sm">VIP</span></h4>
-                      <p className="text-muted-foreground">Track your progress, symptoms, and wins with our proven tracking tools—see your transformation unfold in real-time.</p>
+                      <h4 className="font-bold text-lg text-foreground mb-2">
+                        Downloadable Workbooks & Trackers{" "}
+                        <span className="text-primary text-sm">VIP</span>
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Track your progress, symptoms, and wins with our proven
+                        tracking tools—see your transformation unfold in
+                        real-time.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -940,14 +1329,18 @@ export default function Home() {
                     General Admission
                   </p>
                   <p className="text-3xl font-bold text-gray-900 mb-2">$97</p>
-                  <p className="text-sm text-muted-foreground">Core event access + recordings</p>
+                  <p className="text-sm text-muted-foreground">
+                    Core event access + recordings
+                  </p>
                 </div>
                 <div className="px-6 py-4 bg-primary/10 rounded-xl border-2 border-primary/30">
                   <p className="text-lg font-bold text-foreground mb-1">
                     VIP Experience
                   </p>
                   <p className="text-3xl font-bold text-primary mb-2">$197</p>
-                  <p className="text-sm text-muted-foreground">Everything + $361 in bonuses</p>
+                  <p className="text-sm text-muted-foreground">
+                    Everything + $361 in bonuses
+                  </p>
                 </div>
               </div>
             </div>
@@ -960,13 +1353,16 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-16">
             <div className="inline-block px-6 py-2 bg-primary/10 rounded-full mb-4">
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">⭐ VIP Exclusive</span>
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">
+                ⭐ VIP Exclusive
+              </span>
             </div>
             <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               VIP Bonuses Worth $361
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Upgrade to VIP for just $100 more and receive these exclusive bonuses to accelerate your transformation.
+              Upgrade to VIP for just $100 more and receive these exclusive
+              bonuses to accelerate your transformation.
             </p>
           </div>
 
@@ -976,22 +1372,28 @@ export default function Home() {
                 icon: <BookOpen className="w-10 h-10" />,
                 title: "Complete Hormone Balance Guide",
                 value: "$97 Value",
-                description: "A comprehensive 50-page guide covering everything you need to know about balancing your hormones naturally.",
+                description:
+                  "A comprehensive 50-page guide covering everything you need to know about balancing your hormones naturally.",
               },
               {
                 icon: <Gift className="w-10 h-10" />,
                 title: "14-Day Meal Plan & Recipes",
                 value: "$67 Value",
-                description: "Delicious, hormone-balancing recipes with shopping lists and meal prep instructions.",
+                description:
+                  "Delicious, hormone-balancing recipes with shopping lists and meal prep instructions.",
               },
               {
                 icon: <Video className="w-10 h-10" />,
                 title: "Lifetime Access to Recordings",
                 value: "$197 Value",
-                description: "Watch and rewatch all sessions at your own pace, plus access to future updates.",
+                description:
+                  "Watch and rewatch all sessions at your own pace, plus access to future updates.",
               },
             ].map((bonus, index) => (
-              <Card key={index} className="border-2 hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="border-2 hover:shadow-lg transition-shadow"
+              >
                 <CardContent className="p-8 text-center space-y-4">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 text-primary">
                     {bonus.icon}
@@ -1000,7 +1402,9 @@ export default function Home() {
                     <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-bold rounded-full mb-3">
                       {bonus.value}
                     </div>
-                    <h4 className="text-xl font-bold text-foreground mb-2">{bonus.title}</h4>
+                    <h4 className="text-xl font-bold text-foreground mb-2">
+                      {bonus.title}
+                    </h4>
                     <p className="text-muted-foreground">{bonus.description}</p>
                   </div>
                 </CardContent>
@@ -1010,9 +1414,14 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <div className="inline-block px-8 py-6 bg-primary/10 rounded-2xl border-2 border-primary/30">
-              <p className="text-2xl font-bold text-foreground mb-2">Total VIP Bonus Value: <span className="text-primary">$361</span></p>
-              <p className="text-muted-foreground mb-4">Included FREE with VIP tier ($197)</p>
-              <Button 
+              <p className="text-2xl font-bold text-foreground mb-2">
+                Total VIP Bonus Value:{" "}
+                <span className="text-primary">$361</span>
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Included FREE with VIP tier ($197)
+              </p>
+              <Button
                 className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full"
                 onClick={scrollToWaitlist}
               >
@@ -1023,16 +1432,14 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
-
-
-
-
-
       {/* FAQ Section */}
-      <section className="py-20 border-y" style={{ background: 'linear-gradient(to bottom, #F5F1E8 0%, #FAF8F5 100%)', borderColor: '#D4AF37' }}>
+      <section
+        className="py-20 border-y"
+        style={{
+          background: "linear-gradient(to bottom, #F5F1E8 0%, #FAF8F5 100%)",
+          borderColor: "#D4AF37",
+        }}
+      >
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -1048,71 +1455,91 @@ export default function Home() {
               {[
                 {
                   question: "What if I can't attend the live sessions?",
-                  answer: "No problem at all! You'll get <strong>lifetime access to all recordings</strong>, so you can watch at your own pace, rewatch any session, and never miss a thing. Many of our most successful participants watch the recordings on their own schedule."
+                  answer:
+                    "No problem at all! You'll get <strong>lifetime access to all recordings</strong>, so you can watch at your own pace, rewatch any session, and never miss a thing. Many of our most successful participants watch the recordings on their own schedule.",
                 },
                 {
-                  question: "Is this right for me if I'm already on HRT or bioidentical hormones?",
-                  answer: "Absolutely! We cover <strong>both natural and bioidentical hormone approaches</strong>, and you'll learn how to optimize whatever protocol you're currently on. Many women on HRT still struggle with weight, energy, and symptoms because they're missing the other critical pieces—which we'll address in depth."
+                  question:
+                    "Is this right for me if I'm already on HRT or bioidentical hormones?",
+                  answer:
+                    "Absolutely! We cover <strong>both natural and bioidentical hormone approaches</strong>, and you'll learn how to optimize whatever protocol you're currently on. Many women on HRT still struggle with weight, energy, and symptoms because they're missing the other critical pieces—which we'll address in depth.",
                 },
                 {
-                  question: "I've tried everything—diets, supplements, exercise. Why will this work when nothing else has?",
-                  answer: "Because this isn't another generic diet or supplement protocol. Victoria's approach is <strong>evidence-based and personalized</strong> to how YOUR body works in perimenopause and menopause. You'll learn exactly why previous approaches failed and get a customized strategy based on your hormones, metabolism, and lifestyle—not a one-size-fits-all plan."
+                  question:
+                    "I've tried everything—diets, supplements, exercise. Why will this work when nothing else has?",
+                  answer:
+                    "Because this isn't another generic diet or supplement protocol. Victoria's approach is <strong>evidence-based and personalized</strong> to how YOUR body works in perimenopause and menopause. You'll learn exactly why previous approaches failed and get a customized strategy based on your hormones, metabolism, and lifestyle—not a one-size-fits-all plan.",
                 },
                 {
-                  question: "What's the time commitment? I have a busy schedule.",
-                  answer: "The live event runs <strong>10am-5pm on May 17-18</strong> (with lunch breaks and Q&A). But remember, you get lifetime access to recordings, so you can watch on your schedule. Plus, the strategies you'll learn are designed to fit into a busy life—not add more stress."
+                  question:
+                    "What's the time commitment? I have a busy schedule.",
+                  answer:
+                    "The live event runs <strong>10am-5pm on May 17-18</strong> (with lunch breaks and Q&A). But remember, you get lifetime access to recordings, so you can watch on your schedule. Plus, the strategies you'll learn are designed to fit into a busy life—not add more stress.",
                 },
                 {
-                  question: "Will I get personalized guidance, or is this just general information?",
-                  answer: "You'll get <strong>both</strong>! The curriculum covers comprehensive strategies that work for all women in midlife, PLUS you'll have dedicated Q&A sessions with Victoria to ask YOUR specific questions. You'll also receive personalized protocols based on your symptoms and goals."
+                  question:
+                    "Will I get personalized guidance, or is this just general information?",
+                  answer:
+                    "You'll get <strong>both</strong>! The curriculum covers comprehensive strategies that work for all women in midlife, PLUS you'll have dedicated Q&A sessions with Victoria to ask YOUR specific questions. You'll also receive personalized protocols based on your symptoms and goals.",
                 },
                 {
-                  question: "What's the difference between General Admission and VIP?",
-                  answer: "<strong>General Admission ($97)</strong> includes full access to both days, all training sessions, live Q&A, lifetime recordings, and community access. <strong>VIP ($197)</strong> includes everything in General PLUS $361 worth of exclusive bonuses: Complete Hormone Balancing Guide, 14-Day Meal Plan, Personalized Protocol Template, Workbooks & Trackers, and priority Q&A access. VIP members get their questions answered first and receive actionable tools to implement immediately."
+                  question:
+                    "What's the difference between General Admission and VIP?",
+                  answer:
+                    "<strong>General Admission ($97)</strong> includes full access to both days, all training sessions, live Q&A, lifetime recordings, and community access. <strong>VIP ($197)</strong> includes everything in General PLUS $361 worth of exclusive bonuses: Complete Hormone Balancing Guide, 14-Day Meal Plan, Personalized Protocol Template, Workbooks & Trackers, and priority Q&A access. VIP members get their questions answered first and receive actionable tools to implement immediately.",
                 },
                 {
                   question: "Is VIP worth the extra $100?",
-                  answer: "Absolutely! You're getting <strong>$361 in bonuses for just $100 more</strong>—that's $261 in extra value. The VIP bonuses include the exact tools you need to implement what you learn: personalized protocols, meal plans, tracking workbooks, and priority access to Victoria. Most successful participants choose VIP because they want the complete transformation toolkit, not just information."
+                  answer:
+                    "Absolutely! You're getting <strong>$361 in bonuses for just $100 more</strong>—that's $261 in extra value. The VIP bonuses include the exact tools you need to implement what you learn: personalized protocols, meal plans, tracking workbooks, and priority access to Victoria. Most successful participants choose VIP because they want the complete transformation toolkit, not just information.",
                 },
                 {
                   question: "When do I need to pay?",
-                  answer: "You're joining the <strong>waitlist now for free</strong>—no payment required yet. Once the waitlist closes, we'll send you a payment link to secure your spot. You'll choose your tier (General $97 or VIP $197) at that time. This gives you priority access and ensures you don't miss out when spots fill up."
+                  answer:
+                    "You're joining the <strong>waitlist now for free</strong>—no payment required yet. Once the waitlist closes, we'll send you a payment link to secure your spot. You'll choose your tier (General $97 or VIP $197) at that time. This gives you priority access and ensures you don't miss out when spots fill up.",
                 },
                 {
                   question: "What if I'm in a different time zone?",
-                  answer: "The event is scheduled for <strong>Australian Eastern Time (AEST)</strong>, but with lifetime recording access, you can participate from anywhere in the world on your own schedule. Many international participants watch the recordings and submit questions via our private community."
+                  answer:
+                    "The event is scheduled for <strong>Australian Eastern Time (AEST)</strong>, but with lifetime recording access, you can participate from anywhere in the world on your own schedule. Many international participants watch the recordings and submit questions via our private community.",
                 },
                 {
-                  question: "How is this different from other hormone or menopause programs?",
-                  answer: "Victoria's approach combines <strong>over 25 years of clinical experience with cutting-edge research</strong> and has helped thousands of women transform their health. Unlike generic programs, you'll get evidence-based strategies tailored to midlife metabolism, ongoing support in our thriving community, and practical tools you can implement immediately—not just theory."
+                  question:
+                    "How is this different from other hormone or menopause programs?",
+                  answer:
+                    "Victoria's approach combines <strong>over 25 years of clinical experience with cutting-edge research</strong> and has helped thousands of women transform their health. Unlike generic programs, you'll get evidence-based strategies tailored to midlife metabolism, ongoing support in our thriving community, and practical tools you can implement immediately—not just theory.",
                 },
                 {
                   question: "What's included in the VIP bonuses?",
-                  answer: "VIP members receive <strong>$361 in exclusive bonuses</strong>: Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Personalized Protocol Template ($147 value), Downloadable Workbooks & Trackers ($50 value), plus priority Q&A access. These bonuses are designed to help you implement everything you learn immediately and get faster results."
+                  answer:
+                    "VIP members receive <strong>$361 in exclusive bonuses</strong>: Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Personalized Protocol Template ($147 value), Downloadable Workbooks & Trackers ($50 value), plus priority Q&A access. These bonuses are designed to help you implement everything you learn immediately and get faster results.",
                 },
                 {
                   question: "Can I upgrade from General to VIP later?",
-                  answer: "Yes! You can upgrade to VIP anytime before the event starts by paying the $100 difference. However, we recommend choosing VIP when you register to ensure you receive all bonuses and materials in advance, giving you time to prepare and get the most out of the event."
-                }
+                  answer:
+                    "Yes! You can upgrade to VIP anytime before the event starts by paying the $100 difference. However, we recommend choosing VIP when you register to ensure you receive all bonuses and materials in advance, giving you time to prepare and get the most out of the event.",
+                },
               ].map((faq, index) => (
-                <Card 
-                  key={index} 
+                <Card
+                  key={index}
                   className="border-2 border-primary/10 hover:border-primary/30 transition-all cursor-pointer"
-                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  onClick={() =>
+                    setOpenFaqIndex(openFaqIndex === index ? null : index)
+                  }
                 >
                   <CardContent className="p-5">
                     <div className="flex items-center justify-between gap-4">
                       <h4 className="font-bold text-base md:text-lg text-foreground">
                         {faq.question}
                       </h4>
-                      <ChevronDown 
+                      <ChevronDown
                         className={`w-5 h-5 text-primary flex-shrink-0 transition-transform ${
-                          openFaqIndex === index ? 'rotate-180' : ''
+                          openFaqIndex === index ? "rotate-180" : ""
                         }`}
                       />
                     </div>
                     {openFaqIndex === index && (
-                      <p 
+                      <p
                         className="text-muted-foreground mt-4 pt-4 border-t border-gray-200"
                         dangerouslySetInnerHTML={{ __html: faq.answer }}
                       />
@@ -1120,8 +1547,6 @@ export default function Home() {
                   </CardContent>
                 </Card>
               ))}
-
-
             </div>
 
             <div className="mt-12 text-center">
@@ -1130,7 +1555,8 @@ export default function Home() {
                   Still have questions?
                 </p>
                 <p className="text-muted-foreground">
-                  Join the waitlist and we'll answer any questions you have before the event.
+                  Join the waitlist and we'll answer any questions you have
+                  before the event.
                 </p>
               </div>
             </div>
@@ -1146,34 +1572,39 @@ export default function Home() {
               Join the Waitlist
             </h3>
             <p className="text-lg text-muted-foreground">
-              Be the first to know when registration opens for The Longevity Reset. Limited spots available.
+              Be the first to know when registration opens for The Longevity
+              Reset. Limited spots available.
             </p>
           </div>
-          
+
           <Card className="border-2 shadow-lg">
             <CardContent className="p-8 md:p-12">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-base font-semibold">Full Name</Label>
+                  <Label htmlFor="name" className="text-base font-semibold">
+                    Full Name
+                  </Label>
                   <Input
                     id="name"
                     type="text"
                     placeholder="Enter your full name"
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={e => setName(e.target.value)}
                     className="h-12 text-base"
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-base font-semibold">Email Address</Label>
+                  <Label htmlFor="email" className="text-base font-semibold">
+                    Email Address
+                  </Label>
                   <Input
                     id="email"
                     type="email"
                     placeholder="Enter your email address"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={e => setEmail(e.target.value)}
                     className="h-12 text-base"
                     required
                   />
@@ -1181,21 +1612,44 @@ export default function Home() {
 
                 {/* Tier Selection */}
                 <div className="space-y-3">
-                  <Label className="text-base font-semibold">Which tier interests you?</Label>
+                  <Label className="text-base font-semibold">
+                    Which tier interests you?
+                  </Label>
                   <div className="space-y-3">
                     <label className="flex items-start gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-primary transition-all">
-                      <input type="radio" name="tier" value="general" className="mt-1" defaultChecked />
+                      <input
+                        type="radio"
+                        name="tier"
+                        value="general"
+                        className="mt-1"
+                        defaultChecked
+                      />
                       <div className="flex-1">
-                        <div className="font-bold text-gray-900">General Admission - $97</div>
-                        <div className="text-sm text-gray-600">Full 2-day event access + recordings</div>
+                        <div className="font-bold text-gray-900">
+                          General Admission - $97
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          Full 2-day event access + recordings
+                        </div>
                       </div>
                     </label>
                     <label className="flex items-start gap-3 p-4 border-2 border-primary/50 bg-primary/5 rounded-lg cursor-pointer hover:border-primary transition-all">
-                      <input type="radio" name="tier" value="vip" className="mt-1" />
+                      <input
+                        type="radio"
+                        name="tier"
+                        value="vip"
+                        className="mt-1"
+                      />
                       <div className="flex-1">
-                        <div className="font-bold text-primary">VIP Experience - $177 (Early Bird!)</div>
-                        <div className="text-sm text-gray-600">Everything + $361 in exclusive bonuses</div>
-                        <div className="text-xs text-primary font-semibold mt-1">⭐ MOST POPULAR - Save $20!</div>
+                        <div className="font-bold text-primary">
+                          VIP Experience - $177 (Early Bird!)
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          Everything + $361 in exclusive bonuses
+                        </div>
+                        <div className="text-xs text-primary font-semibold mt-1">
+                          ⭐ MOST POPULAR - Save $20!
+                        </div>
                       </div>
                     </label>
                   </div>
@@ -1206,13 +1660,19 @@ export default function Home() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-bold text-green-900 mb-1">100% Satisfaction Guarantee</p>
-                      <p className="text-sm text-green-800">If you don't feel this event was worth 10X what you paid, we'll refund you in full—no questions asked. You have nothing to lose and your health to gain.</p>
+                      <p className="font-bold text-green-900 mb-1">
+                        100% Satisfaction Guarantee
+                      </p>
+                      <p className="text-sm text-green-800">
+                        If you don't feel this event was worth 10X what you
+                        paid, we'll refund you in full—no questions asked. You
+                        have nothing to lose and your health to gain.
+                      </p>
                     </div>
                   </div>
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg h-14 rounded-full shadow-lg hover:shadow-xl transition-all"
@@ -1222,7 +1682,8 @@ export default function Home() {
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">
-                  By joining the waitlist, you'll receive priority access when registration opens plus all bonus materials instantly.
+                  By joining the waitlist, you'll receive priority access when
+                  registration opens plus all bonus materials instantly.
                 </p>
               </form>
             </CardContent>
@@ -1231,19 +1692,26 @@ export default function Home() {
       </section>
 
       {/* Newsletter/Community CTA Section */}
-      <section className="py-20 border-t relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #FFFDF7 0%, #F5F1E8 50%, #E8E5DC 100%)', borderColor: '#D4AF37' }}>
+      <section
+        className="py-20 border-t relative overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(135deg, #FFFDF7 0%, #F5F1E8 50%, #E8E5DC 100%)",
+          borderColor: "#D4AF37",
+        }}
+      >
         <div className="container">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               {/* Left Side - Device Mockup */}
               <div className="relative">
-                <img 
-                  src="/longevity-reset-mockup.png" 
-                  alt="The Longevity Reset on multiple devices" 
+                <img
+                  src="/longevity-reset-mockup.png"
+                  alt="The Longevity Reset on multiple devices"
                   className="w-full h-auto"
                 />
               </div>
-              
+
               {/* Right Side - CTA Copy & Form */}
               <div className="space-y-8">
                 <div>
@@ -1251,33 +1719,42 @@ export default function Home() {
                     <span className="font-normal">join </span>
                     <span className="font-bold">17,000+ women</span>
                     <span className="font-normal"> to get all the </span>
-                    <span className="font-normal">resources + tools you need to </span>
-                    <span className="italic text-primary">thrive in midlife</span>
+                    <span className="font-normal">
+                      resources + tools you need to{" "}
+                    </span>
+                    <span className="italic text-primary">
+                      thrive in midlife
+                    </span>
                   </h3>
-                  
+
                   <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                    Learn the exact strategies to balance your hormones, boost your energy, and reclaim your vitality. From understanding your metabolism to mastering the midlife eating blueprint, Victoria O'Sullivan covers it all in this transformative 2-day event!
+                    Learn the exact strategies to balance your hormones, boost
+                    your energy, and reclaim your vitality. From understanding
+                    your metabolism to mastering the midlife eating blueprint,
+                    Victoria O'Sullivan covers it all in this transformative
+                    2-day event!
                   </p>
-                  
+
                   <p className="text-base md:text-lg font-semibold text-gray-900">
-                    Get on the waitlist for priority access to our best content, exclusive bonuses, and VIP offers.
+                    Get on the waitlist for priority access to our best content,
+                    exclusive bonuses, and VIP offers.
                   </p>
                 </div>
-                
+
                 <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-primary/20">
                   <div className="grid md:grid-cols-2 gap-4 mb-4">
-                    <input 
-                      type="text" 
-                      placeholder="Name" 
+                    <input
+                      type="text"
+                      placeholder="Name"
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
                     />
-                    <input 
-                      type="email" 
-                      placeholder="Email" 
+                    <input
+                      type="email"
+                      placeholder="Email"
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
                     />
                   </div>
-                  <Button 
+                  <Button
                     size="lg"
                     className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
                     onClick={scrollToWaitlist}
@@ -1294,9 +1771,13 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 border-t bg-white">
         <div className="container text-center text-sm text-muted-foreground space-x-4">
-          <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-foreground transition-colors">
+            Privacy Policy
+          </a>
           <span>·</span>
-          <a href="#" className="hover:text-foreground transition-colors">Disclaimer</a>
+          <a href="#" className="hover:text-foreground transition-colors">
+            Disclaimer
+          </a>
           <span>·</span>
           <span>© 2025 The Longevity Reset. All rights reserved.</span>
         </div>
