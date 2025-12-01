@@ -459,17 +459,15 @@ export default function Home() {
             {/* Video Testimonial 1 */}
             <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
-                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
-                    alt="Video testimonial"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
-                    </div>
-                  </div>
+                <div className="aspect-video bg-gray-100 relative">
+                  <iframe 
+                    className="absolute inset-0 w-full h-full"
+                    src="https://player.vimeo.com/video/843807324?badge=0&autopause=0&player_id=0&app_id=58479"
+                    title="Sarah M. Testimonial"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allowFullScreen
+                  ></iframe>
                 </div>
                 <div className="p-6">
                   <h4 className="font-bold text-lg text-foreground mb-2">"I Got My Life Back"</h4>
@@ -491,17 +489,15 @@ export default function Home() {
             {/* Video Testimonial 2 */}
             <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
-                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
-                  <img 
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
-                    alt="Video testimonial"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
-                    </div>
-                  </div>
+                <div className="aspect-video bg-gray-100 relative">
+                  <iframe 
+                    className="absolute inset-0 w-full h-full"
+                    src="https://player.vimeo.com/video/843807307?badge=0&autopause=0&player_id=0&app_id=58479"
+                    title="Jennifer K. Testimonial"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allowFullScreen
+                  ></iframe>
                 </div>
                 <div className="p-6">
                   <h4 className="font-bold text-lg text-foreground mb-2">"No More Hot Flashes!"</h4>
@@ -523,17 +519,15 @@ export default function Home() {
             {/* Video Testimonial 3 */}
             <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
-                <div className="aspect-video bg-gray-100 relative group cursor-pointer">
-                  <img 
-                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80"
-                    alt="Video testimonial"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Video className="w-8 h-8 text-primary-foreground ml-1" />
-                    </div>
-                  </div>
+                <div className="aspect-video bg-gray-100 relative">
+                  <iframe 
+                    className="absolute inset-0 w-full h-full"
+                    src="https://player.vimeo.com/video/843807252?badge=0&autopause=0&player_id=0&app_id=58479"
+                    title="Michelle R. Testimonial"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allowFullScreen
+                  ></iframe>
                 </div>
                 <div className="p-6">
                   <h4 className="font-bold text-lg text-foreground mb-2">"Balanced & Thriving"</h4>
