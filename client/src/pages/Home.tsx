@@ -200,26 +200,16 @@ export default function Home() {
           </div>
           
           <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
-            {/* Video Placeholder */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5">
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center shadow-lg">
-                  <Video className="w-10 h-10 text-white" />
-                </div>
-                <p className="text-lg font-semibold text-gray-700">Sales Video Coming Soon</p>
-                <p className="text-sm text-gray-500">16:9 aspect ratio placeholder</p>
-              </div>
-            </div>
-            {/* When you have the video, replace the placeholder div above with:
             <iframe 
               className="absolute inset-0 w-full h-full"
-              src="YOUR_VIDEO_URL_HERE"
+              src="https://player.vimeo.com/video/1080000343?badge=0&autopause=0&player_id=0&app_id=58479"
               title="The Longevity Reset Sales Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               allowFullScreen
             ></iframe>
-            */}
           </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </section>
 
