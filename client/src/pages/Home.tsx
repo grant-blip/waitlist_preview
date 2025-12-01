@@ -658,13 +658,6 @@ export default function Home() {
                     <div className="flex items-start gap-3">
                       <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-gray-900 font-bold">14-Day Meal Plan & Recipes</span>
-                        <p className="text-sm text-gray-600 italic">No more guessing what to eat—delicious meals that balance hormones & burn fat</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Gift className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
                         <span className="text-gray-900 font-bold">Personalized Protocol Template</span>
                         <p className="text-sm text-gray-600 italic">Your custom roadmap to implement everything you learn immediately</p>
                       </div>
@@ -686,7 +679,7 @@ export default function Home() {
                   </div>
 
                   <div className="mb-6 p-4 bg-primary/10 rounded-xl border-2 border-primary/30 text-center">
-                    <p className="text-sm font-bold text-foreground">Total Value: $558</p>
+                    <p className="text-sm font-bold text-foreground">Total Value: $491</p>
                     <p className="text-xs text-muted-foreground">Early Bird: Just $177 (Regular $197)</p>
                   </div>
 
@@ -847,23 +840,6 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow relative">
-                <div className="absolute top-4 right-4">
-                  <div className="w-3 h-3 rounded-full bg-primary"></div>
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Gift className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-foreground mb-2">Complete 14-Day Meal Plan & Recipes <span className="text-primary text-sm">VIP</span></h4>
-                      <p className="text-muted-foreground">Delicious, hormone-balancing meals with shopping lists and meal prep instructions—start implementing immediately.</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
               <Card className="border-2 border-gray-200 hover:shadow-lg transition-shadow relative">
                 <div className="absolute top-4 right-4">
                   <div className="w-3 h-3 rounded-full bg-gray-900"></div>
@@ -979,12 +955,6 @@ export default function Home() {
                 description: "A comprehensive 50-page guide covering everything you need to know about balancing your hormones naturally.",
               },
               {
-                icon: <Gift className="w-10 h-10" />,
-                title: "14-Day Meal Plan & Recipes",
-                value: "$67 Value",
-                description: "Delicious, hormone-balancing recipes with shopping lists and meal prep instructions.",
-              },
-              {
                 icon: <Video className="w-10 h-10" />,
                 title: "Lifetime Access to Recordings",
                 value: "$197 Value",
@@ -1010,7 +980,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <div className="inline-block px-8 py-6 bg-primary/10 rounded-2xl border-2 border-primary/30">
-              <p className="text-2xl font-bold text-foreground mb-2">Total VIP Bonus Value: <span className="text-primary">$361</span></p>
+              <p className="text-2xl font-bold text-foreground mb-2">Total VIP Bonus Value: <span className="text-primary">$294</span></p>
               <p className="text-muted-foreground mb-4">Included FREE with VIP tier ($197)</p>
               <Button 
                 className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full"
@@ -1068,11 +1038,11 @@ export default function Home() {
                 },
                 {
                   question: "What's the difference between General Admission and VIP?",
-                  answer: "<strong>General Admission ($97)</strong> includes full access to both days, all training sessions, live Q&A, lifetime recordings, and community access. <strong>VIP ($197)</strong> includes everything in General PLUS $361 worth of exclusive bonuses: Complete Hormone Balancing Guide, 14-Day Meal Plan, Personalized Protocol Template, Workbooks & Trackers, and priority Q&A access. VIP members get their questions answered first and receive actionable tools to implement immediately."
+                  answer: "<strong>General Admission ($97)</strong> includes full access to both days, all training sessions, live Q&A, lifetime recordings, and community access. <strong>VIP ($197)</strong> includes everything in General PLUS $294 worth of exclusive bonuses: Complete Hormone Balancing Guide, Personalized Protocol Template, Workbooks & Trackers, and priority Q&A access. VIP members get their questions answered first and receive actionable tools to implement immediately."
                 },
                 {
                   question: "Is VIP worth the extra $100?",
-                  answer: "Absolutely! You're getting <strong>$361 in bonuses for just $100 more</strong>—that's $261 in extra value. The VIP bonuses include the exact tools you need to implement what you learn: personalized protocols, meal plans, tracking workbooks, and priority access to Victoria. Most successful participants choose VIP because they want the complete transformation toolkit, not just information."
+                  answer: "Absolutely! You're getting <strong>$294 in bonuses for just $100 more</strong>—that's $194 in extra value. The VIP bonuses include the exact tools you need to implement what you learn: personalized protocols, tracking workbooks, and priority access to Victoria. Most successful participants choose VIP because they want the complete transformation toolkit, not just information."
                 },
                 {
                   question: "When do I need to pay?",
@@ -1088,7 +1058,7 @@ export default function Home() {
                 },
                 {
                   question: "What's included in the VIP bonuses?",
-                  answer: "VIP members receive <strong>$361 in exclusive bonuses</strong>: Complete Hormone Balancing Guide ($97 value), 14-Day Meal Plan with Recipes ($67 value), Personalized Protocol Template ($147 value), Downloadable Workbooks & Trackers ($50 value), plus priority Q&A access. These bonuses are designed to help you implement everything you learn immediately and get faster results."
+                  answer: "VIP members receive <strong>$294 in exclusive bonuses</strong>: Complete Hormone Balancing Guide ($97 value), Personalized Protocol Template ($147 value), Downloadable Workbooks & Trackers ($50 value), plus priority Q&A access. These bonuses are designed to help you implement everything you learn immediately and get faster results."
                 },
                 {
                   question: "Can I upgrade from General to VIP later?",
