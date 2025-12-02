@@ -1168,14 +1168,8 @@ export default function Home() {
       </section>
 
       {/* What You'll Walk Away With Section */}
-      <section className="py-20 relative overflow-hidden border-y border-gray-100">
-        {/* Background Image with Overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/walk-away-bg.jpg)' }}
-        ></div>
-        <div className="absolute inset-0 bg-white/75"></div>
-        <div className="container relative z-10">
+      <section className="py-20 bg-white border-y border-gray-100">
+        <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
@@ -1194,16 +1188,16 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--rose-gold)' }}></div>
+                  <div className="w-4 h-4 rounded-full bg-primary"></div>
                   <span className="font-semibold">VIP Exclusive ($197)</span>
                 </div>
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="border-2 border-primary/20 shadow-luxury hover:shadow-xl transition-shadow relative">
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow relative">
                 <div className="absolute top-4 right-4">
-                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: 'var(--rose-gold)' }}></div>
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
@@ -1225,9 +1219,9 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 shadow-luxury hover:shadow-xl transition-shadow relative">
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow relative">
                 <div className="absolute top-4 right-4">
-                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: 'var(--rose-gold)' }}></div>
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
@@ -1319,9 +1313,9 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary/20 shadow-luxury hover:shadow-xl transition-shadow relative">
+              <Card className="border-2 border-primary/20 hover:shadow-lg transition-shadow relative">
                 <div className="absolute top-4 right-4">
-                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: 'var(--rose-gold)' }}></div>
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
