@@ -987,17 +987,12 @@ export default function Home() {
 
       {/* Event Agenda Section */}
       <section className="relative py-20 overflow-hidden">
-        {/* Luxury Gradient Background with Subtle Texture */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, #E8E5DC 0%, #F5F1E8 50%, #FFFDF7 100%)",
-          }}
-        >
-          {/* Subtle overlay for depth */}
-          <div className="absolute inset-0 bg-white/10" />
-        </div>
+        {/* Luxury Botanical Background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/agenda-bg.jpg)' }}
+        ></div>
+        <div className="absolute inset-0 bg-white/70"></div>
 
         <div className="container relative z-10">
           <div className="text-center mb-16">
@@ -1010,9 +1005,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto relative">
+            {/* Gold Divider - visible on mobile between cards */}
+            <div className="md:hidden absolute left-0 right-0 h-px" style={{ backgroundColor: 'var(--champagne-gold)', top: '50%', transform: 'translateY(-50%)' }}></div>
             {/* Day 1 */}
-            <Card className="border-2 bg-white/95 backdrop-blur-sm">
+            <Card className="border-2 bg-white/90 backdrop-blur-sm shadow-luxury">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
@@ -1062,7 +1059,7 @@ export default function Home() {
                     },
                   ].map((session, idx) => (
                     <div key={idx} className="flex gap-4">
-                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">
+                      <div className="flex-shrink-0 w-24 text-sm font-semibold" style={{ color: 'var(--rose-gold)' }}>
                         {session.time}
                       </div>
                       <div className="flex-1">
@@ -1080,7 +1077,7 @@ export default function Home() {
             </Card>
 
             {/* Day 2 */}
-            <Card className="border-2 bg-white/95 backdrop-blur-sm">
+            <Card className="border-2 bg-white/90 backdrop-blur-sm shadow-luxury">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
@@ -1131,7 +1128,7 @@ export default function Home() {
                     },
                   ].map((session, idx) => (
                     <div key={idx} className="flex gap-4">
-                      <div className="flex-shrink-0 w-24 text-sm font-semibold text-primary">
+                      <div className="flex-shrink-0 w-24 text-sm font-semibold" style={{ color: 'var(--rose-gold)' }}>
                         {session.time}
                       </div>
                       <div className="flex-1">
