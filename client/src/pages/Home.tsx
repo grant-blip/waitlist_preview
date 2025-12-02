@@ -240,8 +240,27 @@ export default function Home() {
       </section>
 
       {/* Sales Video Section */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container max-w-5xl">
+      <section className="py-16 md:py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #F9F5F2 0%, #FEFDFB 100%)' }}>
+        {/* Decorative botanical elements */}
+        <div className="absolute top-8 left-8 w-32 h-32 opacity-10">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 50 Q30 30, 50 20 T80 30" stroke="#589351" strokeWidth="1.5" fill="none"/>
+            <path d="M30 60 Q40 45, 55 40 T75 50" stroke="#589351" strokeWidth="1.5" fill="none"/>
+            <circle cx="50" cy="20" r="3" fill="#589351"/>
+            <circle cx="80" cy="30" r="2.5" fill="#589351"/>
+            <circle cx="55" cy="40" r="2" fill="#589351"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-8 right-8 w-32 h-32 opacity-10 transform rotate-180">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 50 Q30 30, 50 20 T80 30" stroke="#589351" strokeWidth="1.5" fill="none"/>
+            <path d="M30 60 Q40 45, 55 40 T75 50" stroke="#589351" strokeWidth="1.5" fill="none"/>
+            <circle cx="50" cy="20" r="3" fill="#589351"/>
+            <circle cx="80" cy="30" r="2.5" fill="#589351"/>
+            <circle cx="55" cy="40" r="2" fill="#589351"/>
+          </svg>
+        </div>
+        <div className="container max-w-5xl relative z-10">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               Watch: Why The Longevity Reset Is Different
@@ -252,7 +271,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+          <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-luxury border-2" style={{ borderColor: 'var(--champagne-gold)' }}>
             <iframe
               className="absolute inset-0 w-full h-full"
               src="https://player.vimeo.com/video/1080000343?badge=0&autopause=0&player_id=0&app_id=58479"
