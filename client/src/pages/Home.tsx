@@ -85,6 +85,25 @@ export default function Home() {
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // SamCart checkout triggers
+  const openGeneralCheckout = () => {
+    // Trigger SamCart popup for General Admission ($97)
+    const checkoutElement = document.createElement('sc-checkout');
+    checkoutElement.setAttribute('product', 'vipreset');
+    checkoutElement.setAttribute('subdomain', 'victoriaosulliv');
+    checkoutElement.setAttribute('coupon', '');
+    document.body.appendChild(checkoutElement);
+  };
+
+  const openVIPCheckout = () => {
+    // Trigger SamCart popup for VIP Experience ($197)
+    const checkoutElement = document.createElement('sc-checkout');
+    checkoutElement.setAttribute('product', '2-day-longevity-reset-vip-option-copy');
+    checkoutElement.setAttribute('subdomain', 'victoriaosulliv');
+    checkoutElement.setAttribute('coupon', '');
+    document.body.appendChild(checkoutElement);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Sticky Header */}
@@ -139,7 +158,7 @@ export default function Home() {
           </div>
           <Button
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-4 md:px-6 text-sm md:text-base"
-            onClick={scrollToWaitlist}
+            onClick={openVIPCheckout}
           >
             Reserve Your Spot
           </Button>
@@ -217,7 +236,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-                  onClick={scrollToWaitlist}
+                  onClick={openVIPCheckout}
                 >
                   Reserve Your Spot Now
                 </Button>
@@ -687,7 +706,7 @@ export default function Home() {
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-                    onClick={scrollToWaitlist}
+                    onClick={openVIPCheckout}
                   >
                     Yes, This Is Me—I'm Ready
                   </Button>
@@ -827,7 +846,7 @@ export default function Home() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-              onClick={scrollToWaitlist}
+              onClick={openVIPCheckout}
             >
               Ready to Write Your Own Success Story?
             </Button>
@@ -909,7 +928,7 @@ export default function Home() {
 
                   <Button
                     className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 rounded-full"
-                    onClick={scrollToWaitlist}
+                    onClick={openGeneralCheckout}
                   >
                     Register - General Admission
                   </Button>
@@ -1045,7 +1064,7 @@ export default function Home() {
 
                   <Button
                     className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full shadow-lg"
-                    onClick={scrollToWaitlist}
+                    onClick={openVIPCheckout}
                   >
                     Register - VIP Experience ⭐
                   </Button>
@@ -1511,7 +1530,7 @@ export default function Home() {
               </p>
               <Button
                 className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full"
-                onClick={scrollToWaitlist}
+                onClick={openVIPCheckout}
               >
                 Upgrade to VIP ⭐
               </Button>
@@ -1845,7 +1864,7 @@ export default function Home() {
                   <Button
                     size="lg"
                     className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
-                    onClick={scrollToWaitlist}
+                    onClick={openVIPCheckout}
                   >
                     Secure Your Spot Now
                   </Button>
