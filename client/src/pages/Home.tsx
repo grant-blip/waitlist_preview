@@ -35,8 +35,8 @@ export default function Home() {
   });
 
   useEffect(() => {
-    // Set event date: May 17, 2025 at 10:00 AM
-    const eventDate = new Date("2025-05-17T10:00:00").getTime();
+    // Set event date: February 7, 2025 at 10:00 AM
+    const eventDate = new Date("2025-02-07T10:00:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -72,7 +72,7 @@ export default function Home() {
 
     // Simulate form submission
     setTimeout(() => {
-      toast.success("You've been added to the waitlist!");
+      toast.success("Registration successful! Check your email for details.");
       setName("");
       setEmail("");
       setIsSubmitting(false);
@@ -141,7 +141,7 @@ export default function Home() {
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-4 md:px-6 text-sm md:text-base"
             onClick={scrollToWaitlist}
           >
-            Join the Waitlist
+            Reserve Your Spot
           </Button>
         </div>
       </header>
@@ -200,7 +200,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm text-gray-700 rounded-lg text-sm font-medium shadow-sm border border-gray-200">
                     <Calendar className="w-4 h-4 text-primary" />
-                    May 17-18, 2025
+                    February 7-8, 2025
                   </span>
                   <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-bold shadow-sm">
                     From $97
@@ -219,7 +219,7 @@ export default function Home() {
                   className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
                   onClick={scrollToWaitlist}
                 >
-                  Join the Waitlist Now
+                  Reserve Your Spot Now
                 </Button>
 
                 {/* Simplified Social Proof */}
@@ -240,24 +240,57 @@ export default function Home() {
       </section>
 
       {/* Sales Video Section */}
-      <section className="py-16 md:py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #F9F5F2 0%, #FEFDFB 100%)' }}>
+      <section
+        className="py-16 md:py-20 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(to bottom, #F9F5F2 0%, #FEFDFB 100%)",
+        }}
+      >
         {/* Decorative botanical elements */}
         <div className="absolute top-8 left-8 w-32 h-32 opacity-10">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 50 Q30 30, 50 20 T80 30" stroke="#589351" strokeWidth="1.5" fill="none"/>
-            <path d="M30 60 Q40 45, 55 40 T75 50" stroke="#589351" strokeWidth="1.5" fill="none"/>
-            <circle cx="50" cy="20" r="3" fill="#589351"/>
-            <circle cx="80" cy="30" r="2.5" fill="#589351"/>
-            <circle cx="55" cy="40" r="2" fill="#589351"/>
+          <svg
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 50 Q30 30, 50 20 T80 30"
+              stroke="#589351"
+              strokeWidth="1.5"
+              fill="none"
+            />
+            <path
+              d="M30 60 Q40 45, 55 40 T75 50"
+              stroke="#589351"
+              strokeWidth="1.5"
+              fill="none"
+            />
+            <circle cx="50" cy="20" r="3" fill="#589351" />
+            <circle cx="80" cy="30" r="2.5" fill="#589351" />
+            <circle cx="55" cy="40" r="2" fill="#589351" />
           </svg>
         </div>
         <div className="absolute bottom-8 right-8 w-32 h-32 opacity-10 transform rotate-180">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 50 Q30 30, 50 20 T80 30" stroke="#589351" strokeWidth="1.5" fill="none"/>
-            <path d="M30 60 Q40 45, 55 40 T75 50" stroke="#589351" strokeWidth="1.5" fill="none"/>
-            <circle cx="50" cy="20" r="3" fill="#589351"/>
-            <circle cx="80" cy="30" r="2.5" fill="#589351"/>
-            <circle cx="55" cy="40" r="2" fill="#589351"/>
+          <svg
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 50 Q30 30, 50 20 T80 30"
+              stroke="#589351"
+              strokeWidth="1.5"
+              fill="none"
+            />
+            <path
+              d="M30 60 Q40 45, 55 40 T75 50"
+              stroke="#589351"
+              strokeWidth="1.5"
+              fill="none"
+            />
+            <circle cx="50" cy="20" r="3" fill="#589351" />
+            <circle cx="80" cy="30" r="2.5" fill="#589351" />
+            <circle cx="55" cy="40" r="2" fill="#589351" />
           </svg>
         </div>
         <div className="container max-w-5xl relative z-10">
@@ -271,7 +304,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-luxury border-2" style={{ borderColor: 'var(--champagne-gold)' }}>
+          <div
+            className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-luxury border-2"
+            style={{ borderColor: "var(--champagne-gold)" }}
+          >
             <iframe
               className="absolute inset-0 w-full h-full"
               src="https://player.vimeo.com/video/1080000343?badge=0&autopause=0&player_id=0&app_id=58479"
@@ -473,7 +509,10 @@ export default function Home() {
                   {/* Checklist Item 1 */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -490,7 +529,10 @@ export default function Home() {
                   {/* Checklist Item 2 */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -509,7 +551,10 @@ export default function Home() {
                   {/* Checklist Item 3 */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -527,7 +572,10 @@ export default function Home() {
                   {/* Checklist Item 4 */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -544,7 +592,10 @@ export default function Home() {
                   {/* Checklist Item 5 */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -562,7 +613,10 @@ export default function Home() {
                   {/* Checklist Item 6 */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -580,7 +634,10 @@ export default function Home() {
                   {/* Checklist Item 7 */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -599,7 +656,10 @@ export default function Home() {
                   {/* Checklist Item 8 - NEW */}
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--rose-gold)" }}
+                      >
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     </div>
@@ -851,7 +911,7 @@ export default function Home() {
                     className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 rounded-full"
                     onClick={scrollToWaitlist}
                   >
-                    Join Waitlist - General
+                    Register - General Admission
                   </Button>
                 </CardContent>
               </Card>
@@ -987,7 +1047,7 @@ export default function Home() {
                     className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full shadow-lg"
                     onClick={scrollToWaitlist}
                   >
-                    Join Waitlist - VIP ⭐
+                    Register - VIP Experience ⭐
                   </Button>
                 </CardContent>
               </Card>
@@ -996,8 +1056,7 @@ export default function Home() {
             <div className="mt-12 text-center">
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 🔒 <strong>Secure your spot now.</strong> Limited to 100
-                attendees total. Payment will be collected after waitlist
-                closes.
+                attendees total. Register today to guarantee your place.
               </p>
             </div>
           </div>
@@ -1007,9 +1066,9 @@ export default function Home() {
       {/* Event Agenda Section */}
       <section className="relative py-20 overflow-hidden">
         {/* Luxury Botanical Background */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/agenda-bg.jpg)' }}
+          style={{ backgroundImage: "url(/agenda-bg.jpg)" }}
         ></div>
         <div className="absolute inset-0 bg-white/70"></div>
 
@@ -1026,7 +1085,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto relative">
             {/* Gold Divider - visible on mobile between cards */}
-            <div className="md:hidden absolute left-0 right-0 h-px" style={{ backgroundColor: 'var(--champagne-gold)', top: '50%', transform: 'translateY(-50%)' }}></div>
+            <div
+              className="md:hidden absolute left-0 right-0 h-px"
+              style={{
+                backgroundColor: "var(--champagne-gold)",
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            ></div>
             {/* Day 1 */}
             <Card className="border-2 bg-white/90 backdrop-blur-sm shadow-luxury">
               <CardContent className="p-8">
@@ -1039,7 +1105,7 @@ export default function Home() {
                       Day 1: Reboot & Reset
                     </h4>
                     <p className="text-muted-foreground">
-                      May 17th, 2025 | 10:00 AM - 5:00 PM
+                      February 7th, 2025 | 10:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>
@@ -1078,7 +1144,10 @@ export default function Home() {
                     },
                   ].map((session, idx) => (
                     <div key={idx} className="flex gap-4">
-                      <div className="flex-shrink-0 w-24 text-sm font-semibold" style={{ color: 'var(--rose-gold)' }}>
+                      <div
+                        className="flex-shrink-0 w-24 text-sm font-semibold"
+                        style={{ color: "var(--rose-gold)" }}
+                      >
                         {session.time}
                       </div>
                       <div className="flex-1">
@@ -1107,7 +1176,7 @@ export default function Home() {
                       Day 2: Build & Sustain Your Transformation
                     </h4>
                     <p className="text-muted-foreground">
-                      May 18th, 2025 | 10:00 AM - 5:00 PM
+                      February 8th, 2025 | 10:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>
@@ -1147,7 +1216,10 @@ export default function Home() {
                     },
                   ].map((session, idx) => (
                     <div key={idx} className="flex gap-4">
-                      <div className="flex-shrink-0 w-24 text-sm font-semibold" style={{ color: 'var(--rose-gold)' }}>
+                      <div
+                        className="flex-shrink-0 w-24 text-sm font-semibold"
+                        style={{ color: "var(--rose-gold)" }}
+                      >
                         {session.time}
                       </div>
                       <div className="flex-1">
@@ -1490,7 +1562,7 @@ export default function Home() {
                   question:
                     "What's the time commitment? I have a busy schedule.",
                   answer:
-                    "The live event runs <strong>10am-5pm on May 17-18</strong> (with lunch breaks and Q&A). But remember, you get lifetime access to recordings, so you can watch on your schedule. Plus, the strategies you'll learn are designed to fit into a busy life—not add more stress.",
+                    "The live event runs <strong>10am-5pm on February 7-8</strong> (with lunch breaks and Q&A). But remember, you get lifetime access to recordings, so you can watch on your schedule. Plus, the strategies you'll learn are designed to fit into a busy life—not add more stress.",
                 },
                 {
                   question:
@@ -1512,7 +1584,7 @@ export default function Home() {
                 {
                   question: "When do I need to pay?",
                   answer:
-                    "You're joining the <strong>waitlist now for free</strong>—no payment required yet. Once the waitlist closes, we'll send you a payment link to secure your spot. You'll choose your tier (General $97 or VIP $197) at that time. This gives you priority access and ensures you don't miss out when spots fill up.",
+                    "Payment is required at registration to secure your spot. You'll choose your tier (General $97 or VIP $197) during checkout. Limited to 100 attendees total, so register early to guarantee your place.",
                 },
                 {
                   question: "What if I'm in a different time zone?",
@@ -1571,8 +1643,8 @@ export default function Home() {
                   Still have questions?
                 </p>
                 <p className="text-muted-foreground">
-                  Join the waitlist and we'll answer any questions you have
-                  before the event.
+                  Register now and we'll answer any questions you have before
+                  the event.
                 </p>
               </div>
             </div>
@@ -1585,11 +1657,11 @@ export default function Home() {
         <div className="container max-w-2xl">
           <div className="text-center mb-10">
             <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
-              Join the Waitlist
+              Reserve Your Spot
             </h3>
             <p className="text-lg text-muted-foreground">
-              Be the first to know when registration opens for The Longevity
-              Reset. Limited spots available.
+              Secure your spot for The Longevity Reset. Limited to 100
+              attendees—register now before spots fill up.
             </p>
           </div>
 
@@ -1694,12 +1766,12 @@ export default function Home() {
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg h-14 rounded-full shadow-lg hover:shadow-xl transition-all"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Joining..." : "Join the Waitlist Now"}
+                  {isSubmitting ? "Processing..." : "Reserve Your Spot Now"}
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">
-                  By joining the waitlist, you'll receive priority access when
-                  registration opens plus all bonus materials instantly.
+                  By registering, you'll secure your spot and receive all bonus
+                  materials instantly.
                 </p>
               </form>
             </CardContent>
@@ -1752,8 +1824,8 @@ export default function Home() {
                   </p>
 
                   <p className="text-base md:text-lg font-semibold text-gray-900">
-                    Get on the waitlist for priority access to our best content,
-                    exclusive bonuses, and VIP offers.
+                    Register now to secure your spot and receive exclusive bonuses
+                    and VIP access to The Longevity Reset.
                   </p>
                 </div>
 
@@ -1775,7 +1847,7 @@ export default function Home() {
                     className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
                     onClick={scrollToWaitlist}
                   >
-                    Join The Waitlist
+                    Secure Your Spot Now
                   </Button>
                 </div>
               </div>
