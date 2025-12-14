@@ -278,7 +278,7 @@ export default function Home() {
               </div>
 
               {/* Countdown Timer */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-gray-200">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-gray-200 max-w-md">
                 <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider text-center mb-3">
                   Event Starts In:
                 </p>
