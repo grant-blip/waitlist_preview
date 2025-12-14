@@ -40,8 +40,8 @@ export default function Home() {
   });
 
   useEffect(() => {
-    // Set event date: February 7, 2025 at 10:00 AM
-    const eventDate = new Date("2025-02-07T10:00:00").getTime();
+    // Set event date: February 7, 2026 at 10:00 AM
+    const eventDate = new Date("2026-02-07T10:00:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -274,6 +274,39 @@ export default function Home() {
                     <Gift className="w-4 h-4" />
                     VIP $197
                   </span>
+                </div>
+              </div>
+
+              {/* Countdown Timer */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
+                <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider text-center mb-4">
+                  Event Starts In:
+                </p>
+                <div className="grid grid-cols-4 gap-3 md:gap-4">
+                  <div className="text-center">
+                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
+                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.days}</div>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Days</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
+                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.hours}</div>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Hours</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
+                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.minutes}</div>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Minutes</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
+                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.seconds}</div>
+                    </div>
+                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Seconds</p>
+                  </div>
                 </div>
               </div>
 
