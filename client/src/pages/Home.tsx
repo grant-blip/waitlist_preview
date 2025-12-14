@@ -316,15 +316,15 @@ export default function Home() {
                   href={vipCheckoutUrl}
                   className="inline-block w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all text-center"
                 >
-                  Reserve Your Spot Now
+                  Claim My Spot Now
                 </a>
 
                 {/* Simplified Social Proof */}
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold text-primary">247+ women</span>{" "}
-                  already joined •{" "}
+                  <span className="font-semibold text-primary">68 spots taken</span>{" "}
+                  •{" "}
                   <span className="font-semibold text-gray-900">
-                    33 spots left
+                    32 spots left
                   </span>
                 </p>
               </div>
@@ -1148,11 +1148,40 @@ export default function Home() {
               </Card>
             </div>
 
-            <div className="mt-12 text-center">
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-                🔒 <strong>Secure your spot now.</strong> Limited to 100
-                attendees total. Register today to guarantee your place.
-              </p>
+            {/* Security & Guarantee Badges */}
+            <div className="mt-12 space-y-4">
+              {/* 100% Guarantee Badge */}
+              <div className="flex items-center justify-center gap-4 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-2 border-green-200 shadow-sm max-w-3xl mx-auto">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+                    <CheckCircle2 className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="text-left">
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">100% Money-Back Guarantee</h4>
+                  <p className="text-sm text-gray-700">If you're not completely satisfied after Day 1, we'll refund your investment—no questions asked.</p>
+                </div>
+              </div>
+
+              {/* Security & Scarcity Message */}
+              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm max-w-3xl mx-auto">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-semibold">Secure SSL Encrypted</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-semibold">Your Data Protected</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <Users className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="font-semibold">Limited to 100 Attendees</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1861,7 +1890,7 @@ export default function Home() {
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg h-14 rounded-full shadow-lg hover:shadow-xl transition-all"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Processing..." : "Reserve Your Spot Now"}
+                  {isSubmitting ? "Processing..." : "Claim My Spot Now"}
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">
