@@ -203,7 +203,7 @@ export default function Home() {
           <div className="container py-2">
             <div className="flex items-center justify-center gap-2 text-sm">
               <Clock className="w-4 h-4 text-primary" />
-              <span className="font-medium">February 7-8, 2025</span>
+              <span className="font-medium">February 7-8, 2026</span>
               <span className="hidden sm:inline text-muted-foreground">•</span>
               <span className="hidden sm:inline text-muted-foreground">Limited to 100 attendees</span>
             </div>
@@ -265,7 +265,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm text-gray-700 rounded-lg text-sm font-medium shadow-sm border border-gray-200">
                     <Calendar className="w-4 h-4 text-primary" />
-                    February 7-8, 2025
+                    February 7-8, 2026
                   </span>
                   <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-bold shadow-sm">
                     From $97
@@ -278,34 +278,34 @@ export default function Home() {
               </div>
 
               {/* Countdown Timer */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
-                <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider text-center mb-4">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-gray-200">
+                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider text-center mb-3">
                   Event Starts In:
                 </p>
-                <div className="grid grid-cols-4 gap-3 md:gap-4">
+                <div className="grid grid-cols-4 gap-2">
                   <div className="text-center">
-                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
-                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.days}</div>
+                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
+                      <div className="text-lg md:text-xl font-bold">{timeLeft.days}</div>
                     </div>
-                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Days</p>
+                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Days</p>
                   </div>
                   <div className="text-center">
-                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
-                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.hours}</div>
+                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
+                      <div className="text-lg md:text-xl font-bold">{timeLeft.hours}</div>
                     </div>
-                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Hours</p>
+                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Hours</p>
                   </div>
                   <div className="text-center">
-                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
-                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.minutes}</div>
+                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
+                      <div className="text-lg md:text-xl font-bold">{timeLeft.minutes}</div>
                     </div>
-                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Minutes</p>
+                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Mins</p>
                   </div>
                   <div className="text-center">
-                    <div className="bg-primary text-white rounded-lg p-3 md:p-4 shadow-md">
-                      <div className="text-2xl md:text-3xl font-bold">{timeLeft.seconds}</div>
+                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
+                      <div className="text-lg md:text-xl font-bold">{timeLeft.seconds}</div>
                     </div>
-                    <p className="text-xs md:text-sm text-gray-600 mt-2 font-medium">Seconds</p>
+                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Secs</p>
                   </div>
                 </div>
               </div>
@@ -1200,7 +1200,7 @@ export default function Home() {
                       Day 1: Reboot & Reset
                     </h4>
                     <p className="text-muted-foreground">
-                      February 7th, 2025 | 10:00 AM - 5:00 PM
+                      February 7th, 2026 | 10:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>
@@ -1271,7 +1271,7 @@ export default function Home() {
                       Day 2: Build & Sustain Your Transformation
                     </h4>
                     <p className="text-muted-foreground">
-                      February 8th, 2025 | 10:00 AM - 5:00 PM
+                      February 8th, 2026 | 10:00 AM - 5:00 PM
                     </p>
                   </div>
                 </div>
@@ -2042,7 +2042,7 @@ export default function Home() {
 
           {/* Bottom Bar */}
           <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 The Longevity Reset. All rights reserved.</p>
+            <p>© 2026 The Longevity Reset. All rights reserved.</p>
             <p className="mt-2">Hosted by Victoria O'Sullivan Functional Medicine</p>
           </div>
         </div>
