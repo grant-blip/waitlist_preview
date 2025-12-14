@@ -1853,10 +1853,8 @@ export default function Home() {
 
       {/* Newsletter/Community CTA Section */}
       <section
-        className="py-20 border-t relative overflow-hidden"
+        className="py-20 border-t relative overflow-hidden bg-white"
         style={{
-          background:
-            "linear-gradient(135deg, #FFFDF7 0%, #F5F1E8 50%, #E8E5DC 100%)",
           borderColor: "#D4AF37",
         }}
       >
