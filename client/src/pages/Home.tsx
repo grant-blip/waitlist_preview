@@ -141,7 +141,7 @@ export default function Home() {
               href={vipCheckoutUrl}
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6 h-10 transition-colors"
             >
-              Register Now
+              Claim My Spot Now
             </a>
           </nav>
 
@@ -192,7 +192,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6 py-3 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Register Now
+                Claim My Spot Now
               </a>
             </nav>
           </div>
@@ -213,125 +213,118 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[400px] md:min-h-[560px] flex items-center overflow-hidden"
+        className="relative min-h-[500px] md:min-h-[650px] flex items-center overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #F5F1E8 0%, #FFFDF7 100%)",
+          backgroundImage: "url(/hero-background.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        {/* Background Image - Desktop */}
+        {/* Split overlay - Dark left for text, light right for Victoria */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-transparent z-0" />
+
+        {/* Victoria's Image - Desktop Only */}
         <div
-          className="hidden md:block absolute inset-0 z-0"
+          className="hidden md:block absolute right-0 bottom-0 z-5 h-full w-2/5"
           style={{
             backgroundImage: "url(/victoria-hero-new.png)",
             backgroundSize: "contain",
-            backgroundPosition: "82.5% center",
+            backgroundPosition: "bottom right",
             backgroundRepeat: "no-repeat",
           }}
         />
 
-        {/* Background Image - Mobile */}
-        <div
-          className="md:hidden absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url(/victoria-hero-new.png)",
-            backgroundSize: "cover",
-            backgroundPosition: "center 30%",
-          }}
-        >
-          <div className="absolute inset-0 bg-white/75" />
-        </div>
-
         <div className="container relative z-10">
-          <div className="grid md:grid-cols-5 gap-8 items-center">
-            {/* Left Side - Content Overlay (60%) */}
-            <div className="md:col-span-3 space-y-6 md:space-y-8 py-8 md:py-12">
-              {/* Main Headline */}
-              <div className="space-y-4 md:space-y-5">
-                <p className="text-xs md:text-sm uppercase tracking-wider text-gray-600 font-semibold">
-                  Attention All Perimenopausal and Menopausal Women
-                </p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
-                  You Were Never Meant to Feel This Tired, This Stuck, or This
-                  Out of Sync.
-                </h2>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Reset your hormones, your metabolism, and your future in just
-                  2 days.
-                </p>
-              </div>
+          <div className="max-w-3xl space-y-6 md:space-y-8 py-12 md:py-16">
+            {/* Main Headline */}
+            <div className="space-y-4 md:space-y-5">
+              <p className="text-xs md:text-sm uppercase tracking-wider text-white/90 font-semibold">
+                Attention All Perimenopausal and Menopausal Women
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-white leading-tight">
+                You Were Never Meant to Feel This Tired, This Stuck, or This
+                Out of Sync.
+              </h2>
+              <p className="text-lg md:text-xl text-white/95 leading-relaxed">
+                Reset your hormones, your metabolism, and your future in just
+                2 days.
+              </p>
+            </div>
 
-              {/* Event Details + Pricing */}
-              <div className="space-y-3">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm text-gray-700 rounded-lg text-sm font-medium shadow-sm border border-gray-200">
-                    <Calendar className="w-4 h-4 text-primary" />
-                    February 7-8, 2026
-                  </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-bold shadow-sm">
-                    From $97
-                  </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-md">
-                    <Gift className="w-4 h-4" />
-                    VIP $197
-                  </span>
-                </div>
-              </div>
-
-              {/* Countdown Timer */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-gray-200 max-w-md">
-                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider text-center mb-3">
-                  Event Starts In:
-                </p>
-                <div className="grid grid-cols-4 gap-2">
-                  <div className="text-center">
-                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
-                      <div className="text-lg md:text-xl font-bold">{timeLeft.days}</div>
-                    </div>
-                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Days</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
-                      <div className="text-lg md:text-xl font-bold">{timeLeft.hours}</div>
-                    </div>
-                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Hours</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
-                      <div className="text-lg md:text-xl font-bold">{timeLeft.minutes}</div>
-                    </div>
-                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Mins</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-primary text-white rounded-md p-2 shadow-sm">
-                      <div className="text-lg md:text-xl font-bold">{timeLeft.seconds}</div>
-                    </div>
-                    <p className="text-xs text-gray-600 mt-1.5 font-medium">Secs</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="space-y-4">
+            {/* Event Details + Pricing */}
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/95 backdrop-blur-sm text-gray-800 rounded-full text-base md:text-lg font-medium">
+                  <Calendar className="w-5 h-5 text-gray-600" />
+                  February 7-8, 2026
+                </span>
+                <a
+                  href={generalCheckoutUrl}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/90 hover:bg-white text-gray-800 rounded-full text-base md:text-lg font-semibold transition-all"
+                >
+                  From $97
+                </a>
                 <a
                   href={vipCheckoutUrl}
-                  className="inline-block w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all text-center"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#B4A57A] hover:bg-[#A89568] text-white rounded-full text-base md:text-lg font-semibold transition-all"
                 >
-                  Claim My Spot Now
+                  <Gift className="w-5 h-5" />
+                  VIP $197
                 </a>
-
-                {/* Simplified Social Proof */}
-                <p className="text-sm text-gray-600">
-                  <span className="font-semibold text-primary">68 spots taken</span>{" "}
-                  •{" "}
-                  <span className="font-semibold text-gray-900">
-                    32 spots left
-                  </span>
-                </p>
               </div>
             </div>
 
-            {/* Right Side - Empty space for Victoria in background (40%) */}
-            <div className="hidden md:block md:col-span-2" />
+            {/* Countdown Timer */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-4 max-w-md">
+              <p className="text-xs font-medium text-gray-600 uppercase tracking-wider text-center mb-2">
+                Event Starts In:
+              </p>
+                <div className="grid grid-cols-4 gap-2">
+                  <div className="text-center">
+                    <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
+                      <div className="text-base md:text-lg font-bold">{timeLeft.days}</div>
+                    </div>
+                    <p className="text-xs text-gray-600 mt-1 font-medium">Days</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
+                      <div className="text-base md:text-lg font-bold">{timeLeft.hours}</div>
+                    </div>
+                    <p className="text-xs text-gray-600 mt-1 font-medium">Hours</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
+                      <div className="text-base md:text-lg font-bold">{timeLeft.minutes}</div>
+                    </div>
+                    <p className="text-xs text-gray-600 mt-1 font-medium">Mins</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
+                      <div className="text-base md:text-lg font-bold">{timeLeft.seconds}</div>
+                    </div>
+                    <p className="text-xs text-gray-600 mt-1 font-medium">Secs</p>
+                  </div>
+                </div>
+              </div>
+
+            {/* CTA Button */}
+            <div className="space-y-4">
+              <a
+                href={vipCheckoutUrl}
+                className="inline-block w-full md:w-auto bg-[#B4A57A] hover:bg-[#A89568] text-white font-semibold text-lg px-12 py-4 rounded-full transition-all text-center"
+              >
+                Claim My Spot Now
+              </a>
+
+              {/* Simplified Social Proof */}
+              <p className="text-base md:text-lg text-white/95">
+                <span className="font-bold text-white">68 spots taken</span>{" "}
+                •{" "}
+                <span className="font-bold text-white">
+                  32 spots left
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
