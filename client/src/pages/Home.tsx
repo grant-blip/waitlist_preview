@@ -120,16 +120,16 @@ export default function Home() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#home" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+            <a href="https://victoriaosullivan.com.au/" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               Home
             </a>
-            <a href="#about" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+            <a href="https://victoriaosullivan.com.au/meet-the-team/" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               About Victoria
             </a>
-            <a href="#" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+            <a href="https://victoriaosullivan.com.au/blog/" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               Blog
             </a>
-            <a href="#contact" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+            <a href="https://victoriaosullivan.com.au/contact/" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               Contact
             </a>
             <a
