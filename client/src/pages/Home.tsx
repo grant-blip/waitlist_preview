@@ -85,23 +85,25 @@ export default function Home() {
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // SamCart checkout triggers
-  const openGeneralCheckout = () => {
-    // Trigger SamCart popup for General Admission ($97)
-    const checkoutElement = document.createElement('sc-checkout');
-    checkoutElement.setAttribute('product', 'vipreset');
-    checkoutElement.setAttribute('subdomain', 'victoriaosulliv');
-    checkoutElement.setAttribute('coupon', '');
-    document.body.appendChild(checkoutElement);
+  // SamCart checkout URLs
+  const generalCheckoutUrl = 'https://victoriaosulliv.mysamcart.com/checkout/2-day-longevity-reset#samcart-slide-open-right';
+  const vipCheckoutUrl = 'https://victoriaosulliv.mysamcart.com/checkout/2-day-longevity-reset-vip#samcart-slide-open-right';
+
+  // SamCart slide checkout trigger functions
+  const openGeneralCheckout = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Create a temporary link and click it to trigger SamCart's slide checkout
+    const link = document.createElement('a');
+    link.href = generalCheckoutUrl;
+    link.click();
   };
 
-  const openVIPCheckout = () => {
-    // Trigger SamCart popup for VIP Experience ($197)
-    const checkoutElement = document.createElement('sc-checkout');
-    checkoutElement.setAttribute('product', '2-day-longevity-reset-vip-option-copy');
-    checkoutElement.setAttribute('subdomain', 'victoriaosulliv');
-    checkoutElement.setAttribute('coupon', '');
-    document.body.appendChild(checkoutElement);
+  const openVIPCheckout = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Create a temporary link and click it to trigger SamCart's slide checkout
+    const link = document.createElement('a');
+    link.href = vipCheckoutUrl;
+    link.click();
   };
 
   return (
@@ -130,21 +132,21 @@ export default function Home() {
             <a href="#contact" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
               Contact
             </a>
-            <Button
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6"
-              onClick={openVIPCheckout}
+            <a
+              href={vipCheckoutUrl}
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6 h-10 transition-colors"
             >
               Register Now
-            </Button>
+            </a>
           </nav>
 
           {/* Mobile CTA Button */}
-          <Button
-            className="md:hidden bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-4 text-sm"
-            onClick={openVIPCheckout}
+          <a
+            href={vipCheckoutUrl}
+            className="md:hidden inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-4 text-sm h-10 transition-colors"
           >
             Register
-          </Button>
+          </a>
         </div>
 
         {/* Event Date Badge - Below Header */}
@@ -228,13 +230,12 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className="space-y-4">
-                <Button
-                  size="lg"
-                  className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-                  onClick={openVIPCheckout}
+                <a
+                  href={vipCheckoutUrl}
+                  className="inline-block w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all text-center"
                 >
                   Reserve Your Spot Now
-                </Button>
+                </a>
 
                 {/* Simplified Social Proof */}
                 <p className="text-sm text-gray-600">
@@ -698,13 +699,12 @@ export default function Home() {
                   <p className="text-xl text-gray-700 mb-8">
                     The Longevity Reset was created specifically for YOU.
                   </p>
-                  <Button
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-                    onClick={openVIPCheckout}
+                  <a
+                    href={vipCheckoutUrl}
+                    className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
                   >
                     Yes, This Is Me—I'm Ready
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -838,13 +838,12 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all"
-              onClick={openVIPCheckout}
+            <a
+              href={vipCheckoutUrl}
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
             >
               Ready to Write Your Own Success Story?
-            </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -921,12 +920,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <Button
-                    className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 rounded-full"
-                    onClick={openGeneralCheckout}
+                  <a
+                    href={generalCheckoutUrl}
+                    className="inline-flex items-center justify-center w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-6 rounded-full transition-colors"
                   >
                     Register - General Admission
-                  </Button>
+                  </a>
                 </CardContent>
               </Card>
 
@@ -1057,12 +1056,12 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <Button
-                    className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full shadow-lg"
-                    onClick={openVIPCheckout}
+                  <a
+                    href={vipCheckoutUrl}
+                    className="inline-flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full shadow-lg transition-colors"
                   >
                     Register - VIP Experience ⭐
-                  </Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
@@ -1523,12 +1522,12 @@ export default function Home() {
               <p className="text-muted-foreground mb-4">
                 Included FREE with VIP tier ($197)
               </p>
-              <Button
-                className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full"
-                onClick={openVIPCheckout}
+              <a
+                href={vipCheckoutUrl}
+                className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full transition-colors"
               >
                 Upgrade to VIP ⭐
-              </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -1856,13 +1855,12 @@ export default function Home() {
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
                     />
                   </div>
-                  <Button
-                    size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 h-auto rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
-                    onClick={openVIPCheckout}
+                  <a
+                    href={vipCheckoutUrl}
+                    className="inline-flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
                   >
                     Secure Your Spot Now
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
