@@ -331,72 +331,27 @@ export default function Home() {
 
       {/* Sales Video Section */}
       <section
-        className="py-16 md:py-20 relative overflow-hidden"
-        style={{
-          background: "linear-gradient(to bottom, #F9F5F2 0%, #FEFDFB 100%)",
-        }}
+        className="py-16 md:py-24 bg-[#FEFDFB]"
       >
-        {/* Decorative botanical elements */}
-        <div className="absolute top-8 left-8 w-32 h-32 opacity-10">
-          <svg
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20 50 Q30 30, 50 20 T80 30"
-              stroke="#589351"
-              strokeWidth="1.5"
-              fill="none"
-            />
-            <path
-              d="M30 60 Q40 45, 55 40 T75 50"
-              stroke="#589351"
-              strokeWidth="1.5"
-              fill="none"
-            />
-            <circle cx="50" cy="20" r="3" fill="#589351" />
-            <circle cx="80" cy="30" r="2.5" fill="#589351" />
-            <circle cx="55" cy="40" r="2" fill="#589351" />
-          </svg>
-        </div>
-        <div className="absolute bottom-8 right-8 w-32 h-32 opacity-10 transform rotate-180">
-          <svg
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M20 50 Q30 30, 50 20 T80 30"
-              stroke="#589351"
-              strokeWidth="1.5"
-              fill="none"
-            />
-            <path
-              d="M30 60 Q40 45, 55 40 T75 50"
-              stroke="#589351"
-              strokeWidth="1.5"
-              fill="none"
-            />
-            <circle cx="50" cy="20" r="3" fill="#589351" />
-            <circle cx="80" cy="30" r="2.5" fill="#589351" />
-            <circle cx="55" cy="40" r="2" fill="#589351" />
-          </svg>
-        </div>
-        <div className="container max-w-5xl relative z-10">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
-              Watch: Why The Longevity Reset Is Different
+        <div className="container max-w-5xl">
+          <div className="text-center mb-12">
+            {/* Gold pill badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#B4A57A]/10 rounded-full mb-6">
+              <div className="w-2 h-2 bg-[#B4A57A] rounded-full"></div>
+              <span className="text-sm font-medium text-[#B4A57A] uppercase tracking-wider">Featured Video</span>
+            </div>
+            
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why The Longevity Reset Is Different
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Discover the science-backed approach that's helping thousands of
               women reclaim their energy, metabolism, and confidence in midlife.
             </p>
           </div>
 
           <div
-            className="relative aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-luxury border-2"
-            style={{ borderColor: "var(--champagne-gold)" }}
+            className="relative aspect-video bg-gray-100 rounded-3xl overflow-hidden shadow-sm"
           >
             <iframe
               className="absolute inset-0 w-full h-full"
