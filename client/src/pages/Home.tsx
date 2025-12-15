@@ -366,11 +366,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured In - Media Logos */}
-      <section className="py-12 bg-primary/10 border-y border-primary/20">
+      {/* Featured In - Media Logos with Scrolling Animation */}
+      <section className="py-12 bg-white border-y border-gray-200 overflow-hidden">
         <div className="container">
-          <div className="text-center mb-6">
-            <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">
+          <div className="text-center mb-8">
+            <p className="text-sm uppercase tracking-widest text-[#B4A57A] font-semibold mb-2">
               Trusted By Leading Media
             </p>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
@@ -378,12 +378,39 @@ export default function Home() {
             </h3>
           </div>
         </div>
-        <div className="w-full">
-          <img
-            src="/media-logos.jpg"
-            alt="As featured in major media outlets"
-            className="w-full h-auto object-contain max-h-24 md:max-h-32"
-          />
+        
+        {/* Infinite Scrolling Marquee */}
+        <div className="relative w-full overflow-hidden">
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-25%); }
+              }
+              .animate-scroll {
+                animation: scroll 40s linear infinite;
+              }
+              .animate-scroll:hover {
+                animation-play-state: paused;
+              }
+            `
+          }} />
+          
+          <div className="flex animate-scroll gap-16">
+            {/* Multiple duplicates for seamless infinite scroll */}
+            <div className="flex-shrink-0">
+              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+            </div>
+          </div>
         </div>
       </section>
 
