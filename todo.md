@@ -75,7 +75,8 @@
 ## Current Task 🎯
 
 - [x] Add video background to This Is For You If section
-- [ ] Redesign Choose Your Experience pricing section to match reference style
+- [x] Redesign Choose Your Experience pricing section to match reference style
+- [ ] Change pricing card background from gray to sage green
 
 ## Suggested Next Steps 💡
 

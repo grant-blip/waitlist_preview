@@ -892,7 +892,7 @@ export default function Home() {
               {/* General Admission */}
               <div 
                 className="rounded-3xl p-8 border-2 border-white/30 backdrop-blur-sm"
-                style={{ backgroundColor: 'rgba(107, 114, 128, 0.85)' }}
+                style={{ backgroundColor: 'rgba(149, 165, 145, 0.85)' }}
               >
                 {/* Product Mockup Placeholder */}
                 <div className="mb-8 flex items-center justify-center min-h-[200px]">
@@ -957,7 +957,7 @@ export default function Home() {
               {/* VIP Experience */}
               <div 
                 className="rounded-3xl p-8 border-2 border-white/30 backdrop-blur-sm relative"
-                style={{ backgroundColor: 'rgba(107, 114, 128, 0.85)' }}
+                style={{ backgroundColor: 'rgba(149, 165, 145, 0.85)' }}
               >
                 {/* Most Popular Badge */}
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
