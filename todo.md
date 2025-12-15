@@ -67,7 +67,8 @@
 - [x] Remove white backgrounds from phone images and ensure identical sizes (first attempt)
 - [x] Aggressively crop white backgrounds and match sizes properly
 - [x] Regenerate both phones from scratch with identical dimensions
-- [ ] Add CSS constraints to ensure phones render at identical sizes
+- [x] Add CSS constraints to ensure phones render at identical sizes
+- [ ] Replace transparent backgrounds with solid white backgrounds
 
 ## Suggested Next Steps 💡
 

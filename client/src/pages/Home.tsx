@@ -1180,7 +1180,7 @@ export default function Home() {
               {/* Day 1 Phone */}
               <div className="w-[280px] flex-shrink-0">
                 <img
-                  src="/phone-day1-v2.png"
+                  src="/phone-day1-v3.png"
                   alt="Day 1: Reboot & Reset - Mobile App Interface"
                   className="w-[280px] h-auto drop-shadow-2xl"
                   style={{ width: '280px', height: 'auto' }}
@@ -1189,7 +1189,7 @@ export default function Home() {
               {/* Day 2 Phone */}
               <div className="w-[280px] flex-shrink-0">
                 <img
-                  src="/phone-day2-v2.png"
+                  src="/phone-day2-v3.png"
                   alt="Day 2: Build & Sustain - Mobile App Interface"
                   className="w-[280px] h-auto drop-shadow-2xl"
                   style={{ width: '280px', height: 'auto' }}
