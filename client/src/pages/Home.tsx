@@ -379,37 +379,10 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Infinite Scrolling Marquee */}
-        <div className="relative w-full overflow-hidden">
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              @keyframes scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-25%); }
-              }
-              .animate-scroll {
-                animation: scroll 40s linear infinite;
-              }
-              .animate-scroll:hover {
-                animation-play-state: paused;
-              }
-            `
-          }} />
-          
-          <div className="flex animate-scroll gap-16">
-            {/* Multiple duplicates for seamless infinite scroll */}
-            <div className="flex-shrink-0">
-              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-            </div>
+        {/* Static Media Logos */}
+        <div className="container">
+          <div className="flex justify-center">
+            <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70" />
           </div>
         </div>
       </section>
