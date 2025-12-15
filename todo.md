@@ -68,7 +68,8 @@
 - [x] Aggressively crop white backgrounds and match sizes properly
 - [x] Regenerate both phones from scratch with identical dimensions
 - [x] Add CSS constraints to ensure phones render at identical sizes
-- [ ] Replace transparent backgrounds with solid white backgrounds
+- [x] Replace transparent backgrounds with solid white backgrounds
+- [ ] Force browser cache refresh with timestamp query parameter
 
 ## Suggested Next Steps 💡
 
