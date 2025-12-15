@@ -60,7 +60,8 @@
 
 ## Current Task 🎯
 
-- [ ] Redesign As Featured In section - full-width green bar with 2 rows of white logos
+- [x] Redesign As Featured In section - full-width green bar with 2 rows of white logos
+- [ ] Remove white strip below green media logos bar
 
 ## Suggested Next Steps 💡
 
