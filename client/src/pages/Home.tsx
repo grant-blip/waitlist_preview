@@ -1180,7 +1180,7 @@ export default function Home() {
               {/* Day 1 Phone */}
               <div className="w-full max-w-[280px]">
                 <img
-                  src="/phone-day1.png"
+                  src="/phone-day1-v2.png"
                   alt="Day 1: Reboot & Reset - Mobile App Interface"
                   className="w-full h-auto drop-shadow-2xl"
                 />
@@ -1188,7 +1188,7 @@ export default function Home() {
               {/* Day 2 Phone */}
               <div className="w-full max-w-[280px]">
                 <img
-                  src="/phone-day2.png"
+                  src="/phone-day2-v2.png"
                   alt="Day 2: Build & Sustain - Mobile App Interface"
                   className="w-full h-auto drop-shadow-2xl"
                 />
