@@ -1178,19 +1178,21 @@ export default function Home() {
             {/* Right Side - Two Phone Mockups */}
             <div className="flex justify-center lg:justify-end gap-6">
               {/* Day 1 Phone */}
-              <div className="w-full max-w-[280px]">
+              <div className="w-[280px] flex-shrink-0">
                 <img
                   src="/phone-day1-v2.png"
                   alt="Day 1: Reboot & Reset - Mobile App Interface"
-                  className="w-full h-auto drop-shadow-2xl"
+                  className="w-[280px] h-auto drop-shadow-2xl"
+                  style={{ width: '280px', height: 'auto' }}
                 />
               </div>
               {/* Day 2 Phone */}
-              <div className="w-full max-w-[280px]">
+              <div className="w-[280px] flex-shrink-0">
                 <img
                   src="/phone-day2-v2.png"
                   alt="Day 2: Build & Sustain - Mobile App Interface"
-                  className="w-full h-auto drop-shadow-2xl"
+                  className="w-[280px] h-auto drop-shadow-2xl"
+                  style={{ width: '280px', height: 'auto' }}
                 />
               </div>
             </div>

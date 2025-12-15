@@ -66,7 +66,8 @@
 - [x] Generate two separate phone mockups (Day 1 and Day 2) and display side-by-side
 - [x] Remove white backgrounds from phone images and ensure identical sizes (first attempt)
 - [x] Aggressively crop white backgrounds and match sizes properly
-- [ ] Regenerate both phones from scratch with identical dimensions
+- [x] Regenerate both phones from scratch with identical dimensions
+- [ ] Add CSS constraints to ensure phones render at identical sizes
 
 ## Suggested Next Steps 💡
 
