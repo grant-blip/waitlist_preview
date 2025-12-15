@@ -69,7 +69,8 @@
 - [x] Regenerate both phones from scratch with identical dimensions
 - [x] Add CSS constraints to ensure phones render at identical sizes
 - [x] Replace transparent backgrounds with solid white backgrounds
-- [ ] Force browser cache refresh with timestamp query parameter
+- [x] Force browser cache refresh with timestamp query parameter
+- [ ] Regenerate phones with nano banana using explicit white background instructions
 
 ## Suggested Next Steps 💡
 
