@@ -74,7 +74,8 @@
 
 ## Current Task 🎯
 
-- [ ] Add video background to This Is For You If section
+- [x] Add video background to This Is For You If section
+- [ ] Redesign Choose Your Experience pricing section to match reference style
 
 ## Suggested Next Steps 💡
 
