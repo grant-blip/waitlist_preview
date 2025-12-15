@@ -152,7 +152,7 @@ export default function Home() {
               Contact
             </a>
             <a
-              href={vipCheckoutUrl}
+              href={generalCheckoutUrl}
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6 h-10 transition-colors"
             >
               Claim My Spot Now
@@ -202,7 +202,7 @@ export default function Home() {
                 Contact
               </a>
               <a
-                href={vipCheckoutUrl}
+                href={generalCheckoutUrl}
                 className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6 py-3 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -324,7 +324,7 @@ export default function Home() {
             {/* CTA Button */}
             <div className="space-y-4">
               <a
-                href={vipCheckoutUrl}
+                href={generalCheckoutUrl}
                 className="inline-block w-full md:w-auto bg-[#B4A57A] hover:bg-[#A89568] text-white font-semibold text-lg px-12 py-4 rounded-full transition-all text-center"
               >
                 Claim My Spot Now
@@ -601,7 +601,7 @@ export default function Home() {
                     The Longevity Reset was created specifically for YOU.
                   </p>
                   <a
-                    href={vipCheckoutUrl}
+                    href={generalCheckoutUrl}
                     className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
                   >
                     Yes, This Is Me—I'm Ready
@@ -854,7 +854,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <a
-              href={vipCheckoutUrl}
+              href={generalCheckoutUrl}
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
             >
               Ready to Write Your Own Success Story?
@@ -1140,7 +1140,7 @@ export default function Home() {
 
               <div className="pt-4">
                 <a
-                  href={vipCheckoutUrl}
+                  href={generalCheckoutUrl}
                   className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
                   style={{ backgroundColor: '#B4A57A' }}
                 >
@@ -1804,7 +1804,7 @@ export default function Home() {
                     />
                   </div>
                   <a
-                    href={vipCheckoutUrl}
+                    href={generalCheckoutUrl}
                     className="inline-flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
                   >
                     Secure Your Spot Now
