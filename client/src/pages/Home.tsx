@@ -331,7 +331,7 @@ export default function Home() {
 
       {/* Sales Video Section */}
       <section
-        className="py-16 md:py-24 bg-[#FEFDFB]"
+        className="py-16 md:py-24 bg-[#FDF4EB]"
       >
         <div className="container max-w-5xl">
           <div className="text-center mb-12">
