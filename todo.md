@@ -58,6 +58,10 @@
 
 - [x] Scrolling marquee - User prefers static logos, reverting to original layout
 
+## Current Task 🎯
+
+- [ ] Redesign As Featured In section - full-width green bar with 2 rows of white logos
+
 ## Suggested Next Steps 💡
 
 - [ ] Redesign pricing cards with gold pill buttons

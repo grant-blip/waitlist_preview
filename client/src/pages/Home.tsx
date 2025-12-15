@@ -366,25 +366,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured In - Media Logos with Scrolling Animation */}
-      <section className="py-12 bg-white border-y border-gray-200 overflow-hidden">
-        <div className="container">
-          <div className="text-center mb-8">
-            <p className="text-sm uppercase tracking-widest text-[#B4A57A] font-semibold mb-2">
-              Trusted By Leading Media
-            </p>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-              As Featured In
-            </h3>
-          </div>
-        </div>
-        
-        {/* Static Media Logos */}
-        <div className="container">
-          <div className="flex justify-center">
-            <img src="/media-logos.jpg" alt="Media logos" className="h-16 md:h-20 object-contain opacity-70" />
-          </div>
-        </div>
+      {/* Featured In - Full Width Green Bar with Logo Grid */}
+      <section className="w-full overflow-hidden">
+        <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover" />
       </section>
 
       {/* Meet Your Host Section */}
