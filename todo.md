@@ -76,7 +76,8 @@
 
 - [x] Add video background to This Is For You If section
 - [x] Redesign Choose Your Experience pricing section to match reference style
-- [ ] Change pricing card background from gray to sage green
+- [x] Change pricing card background from gray to sage green
+- [ ] Combine What You'll Walk Away With and VIP Bonuses into comparison table
 
 ## Suggested Next Steps 💡
 
