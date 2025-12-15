@@ -856,6 +856,120 @@ export default function Home() {
             </Card>
           </div>
 
+          {/* Second Row - 3 New Testimonials */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
+            {/* Video Testimonial 4 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://player.vimeo.com/video/843807220?badge=0&autopause=0&player_id=0&app_id=58479"
+                    title="Client Testimonial"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">
+                    "Victoria's approach transformed my understanding of my body and health."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                      L
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      Lisa T.
+                    </span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Testimonial 5 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://player.vimeo.com/video/846844123?badge=0&autopause=0&player_id=0&app_id=58479"
+                    title="Client Testimonial"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">
+                    "The results speak for themselves. I finally have my energy back!"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                      K
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      Karen M.
+                    </span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Video Testimonial 6 */}
+            <Card className="border-2 overflow-hidden hover:shadow-xl transition-shadow">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-100 relative">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://player.vimeo.com/video/852854805?h=678f033de8&badge=0&autopause=0&player_id=0&app_id=58479"
+                    title="Client Testimonial"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4 italic">
+                    "Life-changing program. I wish I had found Victoria years ago!"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                      A
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      Amanda R.
+                    </span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="text-center mt-12">
             <a
               href={vipCheckoutUrl}
