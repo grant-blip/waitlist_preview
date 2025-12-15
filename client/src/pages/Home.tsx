@@ -1164,23 +1164,21 @@ export default function Home() {
             </div>
 
             {/* Right Side - Two Phone Mockups */}
-            <div className="flex justify-center lg:justify-end gap-6">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-end gap-4 sm:gap-6">
               {/* Day 1 Phone */}
-              <div className="w-[280px] flex-shrink-0">
+              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
                 <img
                   src="/phone-day1-final.png"
                   alt="Day 1: Reboot & Reset - Mobile App Interface"
-                  className="w-[280px] h-auto drop-shadow-2xl"
-                  style={{ width: '280px', height: 'auto' }}
+                  className="w-full h-auto drop-shadow-2xl"
                 />
               </div>
               {/* Day 2 Phone */}
-              <div className="w-[280px] flex-shrink-0">
+              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
                 <img
                   src="/phone-day2-final.png"
                   alt="Day 2: Build & Sustain - Mobile App Interface"
-                  className="w-[280px] h-auto drop-shadow-2xl"
-                  style={{ width: '280px', height: 'auto' }}
+                  className="w-full h-auto drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -1201,26 +1199,26 @@ export default function Home() {
             {/* Comparison Table */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               {/* Table Header */}
-              <div className="grid grid-cols-3 gap-4 p-6 bg-gradient-to-r from-gray-50 to-gray-100 border-b-2 border-gray-200">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 bg-gradient-to-r from-gray-50 to-gray-100 border-b-2 border-gray-200">
                 <div className="text-left">
-                  <h4 className="text-xl font-bold text-gray-900">Features</h4>
+                  <h4 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900">Features</h4>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">General Admission</h4>
-                  <p className="text-sm text-gray-600">($97)</p>
+                  <h4 className="text-xs sm:text-sm md:text-lg font-bold text-gray-900 mb-1">General</h4>
+                  <p className="text-xs sm:text-sm text-gray-600">($97)</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">VIP Experience</h4>
-                  <p className="text-sm text-gray-600">($177)</p>
+                  <h4 className="text-xs sm:text-sm md:text-lg font-bold text-gray-900 mb-1">VIP</h4>
+                  <p className="text-xs sm:text-sm text-gray-600">($177)</p>
                 </div>
               </div>
 
               {/* Table Rows */}
               <div className="divide-y divide-gray-200">
                 {/* Row 1 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors">
                   <div className="text-left">
-                    <p className="text-gray-800">Full access to both days (10am-5pm) with all live training sessions</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800">Full access to both days (10am-5pm) with all live training sessions</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <div className="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center">
@@ -1235,9 +1233,9 @@ export default function Home() {
                 </div>
 
                 {/* Row 2 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors">
                   <div className="text-left">
-                    <p className="text-gray-800">Live Q&A sessions with Victoria to get your specific questions answered</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800">Live Q&A sessions with Victoria to get your specific questions answered</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <div className="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center">
@@ -1252,9 +1250,9 @@ export default function Home() {
                 </div>
 
                 {/* Row 3 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors">
                   <div className="text-left">
-                    <p className="text-gray-800">Lifetime access to all session recordings to watch at your own pace</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800">Lifetime access to all session recordings to watch at your own pace</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <div className="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center">
@@ -1269,9 +1267,9 @@ export default function Home() {
                 </div>
 
                 {/* Row 4 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors">
                   <div className="text-left">
-                    <p className="text-gray-800">Access to private support community with 17,000+ women</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800">Access to private support community with 17,000+ women</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <div className="w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center">
@@ -1287,9 +1285,9 @@ export default function Home() {
 
                 {/* VIP ONLY FEATURES */}
                 {/* Row 5 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors bg-primary/5">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors bg-primary/5">
                   <div className="text-left">
-                    <p className="text-gray-800 font-semibold">Complete Hormone Balancing Guide - Know exactly which hormones need attention</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800 font-semibold">Complete Hormone Balancing Guide - Know exactly which hormones need attention</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="text-gray-400">—</span>
@@ -1302,9 +1300,9 @@ export default function Home() {
                 </div>
 
                 {/* Row 6 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors bg-primary/5">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors bg-primary/5">
                   <div className="text-left">
-                    <p className="text-gray-800 font-semibold">14-Day Meal Plan & Recipes - Delicious meals that balance hormones & burn fat</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800 font-semibold">14-Day Meal Plan & Recipes - Delicious meals that balance hormones & burn fat</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="text-gray-400">—</span>
@@ -1317,9 +1315,9 @@ export default function Home() {
                 </div>
 
                 {/* Row 7 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors bg-primary/5">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors bg-primary/5">
                   <div className="text-left">
-                    <p className="text-gray-800 font-semibold">Personalized Protocol Template - Your custom roadmap to implement immediately</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800 font-semibold">Personalized Protocol Template - Your custom roadmap to implement immediately</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="text-gray-400">—</span>
@@ -1332,9 +1330,9 @@ export default function Home() {
                 </div>
 
                 {/* Row 8 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors bg-primary/5">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors bg-primary/5">
                   <div className="text-left">
-                    <p className="text-gray-800 font-semibold">Downloadable Workbooks & Progress Trackers - Stay accountable and see your transformation</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800 font-semibold">Downloadable Workbooks & Progress Trackers - Stay accountable and see your transformation</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="text-gray-400">—</span>
@@ -1347,9 +1345,9 @@ export default function Home() {
                 </div>
 
                 {/* Row 9 */}
-                <div className="grid grid-cols-3 gap-4 p-6 hover:bg-gray-50 transition-colors bg-primary/5">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 hover:bg-gray-50 transition-colors bg-primary/5">
                   <div className="text-left">
-                    <p className="text-gray-800 font-semibold">Priority Q&A Access - Get your questions answered first</p>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-800 font-semibold">Priority Q&A Access - Get your questions answered first</p>
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="text-gray-400">—</span>
@@ -1363,16 +1361,16 @@ export default function Home() {
               </div>
 
               {/* Table Footer with Value */}
-              <div className="grid grid-cols-3 gap-4 p-6 bg-gradient-to-r from-gray-50 to-gray-100 border-t-2 border-gray-200">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-6 bg-gradient-to-r from-gray-50 to-gray-100 border-t-2 border-gray-200">
                 <div className="text-left flex items-center">
-                  <p className="text-lg font-bold text-gray-900">Total Value</p>
+                  <p className="text-sm sm:text-base md:text-lg font-bold text-gray-900">Total Value</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-gray-900">$97</p>
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">$97</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-2xl font-bold" style={{ color: 'var(--rose-gold)' }}>$558</p>
-                  <p className="text-sm text-gray-600 mt-1">Early Bird: Just $177</p>
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: 'var(--rose-gold)' }}>$558</p>
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1">Early Bird: Just $177</p>
                 </div>
               </div>
             </div>

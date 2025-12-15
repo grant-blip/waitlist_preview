@@ -78,7 +78,8 @@
 - [x] Redesign Choose Your Experience pricing section to match reference style
 - [x] Change pricing card background from gray to sage green
 - [x] Combine What You'll Walk Away With and VIP Bonuses into comparison table
-- [ ] Remove email collection form from Reserve Your Spot section
+- [x] Remove email collection form from Reserve Your Spot section
+- [ ] Fix mobile responsiveness - phone mockups and all sections
 
 ## Suggested Next Steps 💡
 
