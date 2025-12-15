@@ -997,18 +997,9 @@ export default function Home() {
                   VIP Experience
                 </h4>
                 
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <span className="text-2xl font-bold text-white/60 line-through">
-                    $197
-                  </span>
+                <div className="flex items-center justify-center gap-3 mb-4">
                   <span className="text-5xl font-bold text-white">
-                    $177
-                  </span>
-                </div>
-
-                <div className="inline-block px-4 py-1 rounded-full mb-4 mx-auto block w-fit" style={{ backgroundColor: 'var(--champagne-gold)' }}>
-                  <span className="text-sm font-bold text-gray-900">
-                    Early Bird Price - Save $20!
+                    $197
                   </span>
                 </div>
 
@@ -1048,7 +1039,7 @@ export default function Home() {
                     Total Value: $558
                   </p>
                   <p className="text-xs text-white/80">
-                    Early Bird: Just $177 (Regular $197)
+                    Full Access VIP Experience
                   </p>
                 </div>
 
@@ -1205,7 +1196,7 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <h4 className="text-xs sm:text-sm md:text-lg font-bold text-gray-900 mb-1">VIP</h4>
-                  <p className="text-xs sm:text-sm text-gray-600">($177)</p>
+                  <p className="text-xs sm:text-sm text-gray-600">($197)</p>
                 </div>
               </div>
 
@@ -1366,7 +1357,7 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <p className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: 'var(--rose-gold)' }}>$558</p>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-1">Early Bird: Just $177</p>
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1">VIP Experience</p>
                 </div>
               </div>
             </div>
@@ -1728,17 +1719,9 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-2">
                   VIP Experience
                 </h4>
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-gray-400 line-through">
-                    $197
-                  </span>
+                <div className="flex items-center justify-center gap-2 mb-4">
                   <span className="text-4xl font-bold" style={{ color: 'var(--rose-gold)' }}>
-                    $177
-                  </span>
-                </div>
-                <div className="inline-block px-4 py-1 rounded-full mb-4" style={{ backgroundColor: 'var(--champagne-gold)' }}>
-                  <span className="text-sm font-bold text-gray-900">
-                    Early Bird - Save $20!
+                    $197
                   </span>
                 </div>
                 <p className="text-gray-600 mb-6">
@@ -1969,7 +1952,7 @@ export default function Home() {
                   className="block w-full py-4 px-6 rounded-full font-bold text-white text-center shadow-lg hover:shadow-xl transition-all"
                   style={{ background: 'linear-gradient(135deg, var(--champagne-gold) 0%, #B8956A 100%)' }}
                 >
-                  🎁 Claim VIP Experience - $177
+                  🎁 Claim VIP Experience - $197
                 </a>
                 
                 <a
