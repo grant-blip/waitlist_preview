@@ -1790,26 +1790,12 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-primary/20">
-                  <div className="grid md:grid-cols-2 gap-4 mb-4">
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
-                    />
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
-                    />
-                  </div>
-                  <a
-                    href={generalCheckoutUrl}
-                    className="inline-flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
-                  >
-                    Secure Your Spot Now
-                  </a>
-                </div>
+                <a
+                  href={generalCheckoutUrl}
+                  className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
+                >
+                  Secure Your Spot Now
+                </a>
               </div>
             </div>
           </div>
