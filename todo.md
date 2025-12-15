@@ -64,7 +64,8 @@
 - [x] Remove white strip below green media logos bar
 - [x] Redesign 2-Day Journey section with mobile phone mockup + compelling copy
 - [x] Generate two separate phone mockups (Day 1 and Day 2) and display side-by-side
-- [ ] Remove white backgrounds from phone images and ensure identical sizes
+- [x] Remove white backgrounds from phone images and ensure identical sizes (first attempt)
+- [ ] Aggressively crop white backgrounds and match sizes properly
 
 ## Suggested Next Steps 💡
 
