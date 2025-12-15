@@ -28,6 +28,7 @@ export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showExitPopup, setShowExitPopup] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -64,6 +65,19 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Exit-intent detection
+  useEffect(() => {
+    const handleMouseLeave = (e: MouseEvent) => {
+      // Trigger when mouse moves to top of viewport (trying to leave)
+      if (e.clientY <= 0 && !showExitPopup) {
+        setShowExitPopup(true);
+      }
+    };
+
+    document.addEventListener('mouseleave', handleMouseLeave);
+    return () => document.removeEventListener('mouseleave', handleMouseLeave);
+  }, [showExitPopup]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -1916,6 +1930,64 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Exit-Intent Popup */}
+      {showExitPopup && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-200">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-in zoom-in-95 duration-300">
+            {/* Close button */}
+            <button
+              onClick={() => setShowExitPopup(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Content */}
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
+                <Clock className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Wait! Don't Miss Out
+              </h3>
+              
+              <p className="text-gray-600 mb-2 text-lg">
+                Only <span className="font-bold text-rose-600">32 spots remaining</span> for The Longevity Reset
+              </p>
+              
+              <p className="text-gray-600 mb-6">
+                Join 2,847 women who've already transformed their energy, metabolism, and hormones in just 2 days.
+              </p>
+
+              {/* CTAs */}
+              <div className="space-y-3">
+                <a
+                  href={vipCheckoutUrl}
+                  onClick={() => setShowExitPopup(false)}
+                  className="block w-full py-4 px-6 rounded-full font-bold text-white text-center shadow-lg hover:shadow-xl transition-all"
+                  style={{ background: 'linear-gradient(135deg, var(--champagne-gold) 0%, #B8956A 100%)' }}
+                >
+                  🎁 Claim VIP Experience - $177
+                </a>
+                
+                <a
+                  href={generalCheckoutUrl}
+                  onClick={() => setShowExitPopup(false)}
+                  className="block w-full py-4 px-6 rounded-full font-bold text-gray-700 bg-gray-100 hover:bg-gray-200 text-center transition-all"
+                >
+                  Get General Admission - $97
+                </a>
+              </div>
+
+              <p className="text-xs text-gray-500 mt-4">
+                ✓ 100% Money-Back Guarantee • ✓ Secure Checkout
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
