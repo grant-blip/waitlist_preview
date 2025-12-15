@@ -343,43 +343,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sales Video Section */}
-      <section
-        className="py-16 md:py-24 bg-[#FDF4EB]"
-      >
-        <div className="container max-w-5xl">
-          <div className="text-center mb-12">
-            {/* Gold pill badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#B4A57A]/10 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#B4A57A] rounded-full"></div>
-              <span className="text-sm font-medium text-[#B4A57A] uppercase tracking-wider">Featured Video</span>
-            </div>
-            
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why The Longevity Reset Is Different
-            </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover the science-backed approach that's helping thousands of
-              women reclaim their energy, metabolism, and confidence in midlife.
-            </p>
-          </div>
-
-          <div
-            className="relative aspect-video bg-gray-100 rounded-3xl overflow-hidden shadow-sm"
-          >
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://player.vimeo.com/video/1080000343?badge=0&autopause=0&player_id=0&app_id=58479"
-              title="The Longevity Reset Sales Video"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
-        </div>
-      </section>
-
       {/* Featured In - Full Width Green Bar with Logo Grid */}
       <section className="w-full overflow-hidden">
         <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover" />
@@ -610,6 +573,43 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Sales Video Section - Why The Longevity Reset Is Different */}
+      <section
+        className="py-16 md:py-24 bg-[#FDF4EB]"
+      >
+        <div className="container max-w-5xl">
+          <div className="text-center mb-12">
+            {/* Gold pill badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#B4A57A]/10 rounded-full mb-6">
+              <div className="w-2 h-2 bg-[#B4A57A] rounded-full"></div>
+              <span className="text-sm font-medium text-[#B4A57A] uppercase tracking-wider">Featured Video</span>
+            </div>
+            
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why The Longevity Reset Is Different
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover the science-backed approach that's helping thousands of
+              women reclaim their energy, metabolism, and confidence in midlife.
+            </p>
+          </div>
+
+          <div
+            className="relative aspect-video bg-gray-100 rounded-3xl overflow-hidden shadow-sm"
+          >
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://player.vimeo.com/video/1080000343?badge=0&autopause=0&player_id=0&app_id=58479"
+              title="The Longevity Reset Sales Video"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </section>
 
