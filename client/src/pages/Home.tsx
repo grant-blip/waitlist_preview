@@ -1544,117 +1544,92 @@ export default function Home() {
             </p>
           </div>
 
-          <Card className="border-2 shadow-lg">
-            <CardContent className="p-8 md:p-12">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-base font-semibold">
-                    Full Name
-                  </Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your full name"
-                    value={name}
-                    onChange={e => setName(e.target.value)}
-                    className="h-12 text-base"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-base font-semibold">
-                    Email Address
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                    className="h-12 text-base"
-                    required
-                  />
-                </div>
-
-                {/* Tier Selection */}
-                <div className="space-y-3">
-                  <Label className="text-base font-semibold">
-                    Which tier interests you?
-                  </Label>
-                  <div className="space-y-3">
-                    <label className="flex items-start gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-primary transition-all">
-                      <input
-                        type="radio"
-                        name="tier"
-                        value="general"
-                        className="mt-1"
-                        defaultChecked
-                      />
-                      <div className="flex-1">
-                        <div className="font-bold text-gray-900">
-                          General Admission - $97
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          Full 2-day event access + recordings
-                        </div>
-                      </div>
-                    </label>
-                    <label className="flex items-start gap-3 p-4 border-2 border-primary/50 bg-primary/5 rounded-lg cursor-pointer hover:border-primary transition-all">
-                      <input
-                        type="radio"
-                        name="tier"
-                        value="vip"
-                        className="mt-1"
-                      />
-                      <div className="flex-1">
-                        <div className="font-bold text-primary">
-                          VIP Experience - $177 (Early Bird!)
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          Everything + $361 in exclusive bonuses
-                        </div>
-                        <div className="text-xs text-primary font-semibold mt-1">
-                          ⭐ MOST POPULAR - Save $20!
-                        </div>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-
-                {/* Guarantee */}
-                <div className="p-4 bg-green-50 border-2 border-green-200 rounded-lg">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-bold text-green-900 mb-1">
-                        100% Satisfaction Guarantee
-                      </p>
-                      <p className="text-sm text-green-800">
-                        If you don't feel this event was worth 10X what you
-                        paid, we'll refund you in full—no questions asked. You
-                        have nothing to lose and your health to gain.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg h-14 rounded-full shadow-lg hover:shadow-xl transition-all"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Processing..." : "Claim My Spot Now"}
-                </Button>
-
-                <p className="text-sm text-muted-foreground text-center">
-                  By registering, you'll secure your spot and receive all bonus
-                  materials instantly.
+          {/* Guarantee */}
+          <div className="p-6 bg-green-50 border-2 border-green-200 rounded-xl mb-8">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-green-900 mb-1 text-lg">
+                  100% Satisfaction Guarantee
                 </p>
-              </form>
-            </CardContent>
-          </Card>
+                <p className="text-sm text-green-800">
+                  If you don't feel this event was worth 10X what you
+                  paid, we'll refund you in full—no questions asked. You
+                  have nothing to lose and your health to gain.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* General Admission */}
+            <Card className="border-2 border-gray-200 hover:shadow-lg transition-all">
+              <CardContent className="p-8 text-center">
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                  General Admission
+                </h4>
+                <p className="text-4xl font-bold text-gray-900 mb-4">
+                  $97
+                </p>
+                <p className="text-gray-600 mb-6">
+                  Full 2-day event access + lifetime recordings
+                </p>
+                <a
+                  href={generalCheckoutUrl}
+                  className="inline-flex items-center justify-center w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-full transition-colors text-lg"
+                >
+                  Register Now
+                </a>
+              </CardContent>
+            </Card>
+
+            {/* VIP Experience */}
+            <Card className="border-4 shadow-xl hover:shadow-2xl transition-all relative" style={{ borderColor: 'var(--rose-gold)' }}>
+              {/* Most Popular Badge */}
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <div
+                  className="text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg"
+                  style={{
+                    background: "linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)",
+                  }}
+                >
+                  ⭐ MOST POPULAR
+                </div>
+              </div>
+              
+              <CardContent className="p-8 text-center">
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                  VIP Experience
+                </h4>
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <span className="text-2xl font-bold text-gray-400 line-through">
+                    $197
+                  </span>
+                  <span className="text-4xl font-bold" style={{ color: 'var(--rose-gold)' }}>
+                    $177
+                  </span>
+                </div>
+                <div className="inline-block px-4 py-1 rounded-full mb-4" style={{ backgroundColor: 'var(--champagne-gold)' }}>
+                  <span className="text-sm font-bold text-gray-900">
+                    Early Bird - Save $20!
+                  </span>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Everything + $361 in exclusive bonuses
+                </p>
+                <a
+                  href={vipCheckoutUrl}
+                  className="inline-flex items-center justify-center w-full font-bold py-4 px-8 rounded-full transition-colors text-lg text-white"
+                  style={{ 
+                    background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)',
+                  }}
+                >
+                  Get VIP Experience ⭐
+                </a>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
