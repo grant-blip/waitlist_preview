@@ -61,7 +61,9 @@
 ## Current Task 🎯
 
 - [x] Redesign As Featured In section - full-width green bar with 2 rows of white logos
-- [ ] Remove white strip below green media logos bar
+- [x] Remove white strip below green media logos bar
+- [x] Redesign 2-Day Journey section with mobile phone mockup + compelling copy
+- [ ] Generate two separate phone mockups (Day 1 and Day 2) and display side-by-side
 
 ## Suggested Next Steps 💡
 

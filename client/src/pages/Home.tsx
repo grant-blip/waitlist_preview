@@ -1119,178 +1119,81 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Event Agenda Section */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Luxury Botanical Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/agenda-bg.jpg)" }}
-        ></div>
-        <div className="absolute inset-0 bg-white/70"></div>
+      {/* Event Agenda Section - Phone Mockup Design */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+            {/* Left Side - Compelling Copy */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-4xl md:text-5xl font-luxury-serif font-bold text-gray-900 mb-6 leading-tight">
+                  Want to Feel Like Yourself Again?
+                </h3>
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                  In just 2 days, you'll discover exactly what's been holding you back—and walk away with a personalized roadmap to reclaim your energy, balance your hormones, and finally feel like YOU again.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  No more guessing. No more confusion. Just clear, science-backed strategies tailored to your body, your hormones, and your life.
+                </p>
+              </div>
 
-        <div className="container relative z-10">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-gray-900 mb-4">
-              Your 2-Day Transformation Journey
-            </h3>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              A carefully designed curriculum that takes you from exhausted to
-              energized in just 2 days.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto relative">
-            {/* Gold Divider - visible on mobile between cards */}
-            <div
-              className="md:hidden absolute left-0 right-0 h-px"
-              style={{
-                backgroundColor: "var(--champagne-gold)",
-                top: "50%",
-                transform: "translateY(-50%)",
-              }}
-            ></div>
-            {/* Day 1 */}
-            <Card className="border-2 bg-white/90 backdrop-blur-sm shadow-luxury">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Calendar className="w-8 h-8 text-primary" />
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full" style={{ backgroundColor: '#B4A57A' }}>
+                    <svg className="w-10 h-10 text-white p-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-foreground mb-2">
-                      Day 1: Reboot & Reset
-                    </h4>
-                    <p className="text-muted-foreground">
-                      February 7th, 2026 | 10:00 AM - 5:00 PM
-                    </p>
+                    <h4 className="font-bold text-gray-900 text-lg mb-1">Day 1: Reboot & Reset</h4>
+                    <p className="text-gray-600">Decode your hormones, understand what's sabotaging your metabolism, and discover why your brain craves the foods that keep you stuck.</p>
                   </div>
                 </div>
 
-                <div className="space-y-4 ml-20">
-                  {[
-                    {
-                      time: "10:00 AM",
-                      title: "How to decode your hormones & metabolism",
-                      desc: "for effortless fat loss",
-                    },
-                    {
-                      time: "11:30 AM",
-                      title: "The sneaky mistakes",
-                      desc: "sabotaging your energy, mood, and weight.",
-                    },
-                    {
-                      time: "1:00 PM",
-                      title: "Lunch Break & Q&A",
-                      desc: "Network with other participants and get your questions answered",
-                    },
-                    {
-                      time: "2:00 PM",
-                      title: "Why gut health is the key to weight loss",
-                      desc: "clear skin & balanced hormones",
-                    },
-                    {
-                      time: "3:00 PM",
-                      title: "The Female Brain in Midlife",
-                      desc: "How hormones affect memory, mood, and focus.",
-                    },
-                    {
-                      time: "4:00 PM",
-                      title: "The Craving Brain",
-                      desc: "Understanding why you reach for chocolate, wine, and snacks under stress—and how to break free.",
-                    },
-                  ].map((session, idx) => (
-                    <div key={idx} className="flex gap-4">
-                      <div
-                        className="flex-shrink-0 w-24 text-sm font-semibold"
-                        style={{ color: "var(--rose-gold)" }}
-                      >
-                        {session.time}
-                      </div>
-                      <div className="flex-1">
-                        <h5 className="font-bold text-foreground mb-1">
-                          {session.title}
-                        </h5>
-                        <p className="text-sm text-muted-foreground">
-                          {session.desc}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Day 2 */}
-            <Card className="border-2 bg-white/90 backdrop-blur-sm shadow-luxury">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Calendar className="w-8 h-8 text-primary" />
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full" style={{ backgroundColor: '#B4A57A' }}>
+                    <svg className="w-10 h-10 text-white p-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-foreground mb-2">
-                      Day 2: Build & Sustain Your Transformation
-                    </h4>
-                    <p className="text-muted-foreground">
-                      February 8th, 2026 | 10:00 AM - 5:00 PM
-                    </p>
+                    <h4 className="font-bold text-gray-900 text-lg mb-1">Day 2: Build & Sustain</h4>
+                    <p className="text-gray-600">Get your personalized eating blueprint, learn about bioidentical hormones, and unlock the secret to thriving in midlife—not just surviving it.</p>
                   </div>
                 </div>
+              </div>
 
-                <div className="space-y-4 ml-20">
-                  {[
-                    {
-                      time: "10:00 AM",
-                      title: "The Midlife Eating Blueprint",
-                      desc: "How to eat for fat-burning & energy.",
-                    },
-                    {
-                      time: "11:30 AM",
-                      title:
-                        "Understanding Bioidentical Hormones & Natural Approaches",
-                      desc: "and which is right for you.",
-                    },
-                    {
-                      time: "1:00 PM",
-                      title: "Lunch Break & Q&A",
-                      desc: "Continue networking and get personalized guidance",
-                    },
-                    {
-                      time: "2:00 PM",
-                      title: "The Hormones of Metabolism",
-                      desc: "Train smarter, not harder, for strength, fat-burning and longevity.",
-                    },
-                    {
-                      time: "3:00 PM",
-                      title: "The Stress-Metabolism Connection",
-                      desc: "Turn stress from a fat-storing enemy into a fat-burning ally.",
-                    },
-                    {
-                      time: "4:00 PM",
-                      title: "The Secret to Thriving in Midlife",
-                      desc: "A powerful, eye-opening revelation that will shift the way you think about your health forever.",
-                    },
-                  ].map((session, idx) => (
-                    <div key={idx} className="flex gap-4">
-                      <div
-                        className="flex-shrink-0 w-24 text-sm font-semibold"
-                        style={{ color: "var(--rose-gold)" }}
-                      >
-                        {session.time}
-                      </div>
-                      <div className="flex-1">
-                        <h5 className="font-bold text-foreground mb-1">
-                          {session.title}
-                        </h5>
-                        <p className="text-sm text-muted-foreground">
-                          {session.desc}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+              <div className="pt-4">
+                <a
+                  href={vipCheckoutUrl}
+                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                  style={{ backgroundColor: '#B4A57A' }}
+                >
+                  Claim My Spot Now
+                </a>
+                <p className="text-sm text-gray-500 mt-3">68 spots taken • 32 spots left</p>
+              </div>
+            </div>
+
+            {/* Right Side - Two Phone Mockups */}
+            <div className="flex justify-center lg:justify-end gap-6">
+              {/* Day 1 Phone */}
+              <div className="w-full max-w-[280px]">
+                <img
+                  src="/phone-day1.png"
+                  alt="Day 1: Reboot & Reset - Mobile App Interface"
+                  className="w-full h-auto drop-shadow-2xl"
+                />
+              </div>
+              {/* Day 2 Phone */}
+              <div className="w-full max-w-[280px]">
+                <img
+                  src="/phone-day2.png"
+                  alt="Day 2: Build & Sustain - Mobile App Interface"
+                  className="w-full h-auto drop-shadow-2xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
