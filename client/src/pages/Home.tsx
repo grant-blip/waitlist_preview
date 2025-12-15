@@ -506,11 +506,16 @@ export default function Home() {
 
       {/* This Is For You If Section */}
       <section className="py-20 relative overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/this-is-for-you-bg.jpg)" }}
-        ></div>
+        {/* Video Background with Overlay */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-white/70"></div>
 
         {/* Content */}
