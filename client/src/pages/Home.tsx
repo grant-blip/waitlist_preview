@@ -350,7 +350,7 @@ export default function Home() {
 
       {/* Symptoms Section - Slim Banner Layout */}
       <section 
-        className="w-full overflow-hidden"
+        className="w-full overflow-hidden -mt-1"
         style={{ 
           background: 'linear-gradient(to bottom, rgb(149, 165, 145) 0%, rgba(149, 165, 145, 0.5) 100%)'
         }}
@@ -364,8 +364,8 @@ export default function Home() {
           {/* Right Side - Content (50%) */}
           <div className="lg:w-[50%] flex items-center py-4 px-6 lg:px-12">
             <div className="space-y-2 w-full">
-              <h3 className="text-2xl md:text-3xl font-luxury-serif font-bold leading-tight text-white">
-                <span className="font-normal">Reset</span> Your Body
+              <h3 className="text-2xl md:text-3xl leading-tight" style={{ color: '#D4AF37' }}>
+                <span className="font-luxury-serif italic font-normal">Reset</span> <span className="font-luxury-serif font-bold">Your Body</span>
               </h3>
               <p className="text-sm md:text-base text-white/90">
                 Victoria's science-backed approach helps women overcome the most common midlife symptoms:
