@@ -255,39 +255,39 @@ export default function Home() {
               <p className="text-xs md:text-sm uppercase tracking-wider text-gray-700 font-semibold">
                 Attention All Perimenopausal and Menopausal Women
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
                 What If Everything You've Been Told About 'Just Getting Older' Is Wrong?
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
                 In 2 days, learn why you're not broken, what's really happening to your body, and exactly how to fix it.
               </p>
             </div>
 
             {/* Event Details + Pricing */}
             <div className="space-y-3">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/95 backdrop-blur-sm text-gray-800 rounded-full text-base md:text-lg font-medium">
-                  <Calendar className="w-5 h-5 text-gray-600" />
-                  February 7-8, 2026
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <span className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-white/95 backdrop-blur-sm text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium">
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+                  Feb 7-8, 2026
                 </span>
                 <a
                   href={generalCheckoutUrl}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/90 hover:bg-white text-gray-800 rounded-full text-base md:text-lg font-semibold transition-all"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-white/90 hover:bg-white text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-semibold transition-all"
                 >
                   From $97
                 </a>
                 <a
                   href={vipCheckoutUrl}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#B4A57A] hover:bg-[#A89568] text-white rounded-full text-base md:text-lg font-semibold transition-all"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-[#B4A57A] hover:bg-[#A89568] text-white rounded-full text-sm sm:text-base md:text-lg font-semibold transition-all"
                 >
-                  <Gift className="w-5 h-5" />
+                  <Gift className="w-4 h-4 sm:w-5 sm:h-5" />
                   VIP $197
                 </a>
               </div>
             </div>
 
             {/* Countdown Timer */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-4 max-w-md">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-3 sm:p-4 max-w-sm sm:max-w-md">
               <p className="text-xs font-medium text-gray-600 uppercase tracking-wider text-center mb-2">
                 Event Starts In:
               </p>
@@ -324,15 +324,15 @@ export default function Home() {
               <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                 <a
                   href={generalCheckoutUrl}
-                  className="inline-block w-full md:w-auto bg-[#B4A57A] hover:bg-[#A89568] text-white font-semibold text-lg px-12 py-4 rounded-full transition-all text-center"
+                  className="inline-block w-full md:w-auto bg-[#B4A57A] hover:bg-[#A89568] text-white font-semibold text-base sm:text-lg px-8 sm:px-12 py-3 sm:py-4 rounded-full transition-all text-center"
                 >
                   Claim My Spot Now
                 </a>
                 
                 {/* Zoom Online Event Badge */}
-                <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <img src="/zoom-logo.jpg" alt="Zoom" className="h-5 w-auto" />
-                  <span className="text-sm text-gray-700 font-medium">This is an online event hosted on Zoom</span>
+                <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full">
+                  <img src="/zoom-logo.jpg" alt="Zoom" className="h-4 sm:h-5 w-auto" />
+                  <span className="text-xs sm:text-sm text-gray-700 font-medium">Online event on Zoom</span>
                 </div>
               </div>
 
@@ -378,7 +378,7 @@ export default function Home() {
         {/* Section Header */}
         <div className="container mb-12">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif font-bold text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-luxury-serif font-bold text-foreground mb-6">
               This Is For You If...
             </h2>
             <div className="w-24 h-1 mx-auto" style={{ backgroundColor: 'var(--champagne-gold)' }}></div>
@@ -634,7 +634,7 @@ export default function Home() {
             {/* Left Side - Compelling Copy */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-4xl md:text-5xl font-luxury-serif font-bold text-gray-900 mb-6 leading-tight">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
                   Want to Feel Like Yourself Again?
                 </h3>
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
@@ -715,7 +715,7 @@ export default function Home() {
       >
         <div className="container">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               See Real Transformations
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -979,7 +979,7 @@ export default function Home() {
                   className="h-32 md:h-40 mx-auto object-contain"
                 />
               </div>
-              <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
                 Choose Your Experience
               </h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -988,16 +988,16 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
               {/* General Admission */}
               <div 
-                className="rounded-3xl p-8 border-2 border-white/30 backdrop-blur-sm"
+                className="rounded-3xl p-6 md:p-8 border-2 border-white/30 backdrop-blur-sm"
                 style={{ backgroundColor: 'rgba(149, 165, 145, 0.85)' }}
               >
                 {/* Product Mockup Placeholder */}
-                <div className="mb-8 flex items-center justify-center min-h-[200px]">
+                <div className="mb-6 md:mb-8 flex items-center justify-center min-h-[160px] md:min-h-[200px]">
                   <div className="text-center">
-                    <div className="w-48 h-64 mx-auto bg-gray-800 rounded-lg shadow-2xl flex items-center justify-center mb-4">
+                    <div className="w-36 h-48 md:w-48 md:h-64 mx-auto bg-gray-800 rounded-lg shadow-2xl flex items-center justify-center mb-4">
                       <div className="text-white text-center p-6">
                         <p className="text-sm mb-2">The</p>
                         <p className="text-3xl font-luxury-serif font-bold mb-2">Longevity</p>
@@ -1011,11 +1011,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h4 className="text-3xl font-bold text-white text-center mb-2">
+                <h4 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
                   General Admission
                 </h4>
                 
-                <p className="text-5xl font-bold text-white text-center mb-6">
+                <p className="text-4xl md:text-5xl font-bold text-white text-center mb-4 md:mb-6">
                   $97
                 </p>
 
@@ -1056,21 +1056,21 @@ export default function Home() {
 
               {/* VIP Experience */}
               <div 
-                className="rounded-3xl p-8 border-2 border-white/30 backdrop-blur-sm relative"
+                className="rounded-3xl p-6 md:p-8 border-2 border-white/30 backdrop-blur-sm relative"
                 style={{ backgroundColor: 'rgba(149, 165, 145, 0.85)' }}
               >
                 {/* Product Mockup Placeholder */}
-                <div className="mb-8 flex items-center justify-center min-h-[200px]">
-                  <div className="flex gap-4 items-center">
+                <div className="mb-6 md:mb-8 flex items-center justify-center min-h-[160px] md:min-h-[200px]">
+                  <div className="flex gap-3 md:gap-4 items-center">
                     {/* Phone mockup */}
-                    <div className="w-24 h-48 bg-gray-800 rounded-xl shadow-2xl flex items-center justify-center">
+                    <div className="w-20 h-40 md:w-24 md:h-48 bg-gray-800 rounded-xl shadow-2xl flex items-center justify-center">
                       <div className="text-white text-xs text-center p-2">
                         <p className="font-bold">App</p>
                         <p className="text-[8px] mt-1">Access</p>
                       </div>
                     </div>
                     {/* Book mockup */}
-                    <div className="w-40 h-56 bg-gray-800 rounded-lg shadow-2xl flex items-center justify-center">
+                    <div className="w-32 h-44 md:w-40 md:h-56 bg-gray-800 rounded-lg shadow-2xl flex items-center justify-center">
                       <div className="text-white text-center p-4">
                         <p className="text-xs mb-1">The</p>
                         <p className="text-2xl font-luxury-serif font-bold mb-1">Longevity</p>
@@ -1084,12 +1084,12 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h4 className="text-3xl font-bold text-white text-center mb-2">
+                <h4 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
                   VIP Experience
                 </h4>
                 
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <span className="text-5xl font-bold text-white">
+                  <span className="text-4xl md:text-5xl font-bold text-white">
                     $197
                   </span>
                 </div>
@@ -1203,7 +1203,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h3 className="text-4xl md:text-5xl font-luxury-serif font-bold text-foreground mb-4">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-luxury-serif font-bold text-foreground mb-4">
                 Compare the Programs
               </h3>
             </div>
@@ -1561,7 +1561,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
                 Frequently Asked Questions
               </h3>
               <p className="text-lg text-muted-foreground">
@@ -1688,7 +1688,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/50" />
         <div className="container max-w-2xl relative z-10">
           <div className="text-center mb-10">
-            <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               Reserve Your Spot
             </h3>
             <p className="text-lg text-muted-foreground">
@@ -1800,7 +1800,7 @@ export default function Home() {
               {/* Right Side - CTA Copy & Form */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif leading-tight mb-6">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-luxury-serif leading-tight mb-6">
                     <span className="font-normal">join </span>
                     <span className="font-bold">17,000+ women</span>
                     <span className="font-normal"> to get all the </span>
@@ -1828,7 +1828,7 @@ export default function Home() {
 
                 <a
                   href={generalCheckoutUrl}
-                  className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
+                  className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
                 >
                   Secure Your Spot Now
                 </a>
