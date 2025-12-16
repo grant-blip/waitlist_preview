@@ -256,12 +256,10 @@ export default function Home() {
                 Attention All Perimenopausal and Menopausal Women
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
-                You Were Never Meant to Feel This Tired, This Stuck, or This
-                Out of Sync.
+                What If Everything You've Been Told About 'Just Getting Older' Is Wrong?
               </h2>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Reset your hormones, your metabolism, and your future in just
-                2 days.
+                In 2 days, learn why you're not broken, what's really happening to your body, and exactly how to fix it.
               </p>
             </div>
 
