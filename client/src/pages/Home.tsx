@@ -1667,8 +1667,10 @@ export default function Home() {
       </section>
 
       {/* Waitlist Form Section */}
-      <section id="waitlist-form" className="py-20" style={{ backgroundImage: "url('/video-section-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div className="container max-w-2xl">
+      <section id="waitlist-form" className="py-20 relative" style={{ backgroundImage: "url('/video-section-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+        {/* 50% fade overlay */}
+        <div className="absolute inset-0 bg-white/50" />
+        <div className="container max-w-2xl relative z-10">
           <div className="text-center mb-10">
             <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
               Reserve Your Spot
