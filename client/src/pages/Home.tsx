@@ -321,12 +321,20 @@ export default function Home() {
 
             {/* CTA Button */}
             <div className="space-y-4">
-              <a
-                href={generalCheckoutUrl}
-                className="inline-block w-full md:w-auto bg-[#B4A57A] hover:bg-[#A89568] text-white font-semibold text-lg px-12 py-4 rounded-full transition-all text-center"
-              >
-                Claim My Spot Now
-              </a>
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <a
+                  href={generalCheckoutUrl}
+                  className="inline-block w-full md:w-auto bg-[#B4A57A] hover:bg-[#A89568] text-white font-semibold text-lg px-12 py-4 rounded-full transition-all text-center"
+                >
+                  Claim My Spot Now
+                </a>
+                
+                {/* Zoom Online Event Badge */}
+                <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <img src="/zoom-logo.jpg" alt="Zoom" className="h-5 w-auto" />
+                  <span className="text-sm text-gray-700 font-medium">This is an online event hosted on Zoom</span>
+                </div>
+              </div>
 
               {/* Simplified Social Proof */}
               <p className="text-base md:text-lg text-gray-700">
