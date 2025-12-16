@@ -348,9 +348,6 @@ export default function Home() {
         <img src="/media-logos-green-bar-cropped.jpg" alt="As Featured In - Media Logos" className="w-full h-auto" style={{ display: 'block' }} />
       </section>
 
-      {/* Gold Divider Bar */}
-      <div className="w-full" style={{ backgroundColor: '#D4AF37', height: '8px' }} />
-
       {/* Symptoms Section - AI Generated Banner */}
       <section className="w-full overflow-hidden relative">
         <img 
