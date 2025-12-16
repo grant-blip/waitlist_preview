@@ -343,16 +343,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured In - Full Width Green Bar with Logo Grid */}
-      <section className="w-full overflow-hidden">
-        <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover block" />
-      </section>
+      {/* Featured In + Gold Bar + Symptoms - Wrapped to eliminate white gaps */}
+      <div style={{ backgroundColor: '#5a6d57' }}>
+        {/* Featured In - Full Width Green Bar with Logo Grid */}
+        <section className="w-full overflow-hidden">
+          <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover block" style={{ display: 'block', verticalAlign: 'bottom' }} />
+        </section>
 
-      {/* Gold Divider Bar */}
-      <div className="w-full h-2" style={{ backgroundColor: '#D4AF37' }} />
+        {/* Gold Divider Bar */}
+        <div className="w-full h-2" style={{ backgroundColor: '#D4AF37' }} />
 
-      {/* Symptoms Section - AI Generated Banner with Clickable Button Overlay */}
-      <section className="w-full overflow-hidden relative">
+        {/* Symptoms Section - AI Generated Banner with Clickable Button Overlay */}
+        <section className="w-full overflow-hidden relative">
         <img 
           src="/symptoms-banner-hq.jpg" 
           alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
@@ -371,7 +373,8 @@ export default function Home() {
           }}
           aria-label="Claim My Spot Now"
         />
-      </section>
+        </section>
+      </div>
 
 
       {/* This Is For You If Section */}
