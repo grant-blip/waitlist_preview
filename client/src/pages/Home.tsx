@@ -709,7 +709,10 @@ export default function Home() {
       </section>
 
       {/* Detailed Agenda Section */}
-      <section className="py-16 md:py-20" style={{ background: 'linear-gradient(180deg, #FAF8F5 0%, #F5F1E8 100%)' }}>
+      <section className="py-16 md:py-20 relative" style={{ backgroundImage: 'url(/agenda-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-white/40"></div>
+        <div className="relative z-10">
         <div className="container">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
@@ -887,6 +890,7 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mt-3">Limited to 100 attendees • Recordings included</p>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
