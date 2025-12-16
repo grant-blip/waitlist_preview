@@ -1045,19 +1045,6 @@ export default function Home() {
                 className="rounded-3xl p-8 border-2 border-white/30 backdrop-blur-sm relative"
                 style={{ backgroundColor: 'rgba(149, 165, 145, 0.85)' }}
               >
-                {/* Most Popular Badge */}
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div
-                    className="text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)",
-                    }}
-                  >
-                    ⭐ MOST POPULAR
-                  </div>
-                </div>
-
                 {/* Product Mockup Placeholder */}
                 <div className="mb-8 flex items-center justify-center min-h-[200px]">
                   <div className="flex gap-4 items-center">
@@ -1142,6 +1129,19 @@ export default function Home() {
                 >
                   Get the VIP Experience
                 </a>
+
+                {/* Most Popular Badge - Below Button */}
+                <div className="flex justify-center mt-4">
+                  <div
+                    className="text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)",
+                    }}
+                  >
+                    ⭐ MOST POPULAR
+                  </div>
+                </div>
               </div>
             </div>
 
