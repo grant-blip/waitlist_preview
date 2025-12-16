@@ -229,13 +229,13 @@ export default function Home() {
       <section
         className="relative min-h-[500px] md:min-h-[650px] flex items-center overflow-hidden"
         style={{
-          backgroundImage: "url(/hero-background.jpg)",
+          backgroundImage: "url(/conference-bg-light.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         {/* Split overlay - Dark left for text, light right for Victoria */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent z-0" />
 
         {/* Victoria's Image - Desktop Only */}
         <div
@@ -252,14 +252,14 @@ export default function Home() {
           <div className="max-w-3xl space-y-6 md:space-y-8 py-12 md:py-16">
             {/* Main Headline */}
             <div className="space-y-4 md:space-y-5">
-              <p className="text-xs md:text-sm uppercase tracking-wider text-white/90 font-semibold">
+              <p className="text-xs md:text-sm uppercase tracking-wider text-gray-700 font-semibold">
                 Attention All Perimenopausal and Menopausal Women
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-white leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
                 You Were Never Meant to Feel This Tired, This Stuck, or This
                 Out of Sync.
               </h2>
-              <p className="text-lg md:text-xl text-white/95 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 Reset your hormones, your metabolism, and your future in just
                 2 days.
               </p>
@@ -331,10 +331,10 @@ export default function Home() {
               </a>
 
               {/* Simplified Social Proof */}
-              <p className="text-base md:text-lg text-white/95">
-                <span className="font-bold text-white">68 spots taken</span>{" "}
+              <p className="text-base md:text-lg text-gray-700">
+                <span className="font-bold text-gray-900">68 spots taken</span>{" "}
                 •{" "}
-                <span className="font-bold text-white">
+                <span className="font-bold text-gray-900">
                   32 spots left
                 </span>
               </p>
