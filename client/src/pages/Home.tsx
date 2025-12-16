@@ -671,16 +671,6 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="pt-4">
-                <a
-                  href={generalCheckoutUrl}
-                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
-                  style={{ backgroundColor: '#B4A57A' }}
-                >
-                  Claim My Spot Now
-                </a>
-                <p className="text-sm text-gray-500 mt-3">68 spots taken • 32 spots left</p>
-              </div>
             </div>
 
             {/* Right Side - Two Phone Mockups */}
@@ -702,6 +692,18 @@ export default function Home() {
                 />
               </div>
             </div>
+          </div>
+          
+          {/* CTA Below Phones - Centered */}
+          <div className="text-center mt-12">
+            <a
+              href={generalCheckoutUrl}
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
+              style={{ backgroundColor: '#B4A57A' }}
+            >
+              Claim My Spot Now
+            </a>
+            <p className="text-sm text-gray-500 mt-3">68 spots taken • 32 spots left</p>
           </div>
         </div>
       </section>
