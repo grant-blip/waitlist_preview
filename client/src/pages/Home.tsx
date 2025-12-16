@@ -590,8 +590,32 @@ export default function Home() {
           </div>
 
           <div
-            className="relative aspect-video bg-gray-100 rounded-3xl overflow-hidden shadow-sm"
+            className="relative aspect-video bg-gray-100 rounded-3xl overflow-hidden shadow-xl cursor-pointer group"
+            onClick={(e) => {
+              const container = e.currentTarget;
+              const placard = container.querySelector('.video-placard');
+              const iframe = container.querySelector('iframe');
+              if (placard && iframe) {
+                placard.classList.add('hidden');
+                // Add autoplay to the iframe src
+                const currentSrc = iframe.getAttribute('src') || '';
+                if (!currentSrc.includes('autoplay=1')) {
+                  iframe.setAttribute('src', currentSrc + '&autoplay=1');
+                }
+              }
+            }}
           >
+            {/* Video Placard Overlay */}
+            <div className="video-placard absolute inset-0 z-10 transition-opacity duration-300">
+              <img 
+                src="/video-placard.jpg" 
+                alt="Your Transformation Awaits - Click to play video" 
+                className="w-full h-full object-cover"
+              />
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+            </div>
+            {/* Actual Video (hidden behind placard until clicked) */}
             <iframe
               className="absolute inset-0 w-full h-full"
               src="https://player.vimeo.com/video/1080000343?badge=0&autopause=0&player_id=0&app_id=58479"
@@ -601,7 +625,6 @@ export default function Home() {
               allowFullScreen
             ></iframe>
           </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </section>
 
