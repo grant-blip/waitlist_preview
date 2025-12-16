@@ -351,7 +351,7 @@ export default function Home() {
       {/* Symptoms Section - AI Generated Banner with Clickable Button Overlay */}
       <section className="w-full overflow-hidden relative" style={{ marginTop: '-1px' }}>
         <img 
-          src="/symptoms-banner.jpg" 
+          src="/symptoms-banner-use.jpg" 
           alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
           className="w-full h-auto object-cover block"
         />
@@ -360,10 +360,10 @@ export default function Home() {
           href={generalCheckoutUrl}
           className="absolute cursor-pointer hover:opacity-90 transition-opacity"
           style={{
-            bottom: '8%',
-            left: '58%',
-            width: '18%',
-            height: '10%',
+            bottom: '5%',
+            left: '52%',
+            width: '22%',
+            height: '12%',
             borderRadius: '9999px'
           }}
           aria-label="Claim My Spot Now"
