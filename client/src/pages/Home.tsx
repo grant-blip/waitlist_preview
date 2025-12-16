@@ -559,7 +559,7 @@ export default function Home() {
       <section
         className="py-16 md:py-24 relative"
         style={{
-          backgroundImage: 'url(/video-section-bg.jpg)',
+          backgroundImage: 'url(/video-section-bg-simple.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -1668,7 +1668,7 @@ export default function Home() {
       </section>
 
       {/* Waitlist Form Section */}
-      <section id="waitlist-form" className="py-20 bg-gray-50">
+      <section id="waitlist-form" className="py-20" style={{ backgroundImage: "url('/video-section-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="container max-w-2xl">
           <div className="text-center mb-10">
             <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
