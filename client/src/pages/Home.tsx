@@ -623,12 +623,9 @@ export default function Home() {
 
       {/* Video Testimonials Section - Moved here for optimal conversion */}
       <section
-        className="py-20 relative"
+        className="py-20"
         style={{
-          backgroundImage: "url('/testimonial-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          background: "#ffffff",
         }}
       >
         <div className="container">
@@ -956,10 +953,12 @@ export default function Home() {
       {/* Pricing Tiers Section */}
       <section
         id="pricing"
-        className="py-20"
+        className="py-20 relative"
         style={{
-          background:
-            "linear-gradient(135deg, #E8F2E6 0%, #F5F1E8 50%, #FFFDF7 100%)",
+          backgroundImage: "url('/testimonial-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="container">
