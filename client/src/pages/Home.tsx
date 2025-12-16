@@ -564,7 +564,13 @@ export default function Home() {
 
       {/* Sales Video Section - Why The Longevity Reset Is Different */}
       <section
-        className="py-16 md:py-24 bg-[#FDF4EB]"
+        className="py-16 md:py-24 relative"
+        style={{
+          backgroundImage: 'url(/video-section-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <div className="container max-w-5xl">
           <div className="text-center mb-12">
