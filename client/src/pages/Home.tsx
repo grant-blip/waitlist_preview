@@ -373,7 +373,7 @@ export default function Home() {
       </section>
 
 
-      {/* This Is For You If Section - Alternating Image/Text Layout */}
+     {/* This Is For You If Section - Mobile Optimized - Alternating Image/Text Layout */}
       <section className="py-16 md:py-20" style={{ background: 'linear-gradient(180deg, #F8F6F3 0%, #EDE9E3 100%)' }}>
         {/* Section Header */}
         <div className="container mb-12">
