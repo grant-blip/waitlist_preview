@@ -237,9 +237,9 @@ export default function Home() {
         {/* Split overlay - Dark left for text, light right for Victoria */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent z-0" />
 
-        {/* Victoria's Image - Desktop Only */}
+        {/* Victoria's Image - Visible on all devices */}
         <div
-          className="hidden md:block absolute right-0 bottom-0 z-5 h-full w-2/5"
+          className="absolute right-0 bottom-0 z-5 h-[60%] w-[45%] md:h-full md:w-2/5 opacity-60 md:opacity-100"
           style={{
             backgroundImage: "url(/victoria-hero-new.png)",
             backgroundSize: "contain",
@@ -390,9 +390,9 @@ export default function Home() {
           {/* Pain Point 1 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-1-exhaustion.jpg" alt="Exhaustion" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-1-exhaustion.jpg" alt="Exhaustion" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -409,9 +409,9 @@ export default function Home() {
           {/* Pain Point 2 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-2-weight.jpg" alt="Weight Gain" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-2-weight.jpg" alt="Weight Gain" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -428,9 +428,9 @@ export default function Home() {
           {/* Pain Point 3 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-3-hotflash.jpg" alt="Hot Flashes" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-3-hotflash.jpg" alt="Hot Flashes" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -447,9 +447,9 @@ export default function Home() {
           {/* Pain Point 4 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-4-brainfog.jpg" alt="Brain Fog" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-4-brainfog.jpg" alt="Brain Fog" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -466,9 +466,9 @@ export default function Home() {
           {/* Pain Point 5 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-5-moodswings.jpg" alt="Mood Swings" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-5-moodswings.jpg" alt="Mood Swings" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -485,9 +485,9 @@ export default function Home() {
           {/* Pain Point 6 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-6-dismissed.jpg" alt="Feeling Dismissed" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-6-dismissed.jpg" alt="Feeling Dismissed" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -504,9 +504,9 @@ export default function Home() {
           {/* Pain Point 7 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-7-identity.jpg" alt="Loss of Identity" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-7-identity.jpg" alt="Loss of Identity" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -523,9 +523,9 @@ export default function Home() {
           {/* Pain Point 8 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-8-selfcare.jpg" alt="Ready for Self-Care" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-8-selfcare.jpg" alt="Ready for Self-Care" className="w-full h-72 sm:h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
