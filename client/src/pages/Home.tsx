@@ -229,7 +229,7 @@ export default function Home() {
       <section
         className="relative min-h-[500px] md:min-h-[650px] flex items-center overflow-hidden"
         style={{
-          backgroundImage: "url(/conference-bg-light.jpg)",
+          backgroundImage: "url(/conference-bg-light-clean.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
