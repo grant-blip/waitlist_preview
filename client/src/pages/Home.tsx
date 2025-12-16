@@ -371,228 +371,189 @@ export default function Home() {
       </section>
 
 
-      {/* This Is For You If Section */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Video Background with Overlay */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/background-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-white/70"></div>
+      {/* This Is For You If Section - Alternating Image/Text Layout */}
+      <section className="py-16 md:py-20" style={{ background: 'linear-gradient(180deg, #F8F6F3 0%, #EDE9E3 100%)' }}>
+        {/* Section Header */}
+        <div className="container mb-12">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif font-bold text-foreground mb-6">
+              This Is For You If...
+            </h2>
+            <div className="w-24 h-1 mx-auto" style={{ backgroundColor: 'var(--champagne-gold)' }}></div>
+          </div>
+        </div>
 
-        {/* Content */}
-        <div className="relative z-10">
-          <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-luxury-serif font-bold text-foreground mb-6">
-                  This Is For You If...
-                </h2>
-                <div
-                  className="w-24 h-1 mx-auto"
-                  style={{ backgroundColor: "var(--champagne-gold)" }}
-                ></div>
+        {/* Alternating Pain Point Cards */}
+        <div className="space-y-0">
+          {/* Pain Point 1 - Image Left */}
+          <div className="flex flex-col md:flex-row">
+            <div className="md:w-1/2">
+              <img src="/pain-point-1-exhaustion.jpg" alt="Exhaustion" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  You wake up exhausted, even after 8 hours of sleep. Your body feels heavy, your mind foggy, and you're dragging yourself through the day on sheer willpower and coffee. <span className="font-bold text-foreground">You're tired of being tired.</span>
+                </p>
               </div>
+            </div>
+          </div>
 
-              <div
-                className="bg-[#FBF9F7]/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-luxury border-2"
-                style={{
-                  borderColor: "var(--champagne-gold)",
-                  borderWidth: "1px",
-                }}
+          {/* Pain Point 2 - Image Right */}
+          <div className="flex flex-col md:flex-row-reverse">
+            <div className="md:w-1/2">
+              <img src="/pain-point-2-weight.jpg" alt="Weight Gain" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  You've tried everything—cutting calories, exercising more, eating "clean"—but the weight keeps creeping on, settling stubbornly around your middle. <span className="font-bold text-foreground">You're desperate to feel comfortable in your own skin again.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pain Point 3 - Image Left */}
+          <div className="flex flex-col md:flex-row">
+            <div className="md:w-1/2">
+              <img src="/pain-point-3-hotflash.jpg" alt="Hot Flashes" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  You're lying awake at 3am, drenched in sweat, throwing off the covers only to pull them back on minutes later. Hot flashes ambush you in meetings, at dinner, in the middle of conversations. <span className="font-bold text-foreground">You're exhausted by your own body's unpredictability.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pain Point 4 - Image Right */}
+          <div className="flex flex-col md:flex-row-reverse">
+            <div className="md:w-1/2">
+              <img src="/pain-point-4-brainfog.jpg" alt="Brain Fog" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  You walk into a room and forget why. You lose your train of thought mid-sentence. You wonder if this is just "getting older" or if something is seriously wrong. <span className="font-bold text-foreground">You're scared you're losing yourself.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pain Point 5 - Image Left */}
+          <div className="flex flex-col md:flex-row">
+            <div className="md:w-1/2">
+              <img src="/pain-point-5-moodswings.jpg" alt="Mood Swings" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  You snap at your partner over nothing. You cry at commercials. You feel rage bubbling under the surface for no reason at all. Your emotions feel like a rollercoaster you can't get off. <span className="font-bold text-foreground">You're desperate to feel like YOU again.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pain Point 6 - Image Right */}
+          <div className="flex flex-col md:flex-row-reverse">
+            <div className="md:w-1/2">
+              <img src="/pain-point-6-dismissed.jpg" alt="Feeling Dismissed" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  Your doctor says "your labs are normal" and suggests antidepressants or "just dealing with it." You know something is wrong, but you feel dismissed, invisible, unheard. <span className="font-bold text-foreground">You're done accepting "this is just how it is."</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pain Point 7 - Image Left */}
+          <div className="flex flex-col md:flex-row">
+            <div className="md:w-1/2">
+              <img src="/pain-point-7-identity.jpg" alt="Loss of Identity" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  You look in the mirror and barely recognize the woman staring back. You miss your energy, your confidence, your spark. You want to feel vibrant, alive, and powerful again. <span className="font-bold text-foreground">You're ready to reclaim your body, your health, and your life.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pain Point 8 - Image Right */}
+          <div className="flex flex-col md:flex-row-reverse">
+            <div className="md:w-1/2">
+              <img src="/pain-point-8-selfcare.jpg" alt="Ready for Self-Care" className="w-full h-64 md:h-80 object-cover" />
+            </div>
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  You've spent years putting everyone else first—your career, your family, your responsibilities. Now you're ready to invest in yourself and finally prioritize YOUR health, YOUR energy, YOUR happiness. <span className="font-bold text-foreground">You deserve to thrive, not just survive.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="container mt-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-primary/10 rounded-2xl p-8 md:p-12 border-2 border-primary">
+              <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                If you nodded your head to even ONE of these...
+              </p>
+              <p className="text-xl text-gray-700 mb-8">
+                The Longevity Reset was created specifically for YOU.
+              </p>
+              <a
+                href={generalCheckoutUrl}
+                className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
               >
-                <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                  {/* Checklist Item 1 */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      You wake up exhausted, even after 8 hours of sleep. Your
-                      body feels heavy, your mind foggy, and you're dragging
-                      yourself through the day on sheer willpower and coffee.{" "}
-                      <span className="font-bold text-foreground">
-                        You're tired of being tired.
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Checklist Item 2 */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      You've tried everything—cutting calories, exercising more,
-                      eating "clean"—but the weight keeps creeping on, settling
-                      stubbornly around your middle. You feel like your body has
-                      turned against you.{" "}
-                      <span className="font-bold text-foreground">
-                        You're desperate to feel comfortable in your own skin
-                        again.
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Checklist Item 3 */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      You're lying awake at 3am, drenched in sweat, throwing off
-                      the covers only to pull them back on minutes later. Hot
-                      flashes ambush you in meetings, at dinner, in the middle
-                      of conversations.{" "}
-                      <span className="font-bold text-foreground">
-                        You're exhausted by your own body's unpredictability.
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Checklist Item 4 */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      You walk into a room and forget why. You lose your train
-                      of thought mid-sentence. You wonder if this is just
-                      "getting older" or if something is seriously wrong.{" "}
-                      <span className="font-bold text-foreground">
-                        You're scared you're losing yourself.
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Checklist Item 5 */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      You snap at your partner over nothing. You cry at
-                      commercials. You feel rage bubbling under the surface for
-                      no reason at all. Your emotions feel like a rollercoaster
-                      you can't get off.{" "}
-                      <span className="font-bold text-foreground">
-                        You're desperate to feel like YOU again.
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Checklist Item 6 */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      Your doctor says "your labs are normal" and suggests
-                      antidepressants or "just dealing with it." You know
-                      something is wrong, but you feel dismissed, invisible,
-                      unheard.{" "}
-                      <span className="font-bold text-foreground">
-                        You're done accepting "this is just how it is."
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Checklist Item 7 */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      You look in the mirror and barely recognize the woman
-                      staring back. You miss your energy, your confidence, your
-                      spark. You want to feel vibrant, alive, and powerful
-                      again.{" "}
-                      <span className="font-bold text-foreground">
-                        You're ready to reclaim your body, your health, and your
-                        life.
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Checklist Item 8 - NEW */}
-                  <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: "var(--rose-gold)" }}
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                      You've spent years putting everyone else first—your
-                      career, your family, your responsibilities. Now you're
-                      ready to invest in yourself and finally prioritize YOUR
-                      health, YOUR energy, YOUR happiness.{" "}
-                      <span className="font-bold text-foreground">
-                        You deserve to thrive, not just survive.
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-16 text-center">
-                <div className="bg-primary/10 rounded-2xl p-8 md:p-12 border-2 border-primary">
-                  <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                    If you nodded your head to even ONE of these...
-                  </p>
-                  <p className="text-xl text-gray-700 mb-8">
-                    The Longevity Reset was created specifically for YOU.
-                  </p>
-                  <a
-                    href={generalCheckoutUrl}
-                    className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
-                  >
-                    Yes, This Is Me—I'm Ready
-                  </a>
-                </div>
-              </div>
+                Yes, This Is Me—I'm Ready
+              </a>
             </div>
           </div>
         </div>
