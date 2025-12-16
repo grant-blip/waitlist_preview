@@ -235,7 +235,7 @@ export default function Home() {
         }}
       >
         {/* Split overlay - Dark left for text, light right for Victoria */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-transparent z-0" />
 
         {/* Victoria's Image - Desktop Only */}
         <div
