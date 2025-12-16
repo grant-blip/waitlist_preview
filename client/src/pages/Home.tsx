@@ -706,6 +706,174 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Detailed Agenda Section */}
+      <section className="py-16 md:py-20" style={{ background: 'linear-gradient(180deg, #FAF8F5 0%, #F5F1E8 100%)' }}>
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <p className="text-sm uppercase tracking-wider text-primary font-semibold mb-3">February 7-8, 2026 • Online via Zoom</p>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
+                Your 2-Day Transformation Agenda
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                A comprehensive deep-dive into hormone optimization, metabolism reset, and sustainable wellness strategies.
+              </p>
+            </div>
+
+            {/* Day 1 & Day 2 Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Day 1 */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="p-6 text-white" style={{ backgroundColor: '#5a6d57' }}>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-medium text-white/80">Saturday, February 7</p>
+                      <h4 className="text-xl md:text-2xl font-bold">Day 1: Reboot & Reset</h4>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-white/80">10:00 AM - 5:00 PM</p>
+                      <p className="text-xs text-white/60">AEST</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6 space-y-4">
+                  {/* Session 1 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
+                    <h5 className="font-bold text-foreground">The Hormone Truth: What's Really Happening</h5>
+                    <p className="text-sm text-muted-foreground">Understand the 7 key hormones affecting your weight, energy, and mood—and why they're out of balance.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">11:30 AM - 11:45 AM • Morning Break</p>
+                  </div>
+                  
+                  {/* Session 2 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
+                    <h5 className="font-bold text-foreground">Metabolism Masterclass</h5>
+                    <p className="text-sm text-muted-foreground">Why your metabolism has slowed and the exact steps to reignite your fat-burning potential.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Lunch */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">1:00 PM - 2:00 PM • Lunch Break</p>
+                  </div>
+                  
+                  {/* Session 3 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
+                    <h5 className="font-bold text-foreground">Brain Chemistry & Cravings</h5>
+                    <p className="text-sm text-muted-foreground">Discover why your brain craves sugar and carbs—and how to rewire these patterns for good.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">3:30 PM - 3:45 PM • Afternoon Break</p>
+                  </div>
+                  
+                  {/* Session 4 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
+                    <h5 className="font-bold text-foreground">Live Q&A + Hot Seat Coaching</h5>
+                    <p className="text-sm text-muted-foreground">Get your specific questions answered and watch Victoria coach participants in real-time.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Interactive Session</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Day 2 */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="p-6 text-white" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-medium text-white/80">Sunday, February 8</p>
+                      <h4 className="text-xl md:text-2xl font-bold">Day 2: Build & Sustain</h4>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-white/80">10:00 AM - 5:00 PM</p>
+                      <p className="text-xs text-white/60">AEST</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6 space-y-4">
+                  {/* Session 1 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
+                    <h5 className="font-bold text-foreground">The Midlife Eating Blueprint</h5>
+                    <p className="text-sm text-muted-foreground">Your personalized nutrition framework—what to eat, when to eat, and how to make it sustainable.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">11:30 AM - 11:45 AM • Morning Break</p>
+                  </div>
+                  
+                  {/* Session 2 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
+                    <h5 className="font-bold text-foreground">Bioidentical Hormones Demystified</h5>
+                    <p className="text-sm text-muted-foreground">Everything you need to know about HRT, bioidenticals, and natural alternatives—without the confusion.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Lunch */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">1:00 PM - 2:00 PM • Lunch Break</p>
+                  </div>
+                  
+                  {/* Session 3 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
+                    <h5 className="font-bold text-foreground">Sleep, Stress & Longevity</h5>
+                    <p className="text-sm text-muted-foreground">The overlooked pillars of hormone health—practical strategies for deep sleep and stress resilience.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">3:30 PM - 3:45 PM • Afternoon Break</p>
+                  </div>
+                  
+                  {/* Session 4 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
+                    <h5 className="font-bold text-foreground">Your Personalized Action Plan</h5>
+                    <p className="text-sm text-muted-foreground">Leave with your custom 90-day roadmap, next steps, and ongoing support resources.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Interactive Workshop</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center mt-12">
+              <a
+                href={generalCheckoutUrl}
+                className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-4 rounded-full shadow-lg hover:shadow-xl transition-all"
+              >
+                Reserve My Spot Now
+              </a>
+              <p className="text-sm text-muted-foreground mt-3">Limited to 100 attendees • Recordings included</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video Testimonials Section - Moved here for optimal conversion */}
       <section
         className="py-20"
