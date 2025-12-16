@@ -345,11 +345,14 @@ export default function Home() {
 
       {/* Featured In - Full Width Green Bar with Logo Grid */}
       <section className="w-full overflow-hidden">
-        <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover block" style={{ marginBottom: '-4px' }} />
+        <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover block" />
       </section>
 
+      {/* Gold Divider Bar */}
+      <div className="w-full h-2" style={{ backgroundColor: '#D4AF37' }} />
+
       {/* Symptoms Section - AI Generated Banner with Clickable Button Overlay */}
-      <section className="w-full overflow-hidden relative" style={{ marginTop: '-1px' }}>
+      <section className="w-full overflow-hidden relative">
         <img 
           src="/symptoms-banner-hq.jpg" 
           alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
