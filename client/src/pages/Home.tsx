@@ -343,9 +343,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured In - Full Width Green Bar with Logo Grid */}
+      <section className="w-full overflow-hidden" style={{ fontSize: 0, lineHeight: 0 }}>
+        <img src="/media-logos-green-bar-cropped.jpg" alt="As Featured In - Media Logos" className="w-full h-auto" style={{ display: 'block' }} />
+      </section>
+
+      {/* Gold Divider Bar */}
+      <div className="w-full" style={{ backgroundColor: '#D4AF37', height: '8px' }} />
+
       {/* Symptoms Section - AI Generated Banner */}
       <section className="w-full overflow-hidden relative">
-        <div className="w-full" style={{ backgroundColor: '#D4AF37', height: '8px' }} />
         <img 
           src="/symptoms-banner-hq.jpg" 
           alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
