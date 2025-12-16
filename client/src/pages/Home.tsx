@@ -665,7 +665,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 text-center">
                 <a
                   href={generalCheckoutUrl}
                   className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
@@ -680,7 +680,7 @@ export default function Home() {
             {/* Right Side - Two Phone Mockups */}
             <div className="flex flex-col sm:flex-row justify-center lg:justify-end gap-4 sm:gap-6">
               {/* Day 1 Phone */}
-              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
+              <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] mx-auto sm:mx-0 flex-shrink-0">
                 <img
                   src="/phone-day1-final.png"
                   alt="Day 1: Reboot & Reset - Mobile App Interface"
@@ -688,7 +688,7 @@ export default function Home() {
                 />
               </div>
               {/* Day 2 Phone */}
-              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
+              <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] mx-auto sm:mx-0 flex-shrink-0">
                 <img
                   src="/phone-day2-final.png"
                   alt="Day 2: Build & Sustain - Mobile App Interface"
