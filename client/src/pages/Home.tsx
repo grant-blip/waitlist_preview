@@ -963,6 +963,14 @@ export default function Home() {
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
+              {/* Logo */}
+              <div className="mb-6">
+                <img 
+                  src="/logo-option-1.png" 
+                  alt="The Longevity Reset" 
+                  className="h-32 md:h-40 mx-auto object-contain"
+                />
+              </div>
               <h3 className="text-3xl md:text-4xl font-luxury-serif font-bold text-foreground mb-4">
                 Choose Your Experience
               </h3>
