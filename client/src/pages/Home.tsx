@@ -623,9 +623,12 @@ export default function Home() {
 
       {/* Video Testimonials Section - Moved here for optimal conversion */}
       <section
-        className="py-20"
+        className="py-20 relative"
         style={{
-          background: "linear-gradient(to bottom, #FAF8F5 0%, #FFF5F0 100%)",
+          backgroundImage: "url('/testimonial-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="container">
