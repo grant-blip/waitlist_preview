@@ -244,6 +244,7 @@ export default function Home() {
             backgroundImage: "url(/victoria-hero-new.png)",
             backgroundSize: "contain",
             backgroundPosition: "bottom right",
+            marginTop: "80px",
             backgroundRepeat: "no-repeat",
           }}
         />
