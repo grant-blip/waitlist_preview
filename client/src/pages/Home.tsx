@@ -709,7 +709,7 @@ export default function Home() {
       </section>
 
       {/* Detailed Agenda Section */}
-      <section className="py-16 md:py-20 relative" style={{ backgroundImage: 'url(/agenda-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <section className="py-16 md:py-20 relative" style={{ backgroundImage: 'url(/agenda-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="relative z-10">
@@ -747,7 +747,7 @@ export default function Home() {
                     {/* Session 1 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-hormones.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-hormones.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -761,7 +761,7 @@ export default function Home() {
                     {/* Session 2 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-metabolism.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-metabolism.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -775,7 +775,7 @@ export default function Home() {
                     {/* Session 3 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-brain.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-brain.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -789,7 +789,7 @@ export default function Home() {
                     {/* Session 4 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-qa.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-qa.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -822,7 +822,7 @@ export default function Home() {
                     {/* Session 1 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-nutrition.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-nutrition.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -836,7 +836,7 @@ export default function Home() {
                     {/* Session 2 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-hormones.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-hormones.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -850,7 +850,7 @@ export default function Home() {
                     {/* Session 3 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-sleep.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-sleep.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -864,7 +864,7 @@ export default function Home() {
                     {/* Session 4 */}
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <img src="/agenda-icon-plan.png" alt="" className="w-12 h-12 object-contain" />
+                        <img src="/agenda-icon-plan.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
