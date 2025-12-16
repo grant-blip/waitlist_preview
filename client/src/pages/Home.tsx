@@ -390,7 +390,7 @@ export default function Home() {
           {/* Pain Point 1 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/woman-diverse-1.png" alt="Exhaustion" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-1-exhaustion.jpg" alt="Exhaustion" className="w-full h-64 md:h-80 object-cover" />
             </div>
             <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
@@ -409,7 +409,7 @@ export default function Home() {
           {/* Pain Point 2 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/woman-diverse-2.png" alt="Weight Gain" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-2-weight.jpg" alt="Weight Gain" className="w-full h-64 md:h-80 object-cover" />
             </div>
             <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
@@ -428,7 +428,7 @@ export default function Home() {
           {/* Pain Point 3 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/woman-diverse-3.png" alt="Hot Flashes" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-3-hotflash.jpg" alt="Hot Flashes" className="w-full h-64 md:h-80 object-cover" />
             </div>
             <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
@@ -447,7 +447,7 @@ export default function Home() {
           {/* Pain Point 4 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/woman-diverse-4.png" alt="Brain Fog" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-4-brainfog.jpg" alt="Brain Fog" className="w-full h-64 md:h-80 object-cover" />
             </div>
             <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
@@ -466,7 +466,7 @@ export default function Home() {
           {/* Pain Point 5 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/woman-diverse-5.png" alt="Mood Swings" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-5-moodswings.jpg" alt="Mood Swings" className="w-full h-64 md:h-80 object-cover" />
             </div>
             <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
@@ -485,7 +485,7 @@ export default function Home() {
           {/* Pain Point 6 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/woman-diverse-6.png" alt="Feeling Dismissed" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-6-dismissed.jpg" alt="Feeling Dismissed" className="w-full h-64 md:h-80 object-cover" />
             </div>
             <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
@@ -504,7 +504,7 @@ export default function Home() {
           {/* Pain Point 7 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/woman-diverse-7.png" alt="Loss of Identity" className="w-full h-64 md:h-80 object-cover" />
+              <img src="/pain-point-7-identity.jpg" alt="Loss of Identity" className="w-full h-64 md:h-80 object-cover" />
             </div>
             <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
