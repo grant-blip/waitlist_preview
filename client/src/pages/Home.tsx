@@ -341,7 +341,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>{/* Featured In + Gold Bar + Symptoms - Wrapped to eliminate white gaps */}<div style={{ backgroundColor: '#5a6d57', fontSize: 0, lineHeight: 0 }}>{/* Featured In - Full Width Green Bar with Logo Grid */}<img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover" style={{ display: 'block', margin: 0, padding: 0 }} />{/* Gold Divider Bar */}<div className="w-full" style={{ backgroundColor: '#D4AF37', height: '8px' }} />{/* Symptoms Section - AI Generated Banner with Clickable Button Overlay */}<section className="w-full overflow-hidden relative" style={{ fontSize: '16px', lineHeight: 'normal' }}>
+      </section>
+
+      {/* Symptoms Section - AI Generated Banner */}
+      <section className="w-full overflow-hidden relative">
+        <div className="w-full" style={{ backgroundColor: '#D4AF37', height: '8px' }} />
         <img 
           src="/symptoms-banner-hq.jpg" 
           alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
@@ -360,8 +364,7 @@ export default function Home() {
           }}
           aria-label="Claim My Spot Now"
         />
-        </section>
-      </div>
+      </section>
 
 
       {/* This Is For You If Section */}
