@@ -724,137 +724,151 @@ export default function Home() {
             {/* Day 1 & Day 2 Grid */}
             <div className="grid md:grid-cols-2 gap-8">
               {/* Day 1 */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="p-6 text-white" style={{ backgroundColor: '#5a6d57' }}>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm font-medium text-white/80">Saturday, February 7</p>
-                      <h4 className="text-xl md:text-2xl font-bold">Day 1: Reboot & Reset</h4>
+              <div className="rounded-2xl shadow-lg overflow-hidden" style={{ backgroundImage: 'url(/agenda-day1-header.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="bg-white/95 backdrop-blur-sm h-full">
+                  <div className="p-6 text-white" style={{ backgroundColor: '#5a6d57' }}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-medium text-white/80">Saturday, February 7</p>
+                        <h4 className="text-xl md:text-2xl font-bold">Day 1: Reboot & Reset</h4>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm text-white/80">10:00 AM - 5:00 PM AEST</p>
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <p className="text-sm text-white/80">10:00 AM - 5:00 PM</p>
-                      <p className="text-xs text-white/60">AEST</p>
+                  </div>
+                  
+                  <div className="p-6 space-y-5">
+                    {/* Session 1 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-hormones.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">10:00 - 11:30 AM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">The Hormone Truth</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Finally understand why you're exhausted, gaining weight, and feeling "off"—discover which hormones need attention so you can stop guessing and start healing.</p>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <div className="p-6 space-y-4">
-                  {/* Session 1 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
-                    <h5 className="font-bold text-foreground">The Hormone Truth: What's Really Happening</h5>
-                    <p className="text-sm text-muted-foreground">Finally understand why you're exhausted, gaining weight, and feeling "off"—and discover which of your 7 key hormones need attention so you can stop guessing and start healing.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
-                  </div>
-                  
-                  {/* Break */}
-                  <div className="flex items-center gap-2 py-2">
-                    <Coffee className="w-4 h-4 text-muted-foreground" />
-                    <p className="text-xs text-muted-foreground">11:30 AM - 11:45 AM • Morning Break</p>
-                  </div>
-                  
-                  {/* Session 2 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
-                    <h5 className="font-bold text-foreground">Metabolism Masterclass</h5>
-                    <p className="text-sm text-muted-foreground">Stop blaming yourself for the stubborn belly fat that appeared in your 40s. Learn why your metabolism changed overnight and the specific tweaks that will have you burning fat again—without extreme diets or hours of cardio.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
-                  </div>
-                  
-                  {/* Lunch */}
-                  <div className="flex items-center gap-2 py-2">
-                    <Coffee className="w-4 h-4 text-muted-foreground" />
-                    <p className="text-xs text-muted-foreground">1:00 PM - 2:00 PM • Lunch Break</p>
-                  </div>
-                  
-                  {/* Session 3 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
-                    <h5 className="font-bold text-foreground">Brain Chemistry & Cravings</h5>
-                    <p className="text-sm text-muted-foreground">Those 3pm sugar cravings and late-night snack attacks aren't weakness—they're hormonal. Learn how to quiet the constant food noise in your head and finally feel in control around food again.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
-                  </div>
-                  
-                  {/* Break */}
-                  <div className="flex items-center gap-2 py-2">
-                    <Coffee className="w-4 h-4 text-muted-foreground" />
-                    <p className="text-xs text-muted-foreground">3:30 PM - 3:45 PM • Afternoon Break</p>
-                  </div>
-                  
-                  {/* Session 4 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
-                    <h5 className="font-bold text-foreground">Live Q&A + Hot Seat Coaching</h5>
-                    <p className="text-sm text-muted-foreground">Bring your most frustrating symptoms, your doctor's dismissive comments, your "I've tried everything" frustrations—and get real answers tailored to YOUR body and YOUR situation.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Interactive Session</p>
+                    
+                    {/* Session 2 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-metabolism.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">11:45 AM - 1:00 PM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">Metabolism Masterclass</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Stop blaming yourself for stubborn belly fat. Learn why your metabolism changed and the specific tweaks to burn fat again—without extreme diets.</p>
+                      </div>
+                    </div>
+                    
+                    {/* Session 3 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-brain.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">2:00 - 3:30 PM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">Brain Chemistry & Cravings</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Those 3pm sugar cravings aren't weakness—they're hormonal. Learn how to quiet the food noise and finally feel in control again.</p>
+                      </div>
+                    </div>
+                    
+                    {/* Session 4 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-qa.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">3:45 - 5:00 PM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">Live Q&A Session</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Bring your frustrating symptoms and "I've tried everything" questions—get real answers tailored to YOUR body.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Day 2 */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="p-6 text-white" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm font-medium text-white/80">Sunday, February 8</p>
-                      <h4 className="text-xl md:text-2xl font-bold">Day 2: Build & Sustain</h4>
+              <div className="rounded-2xl shadow-lg overflow-hidden" style={{ backgroundImage: 'url(/agenda-day2-header.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="bg-white/95 backdrop-blur-sm h-full">
+                  <div className="p-6 text-white" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-medium text-white/80">Sunday, February 8</p>
+                        <h4 className="text-xl md:text-2xl font-bold">Day 2: Build & Sustain</h4>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm text-white/80">10:00 AM - 5:00 PM AEST</p>
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <p className="text-sm text-white/80">10:00 AM - 5:00 PM</p>
-                      <p className="text-xs text-white/60">AEST</p>
+                  </div>
+                  
+                  <div className="p-6 space-y-5">
+                    {/* Session 1 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-nutrition.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>10:00 - 11:30 AM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">Midlife Eating Blueprint</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Forget dieting rules from your 20s—they don't work anymore. Get a satisfying eating plan designed for your changing hormones.</p>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <div className="p-6 space-y-4">
-                  {/* Session 1 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
-                    <h5 className="font-bold text-foreground">The Midlife Eating Blueprint</h5>
-                    <p className="text-sm text-muted-foreground">Forget everything you learned about dieting in your 20s—it doesn't work anymore. Get a simple, satisfying eating plan designed specifically for your changing hormones that you can actually stick to for life.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
-                  </div>
-                  
-                  {/* Break */}
-                  <div className="flex items-center gap-2 py-2">
-                    <Coffee className="w-4 h-4 text-muted-foreground" />
-                    <p className="text-xs text-muted-foreground">11:30 AM - 11:45 AM • Morning Break</p>
-                  </div>
-                  
-                  {/* Session 2 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
-                    <h5 className="font-bold text-foreground">Bioidentical Hormones Demystified</h5>
-                    <p className="text-sm text-muted-foreground">Cut through the conflicting advice about HRT. Learn exactly what questions to ask your doctor, which options are right for YOUR symptoms, and how to advocate for the care you deserve—whether you choose hormones or natural alternatives.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
-                  </div>
-                  
-                  {/* Lunch */}
-                  <div className="flex items-center gap-2 py-2">
-                    <Coffee className="w-4 h-4 text-muted-foreground" />
-                    <p className="text-xs text-muted-foreground">1:00 PM - 2:00 PM • Lunch Break</p>
-                  </div>
-                  
-                  {/* Session 3 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
-                    <h5 className="font-bold text-foreground">Sleep, Stress & Longevity</h5>
-                    <p className="text-sm text-muted-foreground">End the 3am wake-ups, the racing thoughts, and the exhaustion that no amount of sleep seems to fix. Discover the science-backed rituals that will have you sleeping deeply and waking refreshed—even during perimenopause.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
-                  </div>
-                  
-                  {/* Break */}
-                  <div className="flex items-center gap-2 py-2">
-                    <Coffee className="w-4 h-4 text-muted-foreground" />
-                    <p className="text-xs text-muted-foreground">3:30 PM - 3:45 PM • Afternoon Break</p>
-                  </div>
-                  
-                  {/* Session 4 */}
-                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
-                    <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
-                    <h5 className="font-bold text-foreground">Your Personalized Action Plan</h5>
-                    <p className="text-sm text-muted-foreground">Walk away knowing EXACTLY what to do Monday morning. Your personalized 90-day roadmap with specific foods, supplements, lifestyle tweaks, and doctor conversations—no more overwhelm, just clear next steps.</p>
-                    <p className="text-xs text-primary font-medium mt-1">Interactive Workshop</p>
+                    
+                    {/* Session 2 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-hormones.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>11:45 AM - 1:00 PM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">Bioidentical Hormones Demystified</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Cut through conflicting HRT advice. Learn what questions to ask your doctor and how to advocate for the care you deserve.</p>
+                      </div>
+                    </div>
+                    
+                    {/* Session 3 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-sleep.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>2:00 - 3:30 PM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">Sleep, Stress & Longevity</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">End the 3am wake-ups and racing thoughts. Discover science-backed rituals to sleep deeply and wake refreshed.</p>
+                      </div>
+                    </div>
+                    
+                    {/* Session 4 */}
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <img src="/agenda-icon-plan.png" alt="" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>3:45 - 5:00 PM</span>
+                        </div>
+                        <h5 className="font-bold text-foreground text-lg mb-1">Your Personalized Action Plan</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Walk away knowing EXACTLY what to do Monday morning—your 90-day roadmap with specific foods, supplements, and next steps.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
