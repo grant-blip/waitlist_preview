@@ -621,6 +621,85 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Event Agenda Section - Phone Mockup Design */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+            {/* Left Side - Compelling Copy */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-4xl md:text-5xl font-luxury-serif font-bold text-gray-900 mb-6 leading-tight">
+                  Want to Feel Like Yourself Again?
+                </h3>
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                  In just 2 days, you'll discover exactly what's been holding you back—and walk away with a personalized roadmap to reclaim your energy, balance your hormones, and finally feel like YOU again.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  No more guessing. No more confusion. Just clear, science-backed strategies tailored to your body, your hormones, and your life.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full" style={{ backgroundColor: '#B4A57A' }}>
+                    <svg className="w-10 h-10 text-white p-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-lg mb-1">Day 1: Reboot & Reset</h4>
+                    <p className="text-gray-600">Decode your hormones, understand what's sabotaging your metabolism, and discover why your brain craves the foods that keep you stuck.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full" style={{ backgroundColor: '#B4A57A' }}>
+                    <svg className="w-10 h-10 text-white p-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-lg mb-1">Day 2: Build & Sustain</h4>
+                    <p className="text-gray-600">Get your personalized eating blueprint, learn about bioidentical hormones, and unlock the secret to thriving in midlife—not just surviving it.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <a
+                  href={generalCheckoutUrl}
+                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                  style={{ backgroundColor: '#B4A57A' }}
+                >
+                  Claim My Spot Now
+                </a>
+                <p className="text-sm text-gray-500 mt-3">68 spots taken • 32 spots left</p>
+              </div>
+            </div>
+
+            {/* Right Side - Two Phone Mockups */}
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-end gap-4 sm:gap-6">
+              {/* Day 1 Phone */}
+              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
+                <img
+                  src="/phone-day1-final.png"
+                  alt="Day 1: Reboot & Reset - Mobile App Interface"
+                  className="w-full h-auto drop-shadow-2xl"
+                />
+              </div>
+              {/* Day 2 Phone */}
+              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
+                <img
+                  src="/phone-day2-final.png"
+                  alt="Day 2: Build & Sustain - Mobile App Interface"
+                  className="w-full h-auto drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video Testimonials Section - Moved here for optimal conversion */}
       <section
         className="py-20"
@@ -871,84 +950,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Event Agenda Section - Phone Mockup Design */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-            {/* Left Side - Compelling Copy */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-4xl md:text-5xl font-luxury-serif font-bold text-gray-900 mb-6 leading-tight">
-                  Want to Feel Like Yourself Again?
-                </h3>
-                <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  In just 2 days, you'll discover exactly what's been holding you back—and walk away with a personalized roadmap to reclaim your energy, balance your hormones, and finally feel like YOU again.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  No more guessing. No more confusion. Just clear, science-backed strategies tailored to your body, your hormones, and your life.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full" style={{ backgroundColor: '#B4A57A' }}>
-                    <svg className="w-10 h-10 text-white p-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-1">Day 1: Reboot & Reset</h4>
-                    <p className="text-gray-600">Decode your hormones, understand what's sabotaging your metabolism, and discover why your brain craves the foods that keep you stuck.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full" style={{ backgroundColor: '#B4A57A' }}>
-                    <svg className="w-10 h-10 text-white p-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-1">Day 2: Build & Sustain</h4>
-                    <p className="text-gray-600">Get your personalized eating blueprint, learn about bioidentical hormones, and unlock the secret to thriving in midlife—not just surviving it.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <a
-                  href={generalCheckoutUrl}
-                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
-                  style={{ backgroundColor: '#B4A57A' }}
-                >
-                  Claim My Spot Now
-                </a>
-                <p className="text-sm text-gray-500 mt-3">68 spots taken • 32 spots left</p>
-              </div>
-            </div>
-
-            {/* Right Side - Two Phone Mockups */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-end gap-4 sm:gap-6">
-              {/* Day 1 Phone */}
-              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
-                <img
-                  src="/phone-day1-final.png"
-                  alt="Day 1: Reboot & Reset - Mobile App Interface"
-                  className="w-full h-auto drop-shadow-2xl"
-                />
-              </div>
-              {/* Day 2 Phone */}
-              <div className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] mx-auto sm:mx-0 flex-shrink-0">
-                <img
-                  src="/phone-day2-final.png"
-                  alt="Day 2: Build & Sustain - Mobile App Interface"
-                  className="w-full h-auto drop-shadow-2xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Pricing Tiers Section */}
       <section
