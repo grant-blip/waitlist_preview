@@ -608,7 +608,7 @@ export default function Home() {
             {/* Video Placard Overlay */}
             <div className="video-placard absolute inset-0 z-10 transition-opacity duration-300">
               <img 
-                src="/video-placard.jpg" 
+                src="/video-placard-v2.jpg" 
                 alt="Your Transformation Awaits - Click to play video" 
                 className="w-full h-full object-cover"
               />
