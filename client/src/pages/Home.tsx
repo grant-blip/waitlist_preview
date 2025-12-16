@@ -343,13 +343,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured In - Full Width Green Bar with Logo Grid */}
-      <section className="w-full overflow-hidden" style={{ backgroundColor: '#5a6d57' }}>
-        <div className="text-center py-4">
-          <h3 className="text-lg md:text-xl font-medium text-white/90 tracking-wider uppercase">As Featured In</h3>
-        </div>
-        <img src="/media-logos-green-bar-cropped.jpg" alt="As Featured In - Media Logos" className="w-full h-auto" style={{ display: 'block', fontSize: 0, lineHeight: 0 }} />
-      </section>
 
       {/* Symptoms Section - AI Generated Banner */}
       <section className="w-full overflow-hidden relative">
@@ -1531,6 +1524,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Featured In - Full Width Green Bar with Logo Grid */}
+      <section className="w-full overflow-hidden" style={{ backgroundColor: '#5a6d57' }}>
+        <div className="text-center py-4">
+          <h3 className="text-lg md:text-xl font-medium text-white/90 tracking-wider uppercase">As Featured In</h3>
+        </div>
+        <img src="/media-logos-green-bar-cropped.jpg" alt="As Featured In - Media Logos" className="w-full h-auto" style={{ display: 'block', fontSize: 0, lineHeight: 0 }} />
+      </section>
+
       {/* FAQ Section */}
       <section
         className="py-20 border-y"
