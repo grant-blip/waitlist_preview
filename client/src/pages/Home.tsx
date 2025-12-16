@@ -351,7 +351,7 @@ export default function Home() {
       {/* Symptoms Section - AI Generated Banner with Clickable Button Overlay */}
       <section className="w-full overflow-hidden relative" style={{ marginTop: '-1px' }}>
         <img 
-          src="/symptoms-banner-use.jpg" 
+          src="/symptoms-banner-hq.jpg" 
           alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
           className="w-full h-auto object-cover block"
         />
