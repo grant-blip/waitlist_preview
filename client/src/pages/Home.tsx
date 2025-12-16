@@ -349,86 +349,86 @@ export default function Home() {
       </section>
 
       {/* Symptoms Section - Split Layout */}
-      <section className="py-16 md:py-20" style={{ backgroundColor: 'rgb(149, 165, 145)' }}>
+      <section className="py-8 md:py-10" style={{ backgroundColor: 'rgb(149, 165, 145)' }}>
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center max-w-5xl mx-auto">
             {/* Left Side - Image */}
             <div className="flex justify-center lg:justify-start">
               <img
                 src="/symptoms-section-image.jpg"
                 alt="Vibrant woman feeling her best"
-                className="w-full max-w-md lg:max-w-lg h-auto rounded-2xl shadow-xl object-cover"
+                className="w-full max-w-[280px] lg:max-w-[320px] h-auto rounded-xl shadow-lg object-cover"
               />
             </div>
 
             {/* Right Side - Content */}
-            <div className="text-white space-y-6">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-luxury-serif font-bold leading-tight">
+            <div className="text-white space-y-3">
+              <h3 className="text-2xl md:text-3xl font-luxury-serif font-bold leading-tight">
                 Reset Your Body in Just 2 Days
               </h3>
-              <p className="text-lg md:text-xl opacity-90 leading-relaxed">
-                Victoria's science-backed approach helps women overcome the most common midlife symptoms and reclaim their vitality:
+              <p className="text-sm md:text-base opacity-90 leading-relaxed">
+                Victoria's science-backed approach helps women overcome the most common midlife symptoms:
               </p>
 
               {/* 5 Bullet Points with Icons */}
-              <div className="grid grid-cols-2 gap-x-6 gap-y-4 pt-4">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-2">
                 {/* Bullet 1 - Can't lose weight */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                     </svg>
                   </div>
-                  <span className="font-semibold text-base md:text-lg">Can't Lose Weight</span>
+                  <span className="font-semibold text-sm md:text-base">Can't Lose Weight</span>
                 </div>
 
                 {/* Bullet 2 - Brain fog */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   </div>
-                  <span className="font-semibold text-base md:text-lg">Brain Fog</span>
+                  <span className="font-semibold text-sm md:text-base">Brain Fog</span>
                 </div>
 
                 {/* Bullet 3 - Memory issues */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <span className="font-semibold text-base md:text-lg">Memory Issues</span>
+                  <span className="font-semibold text-sm md:text-base">Memory Issues</span>
                 </div>
 
                 {/* Bullet 4 - Trouble sleeping */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>
                   </div>
-                  <span className="font-semibold text-base md:text-lg">Trouble Sleeping</span>
+                  <span className="font-semibold text-sm md:text-base">Trouble Sleeping</span>
                 </div>
 
                 {/* Bullet 5 - Inflamed */}
-                <div className="flex items-center gap-3 col-span-2 md:col-span-1">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 col-span-2 md:col-span-1">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                     </svg>
                   </div>
-                  <span className="font-semibold text-base md:text-lg">Inflamed</span>
+                  <span className="font-semibold text-sm md:text-base">Inflamed</span>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4">
+              <div className="pt-2">
                 <a
                   href={generalCheckoutUrl}
-                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
                   style={{ backgroundColor: '#D4AF37', color: 'white' }}
                 >
                   Learn More
