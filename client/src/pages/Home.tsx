@@ -344,15 +344,16 @@ export default function Home() {
       </section>
 
       {/* Featured In - Full Width Green Bar with Logo Grid */}
-      <section className="w-full overflow-hidden" style={{ marginBottom: '-2px' }}>
-        <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover block" />
+      <section className="w-full overflow-hidden">
+        <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover block" style={{ marginBottom: '-4px' }} />
       </section>
 
       {/* Symptoms Section - Slim Banner Layout */}
       <section 
         className="w-full overflow-hidden"
         style={{ 
-          background: 'linear-gradient(to bottom, rgb(149, 165, 145) 0%, rgba(149, 165, 145, 0.5) 100%)'
+          background: 'linear-gradient(to bottom, rgb(149, 165, 145) 0%, rgba(149, 165, 145, 0.5) 100%)',
+          marginTop: '-1px'
         }}
       >
         <div className="flex flex-col lg:flex-row" style={{ maxHeight: '320px' }}>
