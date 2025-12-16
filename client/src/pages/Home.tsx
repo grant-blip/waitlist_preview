@@ -624,7 +624,7 @@ export default function Home() {
       {/* Event Agenda Section - Phone Mockup Design */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
             {/* Left Side - Compelling Copy */}
             <div className="space-y-8">
               <div>
@@ -678,9 +678,9 @@ export default function Home() {
             </div>
 
             {/* Right Side - Two Phone Mockups */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-end gap-4 sm:gap-6">
+            <div className="flex flex-row justify-center gap-4 lg:gap-8">
               {/* Day 1 Phone */}
-              <div className="w-full max-w-[300px] sm:max-w-[340px] lg:max-w-[380px] mx-auto sm:mx-0 flex-shrink-0">
+              <div className="w-[160px] sm:w-[200px] lg:w-[240px] flex-shrink-0">
                 <img
                   src="/phone-day1-final.png"
                   alt="Day 1: Reboot & Reset - Mobile App Interface"
@@ -688,7 +688,7 @@ export default function Home() {
                 />
               </div>
               {/* Day 2 Phone */}
-              <div className="w-full max-w-[300px] sm:max-w-[340px] lg:max-w-[380px] mx-auto sm:mx-0 flex-shrink-0">
+              <div className="w-[160px] sm:w-[200px] lg:w-[240px] flex-shrink-0">
                 <img
                   src="/phone-day2-final.png"
                   alt="Day 2: Build & Sustain - Mobile App Interface"
