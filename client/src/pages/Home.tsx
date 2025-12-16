@@ -239,27 +239,28 @@ export default function Home() {
 
         {/* Victoria's Image - Desktop Only */}
         <div
-          className="hidden md:block absolute right-0 bottom-0 z-5 h-full w-2/5"
+          className="hidden md:block absolute right-0 bottom-0 z-5 w-2/5"
           style={{
             backgroundImage: "url(/victoria-hero-new.png)",
             backgroundSize: "contain",
             backgroundPosition: "bottom right",
-            marginTop: "80px",
             backgroundRepeat: "no-repeat",
+            height: "90%",
+            top: "auto",
           }}
         />
 
         <div className="container relative z-10">
-          <div className="max-w-3xl space-y-6 md:space-y-8 py-12 md:py-16">
+          <div className="max-w-2xl space-y-4 md:space-y-6 py-8 md:py-12">
             {/* Main Headline */}
             <div className="space-y-4 md:space-y-5">
               <p className="text-xs md:text-sm uppercase tracking-wider text-gray-700 font-semibold">
                 Attention All Perimenopausal and Menopausal Women
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-luxury-serif font-bold text-gray-900 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-luxury-serif font-bold text-gray-900 leading-tight">
                 What If Everything You've Been Told About 'Just Getting Older' Is Wrong?
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 In 2 days, learn why you're not broken, what's really happening to your body, and exactly how to fix it.
               </p>
             </div>
@@ -288,32 +289,32 @@ export default function Home() {
             </div>
 
             {/* Countdown Timer */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-4 max-w-md">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-3 max-w-sm">
               <p className="text-xs font-medium text-gray-600 uppercase tracking-wider text-center mb-2">
                 Event Starts In:
               </p>
                 <div className="grid grid-cols-4 gap-2">
                   <div className="text-center">
                     <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
-                      <div className="text-base md:text-lg font-bold">{timeLeft.days}</div>
+                      <div className="text-sm md:text-base font-bold">{timeLeft.days}</div>
                     </div>
                     <p className="text-xs text-gray-600 mt-1 font-medium">Days</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
-                      <div className="text-base md:text-lg font-bold">{timeLeft.hours}</div>
+                      <div className="text-sm md:text-base font-bold">{timeLeft.hours}</div>
                     </div>
                     <p className="text-xs text-gray-600 mt-1 font-medium">Hours</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
-                      <div className="text-base md:text-lg font-bold">{timeLeft.minutes}</div>
+                      <div className="text-sm md:text-base font-bold">{timeLeft.minutes}</div>
                     </div>
                     <p className="text-xs text-gray-600 mt-1 font-medium">Mins</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-gray-100 text-gray-900 rounded-xl py-1.5 px-2">
-                      <div className="text-base md:text-lg font-bold">{timeLeft.seconds}</div>
+                      <div className="text-sm md:text-base font-bold">{timeLeft.seconds}</div>
                     </div>
                     <p className="text-xs text-gray-600 mt-1 font-medium">Secs</p>
                   </div>
