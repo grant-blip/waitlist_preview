@@ -348,98 +348,26 @@ export default function Home() {
         <img src="/media-logos-green-bar.jpg" alt="As Featured In - Media Logos" className="w-full h-auto object-cover block" style={{ marginBottom: '-4px' }} />
       </section>
 
-      {/* Symptoms Section - Slim Banner Layout */}
-      <section 
-        className="w-full overflow-hidden"
-        style={{ 
-          background: 'linear-gradient(to bottom, rgb(149, 165, 145) 0%, rgba(149, 165, 145, 0.5) 100%)',
-          marginTop: '-1px'
-        }}
-      >
-        <div className="flex flex-col lg:flex-row" style={{ maxHeight: '320px' }}>
-          {/* Left Side - Placeholder (50%) */}
-          <div className="lg:w-[50%] flex-shrink-0 h-48 lg:h-auto">
-            {/* Placeholder for woman's image - leave blank for now */}
-          </div>
-
-          {/* Right Side - Content (50%) */}
-          <div className="lg:w-[50%] flex items-center py-6 px-6 lg:px-12">
-            <div className="space-y-4 w-full">
-              <h3 className="text-3xl md:text-4xl leading-tight">
-                <span className="font-bold" style={{ color: '#4a5d47' }}>Reset</span> <span className="font-luxury-serif italic" style={{ color: '#D4AF37' }}>Your Body</span>
-              </h3>
-              <p className="text-base md:text-lg" style={{ color: '#3d4d3a' }}>
-                Victoria's science-backed approach helps women<br className="hidden md:block" />
-                overcome the most common midlife symptoms:
-              </p>
-
-              {/* 5 Bullet Points with Icons - 2 column grid */}
-              <div className="grid grid-cols-2 gap-x-8 gap-y-4 pt-2">
-                {/* Bullet 1 - Can't lose weight */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#5a6d57' }}>
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                    </svg>
-                  </div>
-                  <span className="font-bold text-base md:text-lg" style={{ color: '#3d4d3a' }}>Can't Lose Weight</span>
-                </div>
-
-                {/* Bullet 2 - Brain fog */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#5a6d57' }}>
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  </div>
-                  <span className="font-bold text-base md:text-lg" style={{ color: '#3d4d3a' }}>Brain Fog</span>
-                </div>
-
-                {/* Bullet 3 - Memory issues */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#5a6d57' }}>
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <span className="font-bold text-base md:text-lg" style={{ color: '#3d4d3a' }}>Memory Issues</span>
-                </div>
-
-                {/* Bullet 4 - Trouble sleeping */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#5a6d57' }}>
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                  </div>
-                  <span className="font-bold text-base md:text-lg" style={{ color: '#3d4d3a' }}>Trouble Sleeping</span>
-                </div>
-
-                {/* Bullet 5 - Inflamed */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#5a6d57' }}>
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-                    </svg>
-                  </div>
-                  <span className="font-bold text-base md:text-lg" style={{ color: '#3d4d3a' }}>Inflamed</span>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="pt-3">
-                <a
-                  href={generalCheckoutUrl}
-                  className="inline-flex items-center justify-center px-10 py-3 text-base font-bold rounded-full shadow-md transition-all hover:shadow-lg hover:scale-105 uppercase tracking-wide"
-                  style={{ backgroundColor: '#5a6d57', color: 'white' }}
-                >
-                  Reserve My Spot
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Symptoms Section - AI Generated Banner with Clickable Button Overlay */}
+      <section className="w-full overflow-hidden relative" style={{ marginTop: '-1px' }}>
+        <img 
+          src="/symptoms-banner.jpg" 
+          alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
+          className="w-full h-auto object-cover block"
+        />
+        {/* Clickable button overlay positioned over the banner button */}
+        <a
+          href={generalCheckoutUrl}
+          className="absolute cursor-pointer hover:opacity-90 transition-opacity"
+          style={{
+            bottom: '8%',
+            left: '58%',
+            width: '18%',
+            height: '10%',
+            borderRadius: '9999px'
+          }}
+          aria-label="Claim My Spot Now"
+        />
       </section>
 
 
