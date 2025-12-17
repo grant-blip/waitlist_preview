@@ -239,7 +239,7 @@ export default function Home() {
 
         {/* Victoria's Image - Visible on all devices */}
         <div
-          className="absolute right-0 bottom-0 z-5 h-[60%] w-[45%] md:h-full md:w-2/5 opacity-60 md:opacity-100"
+          className="absolute right-0 bottom-0 z-5 h-[70%] w-[55%] md:h-full md:w-2/5 opacity-90 md:opacity-100"
           style={{
             backgroundImage: "url(/victoria-hero-new.png)",
             backgroundSize: "contain",
@@ -350,26 +350,47 @@ export default function Home() {
       </section>
 
 
-      {/* Symptoms Section - AI Generated Banner */}
-      <section className="w-full overflow-hidden relative">
-        <img 
-          src="/symptoms-banner-hq.jpg" 
-          alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
-          className="w-full h-auto object-cover block"
-        />
-        {/* Clickable button overlay positioned over the banner button */}
-        <a
-          href={generalCheckoutUrl}
-          className="absolute cursor-pointer hover:opacity-90 transition-opacity"
-          style={{
-            bottom: '5%',
-            left: '52%',
-            width: '22%',
-            height: '12%',
-            borderRadius: '9999px'
-          }}
-          aria-label="Claim My Spot Now"
-        />
+      {/* Symptoms Section - Desktop: Banner Image, Mobile: Text Version */}
+      <section className="w-full">
+        {/* Desktop Banner - Hidden on Mobile */}
+        <div className="hidden md:block overflow-hidden relative">
+          <img 
+            src="/symptoms-banner-hq.jpg" 
+            alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
+            className="w-full h-auto object-cover block"
+          />
+          {/* Clickable button overlay positioned over the banner button */}
+          <a
+            href={generalCheckoutUrl}
+            className="absolute cursor-pointer hover:opacity-90 transition-opacity"
+            style={{
+              bottom: '5%',
+              left: '52%',
+              width: '22%',
+              height: '12%',
+              borderRadius: '9999px'
+            }}
+            aria-label="Claim My Spot Now"
+          />
+        </div>
+        
+        {/* Mobile Text Version */}
+        <div className="md:hidden py-12 px-6" style={{ background: 'linear-gradient(135deg, #5a6d57 0%, #4a5d47 100%)' }}>
+          <div className="max-w-2xl mx-auto text-center text-white space-y-6">
+            <h3 className="text-3xl font-luxury-serif font-bold leading-tight">
+              Reset Your Body in Just 2 Days
+            </h3>
+            <p className="text-lg leading-relaxed opacity-95">
+              Discover Victoria's science-backed approach to hormone balance, metabolism reset, and lasting vitality.
+            </p>
+            <a
+              href={generalCheckoutUrl}
+              className="inline-block bg-white text-[#5a6d57] font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all"
+            >
+              Claim My Spot Now
+            </a>
+          </div>
+        </div>
       </section>
 
 
