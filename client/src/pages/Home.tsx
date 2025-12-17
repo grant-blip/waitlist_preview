@@ -743,7 +743,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
                     <h5 className="font-bold text-foreground">The Hormone Truth: What's Really Happening</h5>
-                    <p className="text-sm text-muted-foreground">Understand the 7 key hormones affecting your weight, energy, and mood—and why they're out of balance.</p>
+                    <p className="text-sm text-muted-foreground">Finally understand why you're exhausted, gaining weight, and feeling "off"—and discover which of your 7 key hormones need attention so you can stop guessing and start healing.</p>
                     <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
                   </div>
                   
@@ -757,7 +757,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
                     <h5 className="font-bold text-foreground">Metabolism Masterclass</h5>
-                    <p className="text-sm text-muted-foreground">Why your metabolism has slowed and the exact steps to reignite your fat-burning potential.</p>
+                    <p className="text-sm text-muted-foreground">Stop blaming yourself for the stubborn belly fat that appeared in your 40s. Learn why your metabolism changed overnight and the specific tweaks that will have you burning fat again—without extreme diets or hours of cardio.</p>
                     <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
                   </div>
                   
@@ -771,7 +771,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
                     <h5 className="font-bold text-foreground">Brain Chemistry & Cravings</h5>
-                    <p className="text-sm text-muted-foreground">Discover why your brain craves sugar and carbs—and how to rewire these patterns for good.</p>
+                    <p className="text-sm text-muted-foreground">Those 3pm sugar cravings and late-night snack attacks aren't weakness—they're hormonal. Learn how to quiet the constant food noise in your head and finally feel in control around food again.</p>
                     <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
                   </div>
                   
@@ -785,7 +785,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
                     <h5 className="font-bold text-foreground">Live Q&A + Hot Seat Coaching</h5>
-                    <p className="text-sm text-muted-foreground">Get your specific questions answered and watch Victoria coach participants in real-time.</p>
+                    <p className="text-sm text-muted-foreground">Bring your most frustrating symptoms, your doctor's dismissive comments, your "I've tried everything" frustrations—and get real answers tailored to YOUR body and YOUR situation.</p>
                     <p className="text-xs text-primary font-medium mt-1">Interactive Session</p>
                   </div>
                 </div>
@@ -811,7 +811,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
                     <h5 className="font-bold text-foreground">The Midlife Eating Blueprint</h5>
-                    <p className="text-sm text-muted-foreground">Your personalized nutrition framework—what to eat, when to eat, and how to make it sustainable.</p>
+                    <p className="text-sm text-muted-foreground">Forget everything you learned about dieting in your 20s—it doesn't work anymore. Get a simple, satisfying eating plan designed specifically for your changing hormones that you can actually stick to for life.</p>
                     <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
                   </div>
                   
@@ -825,7 +825,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
                     <h5 className="font-bold text-foreground">Bioidentical Hormones Demystified</h5>
-                    <p className="text-sm text-muted-foreground">Everything you need to know about HRT, bioidenticals, and natural alternatives—without the confusion.</p>
+                    <p className="text-sm text-muted-foreground">Cut through the conflicting advice about HRT. Learn exactly what questions to ask your doctor, which options are right for YOUR symptoms, and how to advocate for the care you deserve—whether you choose hormones or natural alternatives.</p>
                     <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
                   </div>
                   
@@ -839,7 +839,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
                     <h5 className="font-bold text-foreground">Sleep, Stress & Longevity</h5>
-                    <p className="text-sm text-muted-foreground">The overlooked pillars of hormone health—practical strategies for deep sleep and stress resilience.</p>
+                    <p className="text-sm text-muted-foreground">End the 3am wake-ups, the racing thoughts, and the exhaustion that no amount of sleep seems to fix. Discover the science-backed rituals that will have you sleeping deeply and waking refreshed—even during perimenopause.</p>
                     <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
                   </div>
                   
@@ -853,7 +853,7 @@ export default function Home() {
                   <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
                     <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
                     <h5 className="font-bold text-foreground">Your Personalized Action Plan</h5>
-                    <p className="text-sm text-muted-foreground">Leave with your custom 90-day roadmap, next steps, and ongoing support resources.</p>
+                    <p className="text-sm text-muted-foreground">Walk away knowing EXACTLY what to do Monday morning. Your personalized 90-day roadmap with specific foods, supplements, lifestyle tweaks, and doctor conversations—no more overwhelm, just clear next steps.</p>
                     <p className="text-xs text-primary font-medium mt-1">Interactive Workshop</p>
                   </div>
                 </div>
