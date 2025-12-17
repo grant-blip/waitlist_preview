@@ -2047,6 +2047,102 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Feedback Form Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-b from-[#F8F6F3] to-white">
+        <div className="container max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-luxury-serif font-bold text-gray-900 mb-4">
+              Help Us Improve
+            </h2>
+            <p className="text-lg text-gray-700">
+              Share your thoughts, questions, or suggestions to help us create the best possible experience for you.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+            <form className="space-y-6">
+              {/* Name Field */}
+              <div>
+                <label htmlFor="feedback-name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="feedback-name"
+                  name="name"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              {/* Email Field */}
+              <div>
+                <label htmlFor="feedback-email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="feedback-email"
+                  name="email"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              {/* Feedback Type */}
+              <div>
+                <label htmlFor="feedback-type" className="block text-sm font-semibold text-gray-700 mb-2">
+                  What would you like to share?
+                </label>
+                <select
+                  id="feedback-type"
+                  name="type"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all"
+                >
+                  <option value="">Select a category...</option>
+                  <option value="suggestion">Improvement Suggestion</option>
+                  <option value="question">Question About the Event</option>
+                  <option value="testimonial">Testimonial / Success Story</option>
+                  <option value="technical">Technical Issue</option>
+                  <option value="other">Other Feedback</option>
+                </select>
+              </div>
+
+              {/* Message Field */}
+              <div>
+                <label htmlFor="feedback-message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Your Message
+                </label>
+                <textarea
+                  id="feedback-message"
+                  name="message"
+                  rows={6}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all resize-none"
+                  placeholder="Share your thoughts, ideas, or questions..."
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div className="text-center pt-4">
+                <button
+                  type="submit"
+                  className="inline-block bg-gradient-to-r from-[#5a6d57] to-[#4a5d47] text-white font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Thank you for your feedback! This form will be connected to a backend once publishing is enabled.');
+                  }}
+                >
+                  Submit Feedback
+                </button>
+                <p className="text-sm text-gray-500 mt-4">
+                  We read every message and appreciate your input!
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Professional Footer */}
       <footer id="contact" className="bg-gradient-to-b from-white to-[#F5F1E8] border-t">
         <div className="container py-16">
