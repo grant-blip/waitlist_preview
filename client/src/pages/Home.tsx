@@ -237,9 +237,9 @@ export default function Home() {
         {/* Split overlay - Dark left for text, light right for Victoria */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent z-0" />
 
-        {/* Victoria's Image - Visible on all devices */}
+        {/* Victoria's Image - Desktop Only */}
         <div
-          className="absolute right-0 bottom-0 z-5 h-[70%] w-[55%] md:h-full md:w-2/5 opacity-90 md:opacity-100"
+          className="hidden md:block absolute right-0 bottom-0 z-5 h-full w-2/5"
           style={{
             backgroundImage: "url(/victoria-hero-new.png)",
             backgroundSize: "contain",
@@ -350,51 +350,30 @@ export default function Home() {
       </section>
 
 
-      {/* Symptoms Section - Desktop: Banner Image, Mobile: Text Version */}
-      <section className="w-full">
-        {/* Desktop Banner - Hidden on Mobile */}
-        <div className="hidden md:block overflow-hidden relative">
-          <img 
-            src="/symptoms-banner-hq.jpg" 
-            alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
-            className="w-full h-auto object-cover block"
-          />
-          {/* Clickable button overlay positioned over the banner button */}
-          <a
-            href={generalCheckoutUrl}
-            className="absolute cursor-pointer hover:opacity-90 transition-opacity"
-            style={{
-              bottom: '5%',
-              left: '52%',
-              width: '22%',
-              height: '12%',
-              borderRadius: '9999px'
-            }}
-            aria-label="Claim My Spot Now"
-          />
-        </div>
-        
-        {/* Mobile Text Version */}
-        <div className="md:hidden py-12 px-6" style={{ background: 'linear-gradient(135deg, #5a6d57 0%, #4a5d47 100%)' }}>
-          <div className="max-w-2xl mx-auto text-center text-white space-y-6">
-            <h3 className="text-3xl font-luxury-serif font-bold leading-tight">
-              Reset Your Body in Just 2 Days
-            </h3>
-            <p className="text-lg leading-relaxed opacity-95">
-              Discover Victoria's science-backed approach to hormone balance, metabolism reset, and lasting vitality.
-            </p>
-            <a
-              href={generalCheckoutUrl}
-              className="inline-block bg-white text-[#5a6d57] font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all"
-            >
-              Claim My Spot Now
-            </a>
-          </div>
-        </div>
+      {/* Symptoms Section - AI Generated Banner */}
+      <section className="w-full overflow-hidden relative">
+        <img 
+          src="/symptoms-banner-hq.jpg" 
+          alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
+          className="w-full h-auto object-cover block"
+        />
+        {/* Clickable button overlay positioned over the banner button */}
+        <a
+          href={generalCheckoutUrl}
+          className="absolute cursor-pointer hover:opacity-90 transition-opacity"
+          style={{
+            bottom: '5%',
+            left: '52%',
+            width: '22%',
+            height: '12%',
+            borderRadius: '9999px'
+          }}
+          aria-label="Claim My Spot Now"
+        />
       </section>
 
 
-     {/* This Is For You If Section - Mobile Optimized - Alternating Image/Text Layout */}
+      {/* This Is For You If Section - Alternating Image/Text Layout */}
       <section className="py-16 md:py-20" style={{ background: 'linear-gradient(180deg, #F8F6F3 0%, #EDE9E3 100%)' }}>
         {/* Section Header */}
         <div className="container mb-12">
@@ -407,13 +386,13 @@ export default function Home() {
         </div>
 
         {/* Alternating Pain Point Cards */}
-        <div className="space-y-4 md:space-y-0">
+        <div className="space-y-0">
           {/* Pain Point 1 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-1-exhaustion.jpg" alt="Exhaustion" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-1-exhaustion.jpg" alt="Exhaustion" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -430,9 +409,9 @@ export default function Home() {
           {/* Pain Point 2 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-2-weight.jpg" alt="Weight Gain" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-2-weight.jpg" alt="Weight Gain" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -449,9 +428,9 @@ export default function Home() {
           {/* Pain Point 3 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-3-hotflash.jpg" alt="Hot Flashes" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-3-hotflash.jpg" alt="Hot Flashes" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -468,9 +447,9 @@ export default function Home() {
           {/* Pain Point 4 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-4-brainfog.jpg" alt="Brain Fog" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-4-brainfog.jpg" alt="Brain Fog" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -487,9 +466,9 @@ export default function Home() {
           {/* Pain Point 5 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-5-moodswings.jpg" alt="Mood Swings" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-5-moodswings.jpg" alt="Mood Swings" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -506,9 +485,9 @@ export default function Home() {
           {/* Pain Point 6 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-6-dismissed.jpg" alt="Feeling Dismissed" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-6-dismissed.jpg" alt="Feeling Dismissed" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -525,9 +504,9 @@ export default function Home() {
           {/* Pain Point 7 - Image Left */}
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <img src="/pain-point-7-identity.jpg" alt="Loss of Identity" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-7-identity.jpg" alt="Loss of Identity" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#F5F3EF] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#F5F3EF] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -544,9 +523,9 @@ export default function Home() {
           {/* Pain Point 8 - Image Right */}
           <div className="flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2">
-              <img src="/pain-point-8-selfcare.jpg" alt="Ready for Self-Care" className="w-full h-56 md:h-80 object-cover" />
+              <img src="/pain-point-8-selfcare.jpg" alt="Ready for Self-Care" className="w-full h-64 md:h-80 object-cover" />
             </div>
-            <div className="md:w-1/2 bg-[#EBE7E0] p-6 sm:p-8 md:p-12 flex items-center">
+            <div className="md:w-1/2 bg-[#EBE7E0] p-8 md:p-12 flex items-center">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0 mt-1">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--rose-gold)' }}>
@@ -692,6 +671,16 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="pt-4">
+                <a
+                  href={generalCheckoutUrl}
+                  className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                  style={{ backgroundColor: '#B4A57A' }}
+                >
+                  Claim My Spot Now
+                </a>
+                <p className="text-sm text-gray-500 mt-3">68 spots taken • 32 spots left</p>
+              </div>
             </div>
 
             {/* Right Side - Two Phone Mockups */}
@@ -714,26 +703,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
-          {/* CTA Below Phones - Centered */}
-          <div className="text-center mt-12">
-            <a
-              href={generalCheckoutUrl}
-              className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
-              style={{ backgroundColor: '#B4A57A' }}
-            >
-              Claim My Spot Now
-            </a>
-            <p className="text-sm text-gray-500 mt-3">68 spots taken • 32 spots left</p>
-          </div>
         </div>
       </section>
 
       {/* Detailed Agenda Section */}
-      <section className="py-16 md:py-20 relative" style={{ backgroundImage: 'url(/agenda-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-white/40"></div>
-        <div className="relative z-10">
+      <section className="py-16 md:py-20" style={{ background: 'linear-gradient(180deg, #FAF8F5 0%, #F5F1E8 100%)' }}>
         <div className="container">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
@@ -750,151 +724,137 @@ export default function Home() {
             {/* Day 1 & Day 2 Grid */}
             <div className="grid md:grid-cols-2 gap-8">
               {/* Day 1 */}
-              <div className="rounded-2xl shadow-lg overflow-hidden" style={{ backgroundImage: 'url(/agenda-day1-header.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                <div className="bg-white/95 backdrop-blur-sm h-full">
-                  <div className="p-6 text-white" style={{ backgroundColor: '#5a6d57' }}>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-sm font-medium text-white/80">Saturday, February 7</p>
-                        <h4 className="text-xl md:text-2xl font-bold">Day 1: Reboot & Reset</h4>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm text-white/80">10:00 AM - 5:00 PM AEST</p>
-                      </div>
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="p-6 text-white" style={{ backgroundColor: '#5a6d57' }}>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-medium text-white/80">Saturday, February 7</p>
+                      <h4 className="text-xl md:text-2xl font-bold">Day 1: Reboot & Reset</h4>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-white/80">10:00 AM - 5:00 PM</p>
+                      <p className="text-xs text-white/60">AEST</p>
                     </div>
                   </div>
+                </div>
+                
+                <div className="p-6 space-y-4">
+                  {/* Session 1 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
+                    <h5 className="font-bold text-foreground">The Hormone Truth: What's Really Happening</h5>
+                    <p className="text-sm text-muted-foreground">Understand the 7 key hormones affecting your weight, energy, and mood—and why they're out of balance.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
                   
-                  <div className="p-6 space-y-5">
-                    {/* Session 1 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-hormones.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">10:00 - 11:30 AM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">The Hormone Truth</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Finally understand why you're exhausted, gaining weight, and feeling "off"—discover which hormones need attention so you can stop guessing and start healing.</p>
-                      </div>
-                    </div>
-                    
-                    {/* Session 2 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-metabolism.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">11:45 AM - 1:00 PM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">Metabolism Masterclass</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Stop blaming yourself for stubborn belly fat. Learn why your metabolism changed and the specific tweaks to burn fat again—without extreme diets.</p>
-                      </div>
-                    </div>
-                    
-                    {/* Session 3 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-brain.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">2:00 - 3:30 PM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">Brain Chemistry & Cravings</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Those 3pm sugar cravings aren't weakness—they're hormonal. Learn how to quiet the food noise and finally feel in control again.</p>
-                      </div>
-                    </div>
-                    
-                    {/* Session 4 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-qa.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#5a6d57]/10 text-[#5a6d57]">3:45 - 5:00 PM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">Live Q&A Session</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Bring your frustrating symptoms and "I've tried everything" questions—get real answers tailored to YOUR body.</p>
-                      </div>
-                    </div>
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">11:30 AM - 11:45 AM • Morning Break</p>
+                  </div>
+                  
+                  {/* Session 2 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
+                    <h5 className="font-bold text-foreground">Metabolism Masterclass</h5>
+                    <p className="text-sm text-muted-foreground">Why your metabolism has slowed and the exact steps to reignite your fat-burning potential.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Lunch */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">1:00 PM - 2:00 PM • Lunch Break</p>
+                  </div>
+                  
+                  {/* Session 3 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
+                    <h5 className="font-bold text-foreground">Brain Chemistry & Cravings</h5>
+                    <p className="text-sm text-muted-foreground">Discover why your brain craves sugar and carbs—and how to rewire these patterns for good.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">3:30 PM - 3:45 PM • Afternoon Break</p>
+                  </div>
+                  
+                  {/* Session 4 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--champagne-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
+                    <h5 className="font-bold text-foreground">Live Q&A + Hot Seat Coaching</h5>
+                    <p className="text-sm text-muted-foreground">Get your specific questions answered and watch Victoria coach participants in real-time.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Interactive Session</p>
                   </div>
                 </div>
               </div>
 
               {/* Day 2 */}
-              <div className="rounded-2xl shadow-lg overflow-hidden" style={{ backgroundImage: 'url(/agenda-day2-header.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                <div className="bg-white/95 backdrop-blur-sm h-full">
-                  <div className="p-6 text-white" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-sm font-medium text-white/80">Sunday, February 8</p>
-                        <h4 className="text-xl md:text-2xl font-bold">Day 2: Build & Sustain</h4>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm text-white/80">10:00 AM - 5:00 PM AEST</p>
-                      </div>
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="p-6 text-white" style={{ background: 'linear-gradient(135deg, var(--rose-gold) 0%, #A05566 100%)' }}>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-medium text-white/80">Sunday, February 8</p>
+                      <h4 className="text-xl md:text-2xl font-bold">Day 2: Build & Sustain</h4>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-white/80">10:00 AM - 5:00 PM</p>
+                      <p className="text-xs text-white/60">AEST</p>
                     </div>
                   </div>
+                </div>
+                
+                <div className="p-6 space-y-4">
+                  {/* Session 1 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">10:00 AM - 11:30 AM</p>
+                    <h5 className="font-bold text-foreground">The Midlife Eating Blueprint</h5>
+                    <p className="text-sm text-muted-foreground">Your personalized nutrition framework—what to eat, when to eat, and how to make it sustainable.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
                   
-                  <div className="p-6 space-y-5">
-                    {/* Session 1 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-nutrition.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>10:00 - 11:30 AM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">Midlife Eating Blueprint</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Forget dieting rules from your 20s—they don't work anymore. Get a satisfying eating plan designed for your changing hormones.</p>
-                      </div>
-                    </div>
-                    
-                    {/* Session 2 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-hormones.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>11:45 AM - 1:00 PM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">Bioidentical Hormones Demystified</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Cut through conflicting HRT advice. Learn what questions to ask your doctor and how to advocate for the care you deserve.</p>
-                      </div>
-                    </div>
-                    
-                    {/* Session 3 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-sleep.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>2:00 - 3:30 PM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">Sleep, Stress & Longevity</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">End the 3am wake-ups and racing thoughts. Discover science-backed rituals to sleep deeply and wake refreshed.</p>
-                      </div>
-                    </div>
-                    
-                    {/* Session 4 */}
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <img src="/agenda-icon-plan.png" alt="" className="w-14 h-14 md:w-12 md:h-12 object-contain rounded-lg shadow-sm" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(180, 103, 119, 0.1)', color: 'var(--rose-gold)' }}>3:45 - 5:00 PM</span>
-                        </div>
-                        <h5 className="font-bold text-foreground text-lg mb-1">Your Personalized Action Plan</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Walk away knowing EXACTLY what to do Monday morning—your 90-day roadmap with specific foods, supplements, and next steps.</p>
-                      </div>
-                    </div>
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">11:30 AM - 11:45 AM • Morning Break</p>
+                  </div>
+                  
+                  {/* Session 2 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">11:45 AM - 1:00 PM</p>
+                    <h5 className="font-bold text-foreground">Bioidentical Hormones Demystified</h5>
+                    <p className="text-sm text-muted-foreground">Everything you need to know about HRT, bioidenticals, and natural alternatives—without the confusion.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Lunch */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">1:00 PM - 2:00 PM • Lunch Break</p>
+                  </div>
+                  
+                  {/* Session 3 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">2:00 PM - 3:30 PM</p>
+                    <h5 className="font-bold text-foreground">Sleep, Stress & Longevity</h5>
+                    <p className="text-sm text-muted-foreground">The overlooked pillars of hormone health—practical strategies for deep sleep and stress resilience.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Speaker: Victoria O'Sullivan</p>
+                  </div>
+                  
+                  {/* Break */}
+                  <div className="flex items-center gap-2 py-2">
+                    <Coffee className="w-4 h-4 text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">3:30 PM - 3:45 PM • Afternoon Break</p>
+                  </div>
+                  
+                  {/* Session 4 */}
+                  <div className="border-l-4 pl-4" style={{ borderColor: 'var(--rose-gold)' }}>
+                    <p className="text-xs text-muted-foreground font-medium">3:45 PM - 5:00 PM</p>
+                    <h5 className="font-bold text-foreground">Your Personalized Action Plan</h5>
+                    <p className="text-sm text-muted-foreground">Leave with your custom 90-day roadmap, next steps, and ongoing support resources.</p>
+                    <p className="text-xs text-primary font-medium mt-1">Interactive Workshop</p>
                   </div>
                 </div>
               </div>
@@ -911,7 +871,6 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mt-3">Limited to 100 attendees • Recordings included</p>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -2043,102 +2002,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Feedback Form Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-[#F8F6F3] to-white">
-        <div className="container max-w-3xl">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-luxury-serif font-bold text-gray-900 mb-4">
-              Help Us Improve
-            </h2>
-            <p className="text-lg text-gray-700">
-              Share your thoughts, questions, or suggestions to help us create the best possible experience for you.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-            <form className="space-y-6">
-              {/* Name Field */}
-              <div>
-                <label htmlFor="feedback-name" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="feedback-name"
-                  name="name"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all"
-                  placeholder="Enter your name"
-                />
-              </div>
-
-              {/* Email Field */}
-              <div>
-                <label htmlFor="feedback-email" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="feedback-email"
-                  name="email"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              {/* Feedback Type */}
-              <div>
-                <label htmlFor="feedback-type" className="block text-sm font-semibold text-gray-700 mb-2">
-                  What would you like to share?
-                </label>
-                <select
-                  id="feedback-type"
-                  name="type"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all"
-                >
-                  <option value="">Select a category...</option>
-                  <option value="suggestion">Improvement Suggestion</option>
-                  <option value="question">Question About the Event</option>
-                  <option value="testimonial">Testimonial / Success Story</option>
-                  <option value="technical">Technical Issue</option>
-                  <option value="other">Other Feedback</option>
-                </select>
-              </div>
-
-              {/* Message Field */}
-              <div>
-                <label htmlFor="feedback-message" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Your Message
-                </label>
-                <textarea
-                  id="feedback-message"
-                  name="message"
-                  rows={6}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#5a6d57] focus:ring-2 focus:ring-[#5a6d57]/20 outline-none transition-all resize-none"
-                  placeholder="Share your thoughts, ideas, or questions..."
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="text-center pt-4">
-                <button
-                  type="submit"
-                  className="inline-block bg-gradient-to-r from-[#5a6d57] to-[#4a5d47] text-white font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert('Thank you for your feedback! This form will be connected to a backend once publishing is enabled.');
-                  }}
-                >
-                  Submit Feedback
-                </button>
-                <p className="text-sm text-gray-500 mt-4">
-                  We read every message and appreciate your input!
-                </p>
-              </div>
-            </form>
           </div>
         </div>
       </section>
