@@ -350,26 +350,86 @@ export default function Home() {
       </section>
 
 
-      {/* Symptoms Section - AI Generated Banner */}
+      {/* Symptoms Section - Responsive Split Layout (Updated 1.0.8) */}
       <section className="w-full overflow-hidden relative">
-        <img 
-          src="/symptoms-banner-hq.jpg" 
-          alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
-          className="w-full h-auto object-cover block"
-        />
-        {/* Clickable button overlay positioned over the banner button */}
-        <a
-          href={generalCheckoutUrl}
-          className="absolute cursor-pointer hover:opacity-90 transition-opacity"
-          style={{
-            bottom: '5%',
-            left: '52%',
-            width: '22%',
-            height: '12%',
-            borderRadius: '9999px'
-          }}
-          aria-label="Claim My Spot Now"
-        />
+        {/* Desktop Version (Original Image) */}
+        <div className="hidden md:block relative">
+          <img 
+            src="/symptoms-banner-hq.jpg" 
+            alt="Reset Your Body in Just 2 Days - Victoria's science-backed approach" 
+            className="w-full h-auto object-cover block"
+          />
+          {/* Clickable button overlay for desktop */}
+          <a
+            href={generalCheckoutUrl}
+            className="absolute cursor-pointer hover:opacity-90 transition-opacity"
+            style={{
+              bottom: '5%',
+              left: '52%',
+              width: '22%',
+              height: '12%',
+              borderRadius: '9999px'
+            }}
+            aria-label="Claim My Spot Now"
+          />
+        </div>
+
+        {/* Mobile Version (Split Layout) */}
+        <div className="md:hidden flex flex-col">
+          {/* Top: Image (Cropped to focus on Victoria) */}
+          <div className="h-[400px] overflow-hidden relative">
+            <img 
+              src="/symptoms-banner-hq.jpg" 
+              alt="Victoria" 
+              loading="lazy"
+              className="w-full h-full object-cover object-left"
+            />
+          </div>
+          
+          {/* Bottom: Content (Recreated Green Section) */}
+          <div className="bg-[#8B9D89] px-6 py-10 text-center text-white">
+            <h2 className="font-luxury-serif text-4xl mb-2">
+              Reset <span className="italic text-[#D4AF37]">Your Body</span>
+            </h2>
+            <h2 className="font-luxury-serif text-4xl mb-6">
+              in Just 2 Days
+            </h2>
+            
+            <p className="text-sm leading-relaxed mb-8 opacity-90 max-w-xs mx-auto">
+              Victoria's science-backed approach helps women overcome the most common midlife symptoms and reclaim their vitality:
+            </p>
+            
+            <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-left max-w-xs mx-auto mb-8 text-sm font-medium">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-white/30 shrink-0" />
+                <span>Can't Lose Weight</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-white/30 shrink-0" />
+                <span>Irritable</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-white/30 shrink-0" />
+                <span>Brain Fog</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-white/30 shrink-0" />
+                <span>Trouble Sleeping</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-white/30 shrink-0" />
+                <span>Inflamed</span>
+              </div>
+            </div>
+            
+            <a 
+              href={generalCheckoutUrl}
+              className="inline-block bg-[#D4AF37] text-white px-8 py-3 rounded-full font-bold text-sm tracking-wide shadow-lg"
+            >
+              CLAIM MY SPOT NOW
+            </a>
+          </div>
+        </div>
       </section>
 
 
